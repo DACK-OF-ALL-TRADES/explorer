@@ -1,0 +1,85 @@
+/* NAVBAR */
+/* STYLE CSS */
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Literata&family=Pacifico&family=Roboto&display=swap");
+
+/* root................................................. */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --craft: #10d48e;
+  --craft-dark: #1d2622;
+  --craft-light: #d5d6d6;
+  --craft-font: "Pacifico", cursive;
+  --craft-font2: "Fredericka the Great", cursive;
+  --craft-font3: "Literata", serif;
+  --roboto: "Roboto", sans-serif;
+}
+
+/* Navbar............................................. */
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--craft);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.152);
+  font-family: var(--roboto);
+}
+
+ul.topnav li {
+  float: left;
+}
+
+ul.topnav li a {
+  display: block;
+  color: var(--craft-dark);
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.logout a {
+  background-color: var(--craft-dark);
+  color: var(--craft-light) !important;
+}
+
+.logout a:hover:not(.active) {
+  background-color: var(--craft-light) !important;
+  color: var(--craft-dark) !important;
+}
+
+ul.topnav li a:hover:not(.active) {
+  background-color: var(--craft-dark);
+  color: var(--craft-light);
+}
+
+ul.topnav li a.active {
+  background-color: var(--craft);
+  padding: 0 10px;
+}
+
+ul.topnav li.right {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {
+    float: none;
+  }
+}

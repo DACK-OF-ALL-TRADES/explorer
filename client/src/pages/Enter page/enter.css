@@ -1,11 +1,33 @@
-/* ENTER PAGE */
-/* STYLE CSS */
+/* APP */
+/* ENTER CSS */
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 /* root................................................. */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--roboto);
+  /* transition: 0.4s ease-in-out; */
+}
+
+:root {
+  --craft: #10d48e;
+  --craft-dark: #1d2622;
+  --craft-light: #d5d6d6;
+  --craft-font: "Pacifico", cursive;
+  --craft-font2: "Fredericka the Great", cursive;
+  --craft-font3: "Literata", serif;
+  --roboto: "Roboto", sans-serif;
 }
 
 /* elements................................................. */
@@ -16,4 +38,40 @@
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
+}
+
+.enter-container {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.enter-body {
+  padding: 2rem !important;
+  background-color: #7d8c7d !important;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.556) !important;
+}
+
+body {
+  background-color: #dadada;
+}
+body > .grid {
+  height: 100%;
+}
+.image {
+  margin-top: -100px;
+}
+.column {
+  width: 100%;
+  min-width: 27vw;
+  background-color: #707674 !important;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.556);
+}
+.enter-body .title-header {
+  display: block !important;
+  float: left;
 }

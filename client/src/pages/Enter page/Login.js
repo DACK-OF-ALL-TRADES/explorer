@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
-import "./enter.css";
+import { Button, Popup, Icon } from "semantic-ui-react";
 
 import Auth from "../../utils/auth";
 import Background from "./Background";
 
 const Login = (props) => {
+  // Check if user logged in, navigate to "/home" if not
+  useEffect(() => {
+    if (Auth.loggedIn()) {
+      window.location.assign("/home");
+    }
+  }, []);
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
@@ -34,6 +40,11 @@ const Login = (props) => {
     } catch (e) {
       console.error(e);
     }
+    if (data) {
+      console.log(data);
+    } else {
+      console.log(error);
+    }
 
     // clear form values
     setFormState({
@@ -44,54 +55,79 @@ const Login = (props) => {
 
   return (
     <div>
-      <Background />
-      <main className="flex-row justify-center mb-4">
-        <div className="col-12 col-lg-10">
-          <div className="card">
-            <h4 className="card-header bg-dark text-light p-2">Login</h4>
-            <div className="card-body">
-              {data ? (
-                <p>
-                  Success! You may now head{" "}
-                  <Link to="/">back to the homepage.</Link>
-                </p>
-              ) : (
-                <form onSubmit={handleFormSubmit}>
-                  <input
-                    className="form-input"
-                    placeholder="Your email"
-                    name="email"
-                    type="email"
-                    value={formState.email}
-                    onChange={handleChange}
-                  />
-                  <input
-                    className="form-input"
-                    placeholder="******"
-                    name="password"
-                    type="password"
-                    value={formState.password}
-                    onChange={handleChange}
-                  />
-                  <button
-                    className="btn btn-block btn-primary"
-                    style={{ cursor: "pointer" }}
-                    type="submit"
-                  >
-                    Submit
-                  </button>
-                </form>
-              )}
-
-              {error && (
-                <div className="my-3 p-3 bg-danger text-white">
-                  {error.message}
+      <div>
+        <div className="enter-container">
+          <Background />
+          <div className="ui middle aligned center aligned grid">
+            <div className="column">
+              <h2 className="ui image header">
+                <div className="content">Log into your account</div>
+              </h2>
+              <form className="ui large form" onSubmit={handleFormSubmit}>
+                <div className="ui stacked segment enter-body">
+                  <div className="title-header">
+                    <small>Email Address</small>
+                  </div>
+                  <div className="field">
+                    <div className="ui left icon input">
+                      <i className="user icon"></i>
+                      <Popup
+                        content="Please enter your email"
+                        trigger={
+                          <input
+                            className="form-input"
+                            fluid="true"
+                            placeholder="Your email"
+                            name="email"
+                            type="email"
+                            value={formState.email}
+                            onChange={handleChange}
+                          />
+                        }
+                      />
+                    </div>
+                  </div>
+                  <div className="title-header">
+                    <small>Password</small>
+                  </div>
+                  <div className="field">
+                    <div className="ui left icon input">
+                      <i className="lock icon"></i>
+                      <Popup
+                        content="Please enter your password"
+                        trigger={
+                          <input
+                            className="form-input"
+                            placeholder="******"
+                            name="password"
+                            type="password"
+                            value={formState.password}
+                            onChange={handleChange}
+                          />
+                        }
+                      />
+                    </div>
+                  </div>
+                  <Button type="submit" color="vk" animated="fade" fluid>
+                    <Button.Content visible>Login</Button.Content>
+                    <Button.Content hidden>Explore the world</Button.Content>
+                  </Button>
                 </div>
-              )}
+
+                <div className="ui error message"></div>
+              </form>
+              <Link to="/">
+                <Button animated fluid color="black">
+                  <Button.Content visible>Create an account</Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="add user" />
+                  </Button.Content>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </div>
   );
 };

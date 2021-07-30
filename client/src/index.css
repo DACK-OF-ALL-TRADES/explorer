@@ -1,0 +1,31 @@
+/* APP */
+/* STYLE CSS */
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Literata&family=Pacifico&family=Roboto&display=swap");
+
+/* root................................................. */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--roboto);
+  transition: 0.4s ease-in-out;
+}
+
+:root {
+  --craft: #10d48e;
+  --craft-dark: #1d2622;
+  --craft-light: #d5d6d6;
+  --craft-font: "Pacifico", cursive;
+  --craft-font2: "Fredericka the Great", cursive;
+  --craft-font3: "Literata", serif;
+  --roboto: "Roboto", sans-serif;
+}
