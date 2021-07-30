@@ -23,7 +23,7 @@ const Head = ({ user }) => {
         </Label>
       </div>
       <div className="home-header">
-        <h1>Search a Location</h1>
+        <h1>Search for a location</h1>
         <p>Where do you want to go {user.firstname}?</p>
         <Step.Group stackable="tablet">
           <Step>
@@ -104,22 +104,22 @@ const Head = ({ user }) => {
                     className="ui large bordered rounded image"
                     alt="explorer"
                   /> */}
-                  LOGO HERE
+                  <h1 className="logo-name">Explorer</h1>
                 </div>
                 <div className="eight wide column">
                   <div style={{ padding: "2rem" }}>
-                    <h3 className="ui header">
+                    <h3 className="ui header home-header-info-subtitle">
                       We Help Families Discover Affordable Holidays
                     </h3>
-                    <p>
+                    <p className="home-header-info-p">
                       Going on a good family trip can be out of your price
                       range, we make sure all the options are available for your
                       wallet by ensuring the best deals and locations.
                     </p>
-                    <h3 className="ui header">
+                    <h3 className="ui header home-header-info-subtitle">
                       Tips to Make You the World’s Savviest Traveler
                     </h3>
-                    <p>
+                    <p className="home-header-info-p">
                       In the beginning, you make a lot of travel mistakes.
                       <br />
                       Travel savviness is a process born of missed buses,

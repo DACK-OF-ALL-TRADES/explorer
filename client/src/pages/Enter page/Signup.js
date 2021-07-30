@@ -55,10 +55,13 @@ const Signup = () => {
     <div>
       <div className="enter-container">
         <Background />
+        <h1 className="enter-logo">Explorer</h1>
         <div className="ui middle aligned center aligned grid">
           <div className="column">
             <h2 className="ui image header">
-              <div className="content">Sign up for an account</div>
+              <div className="content">
+                <h3>Create an account</h3>
+              </div>
             </h2>
             <form className="ui large form" onSubmit={handleFormSubmit}>
               <div className="ui stacked segment enter-body">
@@ -225,10 +228,10 @@ const Signup = () => {
                     />
                   </div>
                 </div>
-                <Button type="submit" color="instagram" animated="fade" fluid>
+                <Button type="submit" color="red" animated="fade" fluid>
                   <Button.Content visible>
                     <Icon name="user plus" />
-                    Create Account
+                    Create account
                   </Button.Content>
                   <Button.Content hidden>Explore the world</Button.Content>
                 </Button>
@@ -238,7 +241,7 @@ const Signup = () => {
             </form>
             <Link to="/login">
               <Button animated fluid color="black">
-                <Button.Content visible>Login</Button.Content>
+                <Button.Content visible>Login instead</Button.Content>
                 <Button.Content hidden>
                   <Icon name="sign in" />
                 </Button.Content>

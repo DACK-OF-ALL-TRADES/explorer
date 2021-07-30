@@ -29,6 +29,11 @@
 }
 /*  */
 /* Home............................................. */
+
+body {
+  background-color: #e1e1e1;
+}
+
 .home-container {
   min-height: 70vh;
 }
@@ -56,6 +61,13 @@
   padding: 0 2rem 2rem 2rem;
 }
 
+.logo-name {
+  font-family: var(--craft-font);
+  font-size: 5rem;
+  color: var(--explorer-red);
+  text-shadow: 3px 3px 0 var(--explorer-dark);
+}
+
 .home-user-header {
   display: flex;
   justify-content: flex-end;
@@ -68,7 +80,7 @@
 }
 
 .home-container * .column {
-  background-color: #dadada !important;
+  background-color: #e1e1e1 !important;
   box-shadow: none !important;
 }
 
@@ -97,6 +109,16 @@
 
 .home-header-info {
   margin-bottom: 5rem;
+}
+
+.home-header-info-subtitle {
+  text-decoration: underline;
+  font-size: 1.5rem !important;
+}
+
+.home-header-info-p {
+  font-size: 110%;
+  font-weight: bold;
 }
 
 @media (max-width: 475px) {

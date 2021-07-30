@@ -148,6 +148,7 @@
     overflow: hidden;
     top: 55px;
     left: 0px;
+    z-index: 10;
   }
   .nav > .nav-links > a {
     display: block;
