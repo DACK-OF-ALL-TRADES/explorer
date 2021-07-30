@@ -39,4 +39,4 @@ asdasdasdasdas
 
 ## ©️ License:
 Copyright © DACK. All rights reserved.
-Licensed under the [MIT](https://github.com/DACK-OF-ALL-TRADES/craftical/blob/main/LICENSE) license.
+Licensed under the [MIT](https://github.com/DACK-OF-ALL-TRADES/explorer/blob/main/LICENSE) license.
