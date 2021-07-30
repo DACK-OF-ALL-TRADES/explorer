@@ -13,24 +13,33 @@ const Nav = () => {
   }, []);
   return (
     <div>
-      <ul className="topnav">
-        <li>
-          <Link to="/home" className="active">
-            Explorer
-          </Link>
-        </li>
-        <li className="right logout">
+      <div className="nav">
+        <input type="checkbox" id="nav-check" />
+        <div className="nav-header">
+          <div className="nav-title">
+            <Link to="/home">Explorer</Link>
+          </div>
+        </div>
+        <div className="nav-btn">
+          <label id="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+
+        <div className="nav-links">
+          {/* if on saved page, display search page else display saved page */}
+          {window.location.pathname === "/home" ? (
+            <Link to="/profile">Profile</Link>
+          ) : (
+            <Link to="/home">Home</Link>
+          )}
           <Link to="/" onClick={() => Auth.logout()}>
-            LOGOUT
+            Logout
           </Link>
-        </li>
-        {/* <li className="right">
-          <Link to="/search">SEARCH</Link>
-        </li>
-        <li className="right">
-          <Link to="/profile">PROFILE</Link>
-        </li> */}
-      </ul>
+        </div>
+      </div>
     </div>
   );
 };
