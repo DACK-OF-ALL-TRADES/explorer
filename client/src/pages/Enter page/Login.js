@@ -39,6 +39,7 @@ const Login = (props) => {
       Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
+      alert(e);
     }
     if (data) {
       console.log(data);
@@ -82,6 +83,8 @@ const Login = (props) => {
                             type="email"
                             value={formState.email}
                             onChange={handleChange}
+                            required
+                            autoComplete="off"
                           />
                         }
                       />
@@ -103,6 +106,9 @@ const Login = (props) => {
                             type="password"
                             value={formState.password}
                             onChange={handleChange}
+                            required
+                            autoComplete="off"
+                            minLength="5"
                           />
                         }
                       />

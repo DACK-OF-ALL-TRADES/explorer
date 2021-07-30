@@ -2,7 +2,7 @@
 /* ENTER CSS */
 
 /* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Literata&family=Pacifico&family=Roboto&display=swap");
 
 /* root................................................. */
 
@@ -16,14 +16,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--roboto);
-  /* transition: 0.4s ease-in-out; */
 }
 
 :root {
-  --craft: #10d48e;
-  --craft-dark: #1d2622;
-  --craft-light: #d5d6d6;
+  --explorer-red: #d62b2b;
+  --explorer-white: #ebebeb;
+  --explorer-dark: #0c0c0c;
   --craft-font: "Pacifico", cursive;
   --craft-font2: "Fredericka the Great", cursive;
   --craft-font3: "Literata", serif;

@@ -79,6 +79,8 @@ const Signup = () => {
                           type="email"
                           value={formState.email}
                           onChange={handleChange}
+                          autoComplete="off"
+                          required
                         />
                       }
                     />
@@ -100,6 +102,9 @@ const Signup = () => {
                           type="password"
                           value={formState.password}
                           onChange={handleChange}
+                          autoComplete="off"
+                          required
+                          minLength="5"
                         />
                       }
                     />
@@ -121,6 +126,8 @@ const Signup = () => {
                           type="username"
                           value={formState.username}
                           onChange={handleChange}
+                          autoComplete="off"
+                          required
                         />
                       }
                     />
@@ -142,6 +149,8 @@ const Signup = () => {
                           type="firstname"
                           value={formState.firstname}
                           onChange={handleChange}
+                          autoComplete="off"
+                          required
                         />
                       }
                     />
@@ -163,6 +172,8 @@ const Signup = () => {
                           type="lastname"
                           value={formState.lastname}
                           onChange={handleChange}
+                          autoComplete="off"
+                          required
                         />
                       }
                     />
@@ -184,6 +195,8 @@ const Signup = () => {
                           type="city"
                           value={formState.city}
                           onChange={handleChange}
+                          autoComplete="off"
+                          required
                         />
                       }
                     />
@@ -205,6 +218,8 @@ const Signup = () => {
                           type="country"
                           value={formState.country}
                           onChange={handleChange}
+                          autoComplete="off"
+                          required
                         />
                       }
                     />

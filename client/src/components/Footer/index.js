@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className="footer">
         <div className="footer__addr">
           <h1 className="footer__logo">
-            <Link to="/">
+            <Link to="/home">
               {/* <img src={logo} width="270" height="100"></img> */}
               Explorer
             </Link>

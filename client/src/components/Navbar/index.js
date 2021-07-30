@@ -21,7 +21,7 @@ const Nav = () => {
           </div>
         </div>
         <div className="nav-btn">
-          <label id="nav-check">
+          <label htmlFor="nav-check">
             <span></span>
             <span></span>
             <span></span>
@@ -31,12 +31,12 @@ const Nav = () => {
         <div className="nav-links">
           {/* if on saved page, display search page else display saved page */}
           {window.location.pathname === "/home" ? (
-            <Link to="/profile">Profile</Link>
+            <Link to="/profile">PROFILE</Link>
           ) : (
-            <Link to="/home">Home</Link>
+            <Link to="/home">HOME</Link>
           )}
-          <Link to="/" onClick={() => Auth.logout()}>
-            Logout
+          <Link to="/" className="nav-logout" onClick={() => Auth.logout()}>
+            LOGOUT
           </Link>
         </div>
       </div>

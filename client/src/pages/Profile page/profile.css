@@ -1,4 +1,4 @@
-/* HOME */
+/* PROFILE */
 /* STYLE CSS */
 
 /* fonts */
@@ -28,12 +28,12 @@
   --roboto: "Roboto", sans-serif;
 }
 
-/* Home............................................. */
-.home-container {
+/* Profile............................................. */
+.profile-container {
   min-height: 70vh;
 }
 
-.home-header {
+.profile-header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +41,7 @@
   width: 100%;
 }
 
-.home-header h1 {
+.profile-header h1 {
   font-family: var(--craft-font);
   font-size: 4rem;
   color: var(--explorer-red);
