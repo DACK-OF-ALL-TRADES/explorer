@@ -145,7 +145,7 @@
     background-color: #180606d4;
     height: 0px;
     transition: all 0.3s ease-in;
-    overflow-y: hidden;
+    overflow: hidden;
     top: 55px;
     left: 0px;
   }
@@ -153,6 +153,16 @@
     display: block;
     width: 100%;
   }
+
+  .nav-links a {
+    padding-left: 5px;
+  }
+
+  .nav-links .nav-logout {
+    margin-left: 15px !important;
+    width: 96% !important;
+  }
+
   .nav > #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
   }
