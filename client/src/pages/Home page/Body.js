@@ -7,8 +7,13 @@ import {
   Button,
   Icon,
 } from "semantic-ui-react";
+import { useBusinessSearch } from "../../utils/yelp-api/useBusinessSearch";
 
 const Body = () => {
+  const term = "cultural";
+  const locationParam = "ottawa";
+  const [businesses, amountResults, searchParams, setSearchParams] =
+    useBusinessSearch(term, locationParam);
   // const [formState, setFormState] = useState({
   //   name: "",
   //   description: "",
@@ -171,9 +176,9 @@ const Body = () => {
             </Button>
           </div>
         </div>
-        <Divider horizontal style={{ color: "#d62b2b" }}>
+        {/* <Divider horizontal style={{ color: "#d62b2b" }}>
           Results
-        </Divider>
+        </Divider> */}
       </Container>
     </div>
   );

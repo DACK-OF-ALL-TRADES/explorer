@@ -16,6 +16,7 @@ const Home = () => {
     userData = data.me;
     console.log(userData);
   }
+
   return (
     <div>
       <Nav />
