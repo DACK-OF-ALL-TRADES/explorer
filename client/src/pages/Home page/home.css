@@ -120,6 +120,32 @@ body {
   font-weight: bold;
 }
 
+.home-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-1,
+.search-2,
+.search-3,
+.search-4,
+.search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1.5rem 0;
+}
+
+.search-2,
+.search-3,
+.search-4,
+.search-button {
+  display: none;
+}
+
 @media (max-width: 475px) {
   .home-header h1 {
     font-size: 3rem;

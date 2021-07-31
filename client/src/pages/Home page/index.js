@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "./Head";
 import Nav from "../../components/Navbar";
+import Body from "./Body";
 import Footer from "../../components/Footer";
 import "./home.css";
 import { useQuery } from "@apollo/client";
@@ -20,6 +21,7 @@ const Home = () => {
       <Nav />
       <div className="home-container">
         <Head user={userData} />
+        <Body />
       </div>
       <Footer />
     </div>
