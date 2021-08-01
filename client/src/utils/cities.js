@@ -752,8 +752,26 @@ const cityList = [
   {
     city: "Bangalore",
     country: "India",
+    continent: "Asia"
     climate: "Tropical",
     image: "https://images.pexels.com/photos/2889701/pexels-photo-2889701.jpeg",
   },
+
+  {
+    city: "Reykjavik",
+    Country: "Iceland",
+    continent: "Europe"
+    climate: "Polar"
+    image: "",
+  },
+
+  {
+    city: "Nepal",
+    Country: "Federal Democratic Republic of Nepal",
+    continent: "Asia"
+    climate: "Polar"
+    image: "",
+  },
+
 ];
 export default cityList;
