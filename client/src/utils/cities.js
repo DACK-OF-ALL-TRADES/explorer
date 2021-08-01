@@ -36,7 +36,8 @@ const cityList = [
     country: "China",
     continent: "Asia",
     climate: "tropical",
-    image: ""
+    image: "",
+    youtube: "",
   },
   {
     city: "Singapore",
@@ -52,10 +53,7 @@ const cityList = [
     continent: "Europe",
     climate: "Temperate",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -64,10 +62,7 @@ const cityList = [
     continent: "Asia",
     climate: "Desert",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -92,17 +87,13 @@ const cityList = [
     continent: "Asia",
     climate: "Mediterranean",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
   {
     city: "Delhi",
     country: "India",
     continent: "",
     climate: "Tropical",
-<<<<<<< HEAD
     image: "",
     youtube: "",
   },
@@ -130,49 +121,17 @@ const cityList = [
     country: "India",
     continent: "Asia",
     climate: "Tropical",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     image: "",
     youtube: "",
   },
 
-<<<<<<< HEAD
-=======
-  {
-    city: "Antalya",
-    country: "Turkey",
-    continent: "Asia",
-    climate: "Tropical",
-    image: "",
-  },
-
-  {
-    city: "Shenzhen",
-    country: "China",
-    continent: "Asia",
-    climate: "Tropical",
-    image: "",
-  },
-
-  {
-    city: "Mumbai",
-    country: "India",
-    continent: "Asia",
-    climate: Tropical"
-    , image: "",
-  },
-
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   {
     city: "Phuket",
     country: "Thailand",
     continent: "Asia",
     climate: "Tropical",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -180,22 +139,10 @@ const cityList = [
     country: "Italy",
     continent: "Europe",
     climate: "Mediterranean",
-<<<<<<< HEAD
-=======
-    image: "",
-  },
-
-  {
-    city: "Tokyo",
-    country: "Japan",
-    continent: "Asia",
-    climate: "Tropical",
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     image: "",
     youtube: "",
   },
 
-<<<<<<< HEAD
   {
     city: "Tokyo",
     country: "Japan",
@@ -205,14 +152,11 @@ const cityList = [
     youtube: "",
   },
 
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   {
     city: "Pattaya",
     country: "Thailand",
     continent: "Asia",
     climate: "Tropical",
-<<<<<<< HEAD
     image: "",
     youtube: "",
   },
@@ -221,21 +165,9 @@ const cityList = [
     country: "Taiwan",
     continent: "Asia",
     climate: "Tropical",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     image: "",
     youtube: "",
   },
-<<<<<<< HEAD
-=======
-  {
-    city: "Taipei",
-    country: "Taiwan",
-    continent: "Asia",
-    climate: "Tropical",
-    image: ""
-  },
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   {
     city: "Mecca",
     country: "Saudi Arabia",
@@ -249,16 +181,6 @@ const cityList = [
     country: "China",
     continent: "Asia",
     climate: "Tropical",
-<<<<<<< HEAD
-=======
-    image: "",
-  },
-  {
-    city: "Prague",
-    country: "Czechia",
-    continent: "Erope",
-    climate: "Temperate",
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     image: "",
     youtube: "",
   },
@@ -292,49 +214,18 @@ const cityList = [
     continent: "Europe",
     climate: "Temperate",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
   {
     city: "Agra",
     country: "India",
     continent: "Asia",
     climate: "Tropical",
-<<<<<<< HEAD
-=======
-    image: "",
-  },
-
-  {
-    city: "Miami",
-    country: "US",
-    continent: "North America",
-    climate: "Temperate",
-    image: "",
-  },
-
-  {
-    city: "Osaka",
-    country: "Japan",
-    continent: "Asia",
-    climate: "Temperate",
-    image: "",
-  },
-
-  {
-    city: "Los Angeles",
-    country: "US",
-    continent: "North America",
-    climate: "Temperate",
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     image: "",
     youtube: "",
   },
 
   {
-<<<<<<< HEAD
     city: "Miami",
     country: "US",
     continent: "North America",
@@ -362,17 +253,12 @@ const cityList = [
   },
 
   {
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     city: "Shanghai",
     country: "China",
     continent: "Asia",
     climate: "Tropical",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -397,10 +283,7 @@ const cityList = [
     continent: "Europe",
     climate: "Mediterranean",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
   {
     city: "Las Vegas",
@@ -408,10 +291,7 @@ const cityList = [
     continent: "North America",
     climate: "Desert",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -419,30 +299,10 @@ const cityList = [
     country: "Italy",
     continent: "Europe",
     climate: "Temperate",
-<<<<<<< HEAD
-=======
-    image: "",
-  },
-
-  {
-    city: "Chennai",
-    country: "India",
-    continent: "Asia",
-    climate: "Tropical",
-    image: "",
-  },
-
-  {
-    city: "Vienna",
-    country: "Austria",
-    continent: "Europe",
-    climate: "Temperate",
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     image: "",
     youtube: "",
   },
 
-<<<<<<< HEAD
   {
     city: "Chennai",
     country: "India",
@@ -461,18 +321,13 @@ const cityList = [
     youtube: "",
   },
 
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   {
     city: "Johor Bahru",
     country: "Malaysia",
     continent: "Asia",
     climate: "Tropical",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
   {
     city: "Jaipur",
@@ -480,24 +335,16 @@ const cityList = [
     continent: "Asia",
     climate: "Tropical",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
     city: "Cancun",
     country: "Mexico",
     continent: "North America",
-<<<<<<< HEAD
     climate: "Tropical",
     image: "",
     youtube: "",
-=======
-    climate: "Tropical"
-      image: "",
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -505,7 +352,6 @@ const cityList = [
     country: "Germany",
     continent: "Europe",
     climate: "Temperate",
-<<<<<<< HEAD
     image: "",
     youtube: "",
   },
@@ -560,63 +406,10 @@ const cityList = [
     country: "Spain",
     continent: "Europe",
     climate: "Mediterranean",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     image: "",
     youtube: "",
   },
 
-<<<<<<< HEAD
-=======
-  {
-    city: "Cairo",
-    country: "Egypt",
-    continent: "Africa",
-    climate: "Desert",
-    image: "",
-  },
-
-  {
-    city: "Athens",
-    country: "Greece",
-    continent: "Europe",
-    climate: "Mediterranean",
-    image: "",
-  },
-
-  {
-    city: "Orlando",
-    country: "US",
-    continent: "North America",
-    climate: "Tropical",
-    image: "",
-  },
-
-  {
-    city: "Moscow",
-    country: "Russia",
-    continent: "Europe",
-    climate: "Temperate",
-    image: "",
-  },
-
-  {
-    city: "Venice",
-    country: "Italy",
-    continent: "Europe",
-    climate: "Mediterranean",
-    image: "",
-  },
-
-  {
-    city: "Madrid",
-    country: "Spain",
-    continent: "Europe",
-    climate: "Mediterranean",
-    image: "",
-  },
-
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   {
     city: "Ha Long",
     country: "Vietnam",
@@ -631,10 +424,7 @@ const cityList = [
     continent: "Asia",
     climate: "Desert",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
   {
     city: "Dublin",
@@ -642,10 +432,7 @@ const cityList = [
     continent: "Europe",
     climate: "Temperate",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -653,7 +440,6 @@ const cityList = [
     country: "Italy",
     continent: "Europe",
     climate: "Mediterranean",
-<<<<<<< HEAD
     image: "",
     youtube: "",
   },
@@ -672,31 +458,10 @@ const cityList = [
     country: "Canada",
     continent: "North America",
     climate: "Temperate",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     image: "",
     youtube: "",
   },
 
-<<<<<<< HEAD
-=======
-  {
-    city: "Ha Noi",
-    country: "Vietnam",
-    continent: "Asia",
-    climate: "Tropical",
-    image: "",
-  },
-
-  {
-    city: "Toronto",
-    country: "Canada",
-    continent: "North America",
-    climate: "Temperate",
-    image: "",
-  },
-
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   {
     city: "Johannesburg",
     country: "South Africa",
@@ -710,7 +475,6 @@ const cityList = [
     country: "Australia",
     continent: "Oceania",
     climate: "Temperate",
-<<<<<<< HEAD
     image: "",
     youtube: "",
   },
@@ -719,41 +483,18 @@ const cityList = [
     country: "Germany",
     continent: "Europe",
     climate: "Temperate",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     image: "",
     youtube: "",
   },
-<<<<<<< HEAD
-=======
-  {
-    city: "Munich",
-    country: "Germany",
-    continent: "Europe",
-    climate: "Temperate",
-    image: "",
-  },
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
 
   {
     city: "Jakarta",
     country: "Indonesia",
     continent: "Asia",
     climate: "Tropical",
-<<<<<<< HEAD
-=======
-    image: "",
-  },
-  {
-    city: "Beijing",
-    country: "China",
-    continent: "Asia",
-    climate: "Tropical",
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     image: "",
     youtube: "",
   },
-<<<<<<< HEAD
   {
     city: "Beijing",
     country: "China",
@@ -762,8 +503,6 @@ const cityList = [
     image: "",
     youtube: "",
   },
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
 
   {
     city: "St. Petersburg",
@@ -834,10 +573,7 @@ const cityList = [
     continent: "Europe",
     climate: "Mediterranean",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -846,10 +582,7 @@ const cityList = [
     continent: "Asia",
     climate: "Temperate",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -899,10 +632,7 @@ const cityList = [
     continent: "Oceania",
     climate: "Temperate",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
   {
     city: "Krakow",
@@ -929,16 +659,6 @@ const cityList = [
     image: "",
     youtube: "",
   },
-<<<<<<< HEAD
-=======
-  {
-    city: "Kolkatta",
-    country: "India",
-    continent: "Asia",
-    climate: "Tropical",
-    image: ""
-  },
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   {
     city: "Cebu",
     country: "Philippines",
@@ -961,10 +681,7 @@ const cityList = [
     continent: "Asia",
     climate: "Mediterranean",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
   {
     city: "Guilin",
@@ -972,10 +689,7 @@ const cityList = [
     continent: "Asia",
     climate: "Tropical",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -984,10 +698,7 @@ const cityList = [
     continent: "North America",
     climate: "Tropical",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -995,7 +706,6 @@ const cityList = [
     country: "Egypt",
     continent: "Africa",
     climate: "Desert",
-<<<<<<< HEAD
     image: "",
     youtube: "",
   },
@@ -1014,41 +724,17 @@ const cityList = [
     country: "Turkey",
     continent: "Asia",
     climate: "Mediterranean",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     image: "",
     youtube: "",
   },
 
-<<<<<<< HEAD
-=======
-  {
-    city: "Warsaw",
-    country: "Poland",
-    continent: "Europe",
-    climate: "Temperate",
-    image: "",
-  },
-
-  {
-    city: "Mugla",
-    country: "Turkey",
-    continent: "Asia",
-    climate: "Mediterranean",
-    image: "",
-  },
-
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   {
     city: "Buenos Aires City",
     country: "Argentina",
     continent: "South America",
     climate: "Tropical",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
   {
     city: "Chiba",
@@ -1073,10 +759,7 @@ const cityList = [
     continent: "Europe",
     climate: "Temperate",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
   {
     city: "Lima",
@@ -1109,10 +792,7 @@ const cityList = [
     continent: "Europe",
     climate: "Mediterranean",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -1121,10 +801,7 @@ const cityList = [
     continent: "Asia",
     climate: "Tropical",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -1133,10 +810,7 @@ const cityList = [
     continent: "Asia",
     climate: "Desert",
     image: "",
-<<<<<<< HEAD
     youtube: "",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
   },
 
   {
@@ -1144,28 +818,9 @@ const cityList = [
     country: "South Korea",
     continent: "Asia",
     climate: "Tropical",
-<<<<<<< HEAD
-=======
-    image: "",
-  },
-  {
-    city: "Porto",
-    country: "Portugal",
-    continent: "Europe",
-    climate: "Mediterranean",
-    image: "",
-  },
-
-  {
-    city: "Rhodes",
-    country: "Greece",
-    continent: "Europe",
-    climate: "Mediterranean",
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     image: "",
     youtube: "",
   },
-<<<<<<< HEAD
   {
     city: "Porto",
     country: "Portugal",
@@ -1183,15 +838,12 @@ const cityList = [
     image: "",
     youtube: "",
   },
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
 
   {
     city: "Rio de Janeiro",
     country: "Brazil",
     continent: "South America",
     climate: "Tropical",
-<<<<<<< HEAD
     image: "",
     youtube: "",
   },
@@ -1200,30 +852,14 @@ const cityList = [
     country: "Thailand",
     continent: "Asia",
     climate: "Tropical",
-=======
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     image: "",
     youtube: "",
   },
-<<<<<<< HEAD
-=======
-  {
-    city: "Krabi",
-    country: "Thailand",
-    continent: "Asia",
-    climate: "Tropical",
-    image: "",
-  },
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
 
   {
     city: "Bangalore",
     country: "India",
-<<<<<<< HEAD
     continent: "Asia",
-=======
-    continent: "Asia"
->>>>>>> 8f8791bc05031c2055b84bd6d23c65bc432f6653
     climate: "Tropical",
     image: "https://images.pexels.com/photos/2889701/pexels-photo-2889701.jpeg",
     youtube: "",
@@ -1250,18 +886,19 @@ const cityList = [
   {
     city: "Reykjavik",
     Country: "Iceland",
-    continent: "Europe"
-    climate: "Polar"
+    continent: "Europe",
+    climate: "Polar",
     image: "",
+    youtube: "",
   },
 
   {
     city: "Nepal",
     Country: "Federal Democratic Republic of Nepal",
-    continent: "Asia"
-    climate: "Polar"
+    continent: "Asia",
+    climate: "Polar",
     image: "",
+    youtube: "",
   },
-
 ];
 export default cityList;
