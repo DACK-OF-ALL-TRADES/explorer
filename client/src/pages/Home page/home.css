@@ -30,7 +30,7 @@
 /* Home............................................. */
 
 body {
-  background-color: #e1e1e1;
+  background-image: url(../../assets/misc/foggy_birds.png);
 }
 
 .home-container {
@@ -79,7 +79,7 @@ body {
 }
 
 .home-container * .column {
-  background-color: #e1e1e1 !important;
+  background-image: url(../../assets/misc/foggy_birds.png) !important;
   box-shadow: none !important;
 }
 
@@ -142,8 +142,18 @@ body {
 .search-2,
 .search-3,
 .search-4,
-.search-button {
+.search-button,
+.searched-cities {
   display: none;
+}
+
+.search-city-display {
+  display: flex;
+  margin: 5rem 0;
+}
+
+.city-card {
+  margin-top: 8rem !important;
 }
 
 @media (max-width: 475px) {

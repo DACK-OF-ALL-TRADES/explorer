@@ -22,7 +22,7 @@ const Home = () => {
       <Nav />
       <div className="home-container">
         <Head user={userData} />
-        <Body />
+        <Body user={userData} />
       </div>
       <Footer />
     </div>

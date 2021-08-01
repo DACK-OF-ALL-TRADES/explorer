@@ -19,8 +19,8 @@ export const ADD_USER = gql`
     $password: String!
     $firstname: String!
     $lastname: String!
-    $city: String!
-    $country: String!
+    $city: String
+    $country: String
   ) {
     addUser(
       username: $username

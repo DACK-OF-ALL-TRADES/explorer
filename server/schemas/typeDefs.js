@@ -28,8 +28,8 @@ const typeDefs = gql`
       password: String!
       firstname: String!
       lastname: String!
-      city: String!
-      country: String!
+      city: String
+      country: String
     ): Auth
     login(email: String!, password: String!): Auth
   }

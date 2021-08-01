@@ -13,6 +13,7 @@ import Login from "./pages/Enter page/Login";
 import Signup from "./pages/Enter page/Signup";
 import Home from "./pages/Home page";
 import Profile from "./pages/Profile page";
+import CityResult from "./pages/CityResult Page";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -54,6 +55,9 @@ function App() {
           </Route>
           <Route exact path="/profile">
             <Profile />
+          </Route>
+          <Route exact path="/search/:city">
+            <CityResult />
           </Route>
         </div>
       </Router>

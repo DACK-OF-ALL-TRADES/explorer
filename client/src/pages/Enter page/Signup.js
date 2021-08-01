@@ -22,8 +22,6 @@ const Signup = () => {
     password: "",
     firstname: "",
     lastname: "",
-    city: "",
-    country: "",
   });
   const [addUser] = useMutation(ADD_USER);
 
@@ -65,6 +63,75 @@ const Signup = () => {
             </h2>
             <form className="ui large form" onSubmit={handleFormSubmit}>
               <div className="ui stacked segment enter-body">
+                <div className="title-header">
+                  <small>First Name</small>
+                </div>
+                <div className="field">
+                  <div className="ui left icon input">
+                    <i className="user icon"></i>
+                    <Popup
+                      content="Please enter your first name"
+                      trigger={
+                        <input
+                          className="form-input"
+                          placeholder="Your first name"
+                          name="firstname"
+                          type="firstname"
+                          value={formState.firstname}
+                          onChange={handleChange}
+                          autoComplete="off"
+                          required
+                        />
+                      }
+                    />
+                  </div>
+                </div>
+                <div className="title-header">
+                  <small>Last Name</small>
+                </div>
+                <div className="field">
+                  <div className="ui left icon input">
+                    <i className="user icon"></i>
+                    <Popup
+                      content="Please enter your last name"
+                      trigger={
+                        <input
+                          className="form-input"
+                          placeholder="Your last name"
+                          name="lastname"
+                          type="lastname"
+                          value={formState.lastname}
+                          onChange={handleChange}
+                          autoComplete="off"
+                          required
+                        />
+                      }
+                    />
+                  </div>
+                </div>
+                <div className="title-header">
+                  <small>Username</small>
+                </div>
+                <div className="field">
+                  <div className="ui left icon input">
+                    <i className="user icon"></i>
+                    <Popup
+                      content="Please enter your username"
+                      trigger={
+                        <input
+                          className="form-input"
+                          placeholder="Your username"
+                          name="username"
+                          type="username"
+                          value={formState.username}
+                          onChange={handleChange}
+                          autoComplete="off"
+                          required
+                        />
+                      }
+                    />
+                  </div>
+                </div>
                 <div className="title-header">
                   <small>Email Address</small>
                 </div>
@@ -113,121 +180,6 @@ const Signup = () => {
                     />
                   </div>
                 </div>
-                <div className="title-header">
-                  <small>Username</small>
-                </div>
-                <div className="field">
-                  <div className="ui left icon input">
-                    <i className="user icon"></i>
-                    <Popup
-                      content="Please enter your username"
-                      trigger={
-                        <input
-                          className="form-input"
-                          placeholder="Your username"
-                          name="username"
-                          type="username"
-                          value={formState.username}
-                          onChange={handleChange}
-                          autoComplete="off"
-                          required
-                        />
-                      }
-                    />
-                  </div>
-                </div>
-                <div className="title-header">
-                  <small>First Name</small>
-                </div>
-                <div className="field">
-                  <div className="ui left icon input">
-                    <i className="user icon"></i>
-                    <Popup
-                      content="Please enter your first name"
-                      trigger={
-                        <input
-                          className="form-input"
-                          placeholder="Your first name"
-                          name="firstname"
-                          type="firstname"
-                          value={formState.firstname}
-                          onChange={handleChange}
-                          autoComplete="off"
-                          required
-                        />
-                      }
-                    />
-                  </div>
-                </div>
-                <div className="title-header">
-                  <small>Last Name</small>
-                </div>
-                <div className="field">
-                  <div className="ui left icon input">
-                    <i className="user icon"></i>
-                    <Popup
-                      content="Please enter your last name"
-                      trigger={
-                        <input
-                          className="form-input"
-                          placeholder="Your last name"
-                          name="lastname"
-                          type="lastname"
-                          value={formState.lastname}
-                          onChange={handleChange}
-                          autoComplete="off"
-                          required
-                        />
-                      }
-                    />
-                  </div>
-                </div>
-                <div className="title-header">
-                  <small>City</small>
-                </div>
-                <div className="field">
-                  <div className="ui left icon input">
-                    <i className="home icon"></i>
-                    <Popup
-                      content="Please enter your city"
-                      trigger={
-                        <input
-                          className="form-input"
-                          placeholder="Your city"
-                          name="city"
-                          type="city"
-                          value={formState.city}
-                          onChange={handleChange}
-                          autoComplete="off"
-                          required
-                        />
-                      }
-                    />
-                  </div>
-                </div>
-                <div className="title-header">
-                  <small>Country</small>
-                </div>
-                <div className="field">
-                  <div className="ui left icon input">
-                    <i className="globe icon"></i>
-                    <Popup
-                      content="Please enter your country"
-                      trigger={
-                        <input
-                          className="form-input"
-                          placeholder="Your Country"
-                          name="country"
-                          type="country"
-                          value={formState.country}
-                          onChange={handleChange}
-                          autoComplete="off"
-                          required
-                        />
-                      }
-                    />
-                  </div>
-                </div>
                 <Button type="submit" color="red" animated="fade" fluid>
                   <Button.Content visible>
                     <Icon name="user plus" />
@@ -236,7 +188,6 @@ const Signup = () => {
                   <Button.Content hidden>Explore the world</Button.Content>
                 </Button>
               </div>
-
               <div className="ui error message"></div>
             </form>
             <Link to="/login">

@@ -1,65 +1,56 @@
-import React from "react";
-import {
-  Container,
-  Input,
-  Dropdown,
-  Divider,
-  Button,
-  Icon,
-} from "semantic-ui-react";
-import { useBusinessSearch } from "../../utils/yelp-api/useBusinessSearch";
+import React, { useState, useEffect } from "react";
+import { Container, Dropdown, Button, Icon } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+// import CityResults from "./CityResults";
+// import cityList from "../../utils/cities";
 
-const Body = () => {
-  const term = "cultural";
-  const locationParam = "ottawa";
-  const [businesses, amountResults, searchParams, setSearchParams] =
-    useBusinessSearch(term, locationParam);
-  // const [formState, setFormState] = useState({
-  //   name: "",
-  //   description: "",
-  //   status: "",
-  //   category: "",
-  //   subcategory: "",
-  // });
+const Body = ({ user }) => {
+  // const [cityNames, setCityNames] = useState([]);
 
-  // ////////////////////////////////////
+  // let city1 = {};
+  // let city2 = {};
+  // let city3 = {};
+  // let city4 = {};
+  // let city5 = {};
+  const citySearch = () => {
+    document.querySelector(".searched-cities").style.display = "block";
+    // city1 = cityList[randomNumber(0, 99)];
+    // city2 = cityList[randomNumber(0, 99)];
+    // city3 = cityList[randomNumber(0, 99)];
+    // city4 = cityList[randomNumber(0, 99)];
+    // city5 = cityList[randomNumber(0, 99)];
+    // console.log(city5);
+    // console.log(city4);
+    // console.log(city3);
+    // console.log(city2);
+    // console.log(city1);
+    // cityNames.push(city1, city2, city3, city4, city5);
+    // console.log(cityNames);
+  };
 
-  // const [ipData, setIpData] = useState([]);
-  // const [cityWeatherData, setcityWeatherData] = useState([]);
+  // function randomNumber(min, max) {
+  //   return Math.round(Math.random() * (max - min) + min);
+  // }
 
-  // useEffect(() => {
-  //   fetch("https://api.techniknews.net/ipgeo/")
-  //     .then((res) => res.json())
-  //     .then(
-  //       (result) => {
-  //         setIpData(result);
-  //       },
-  //       (error) => {
-  //         console.error(error);
-  //       }
-  //     );
-  // }, []);
-  // useEffect(() => {
-  //   fetch(
-  //     `https://api.openweathermap.org/data/2.5/weather?q=${"ottawa"}&units=metric&appid=${
-  //       process.env.REACT_APP_API_KEY
-  //     }`
-  //   )
-  //     .then((res) => res.json())
-  //     .then(
-  //       (result) => {
-  //         setcityWeatherData(result);
-  //       },
-  //       (error) => {
-  //         console.error(error);
-  //       }
-  //     );
-  // }, []);
+  // IP ADDRESS API FETCH........................................................
+  const [ipData, setIpData] = useState([]);
 
-  // console.log(ipData);
-  // console.log(cityWeatherData);
+  useEffect(() => {
+    fetch("https://api.techniknews.net/ipgeo/")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setIpData(result);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+  }, []);
 
-  const dropdownType = (e, { value }) => {
+  console.log(ipData);
+
+  const dropdownClimate = (e, { value }) => {
     if (value) {
       document.querySelector(".search-3").style.display = "flex";
     }
@@ -69,18 +60,9 @@ const Body = () => {
     //   ["status"]: value,
     // });
   };
-  const dropdownTemp = (e, { value }) => {
+  const dropdownCurrency = (e, { value }) => {
     if (value) {
-      document.querySelector(".search-4").style.display = "flex";
-    }
-    console.log(value);
-    // setFormState({
-    //   ...formState,
-    //   ["status"]: value,
-    // });
-  };
-  const dropdownBudget = (e, { value }) => {
-    if (value) {
+      // document.querySelector(".search-4").style.display = "flex";
       document.querySelector(".search-button").style.display = "flex";
     }
     console.log(value);
@@ -89,75 +71,98 @@ const Body = () => {
     //   ["status"]: value,
     // });
   };
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
+  // const dropdownBudget = (e, { value }) => {
+  //   if (value) {
+  //     document.querySelector(".search-button").style.display = "flex";
+  //   }
+  //   console.log(value);
+  //   // setFormState({
+  //   //   ...formState,
+  //   //   ["status"]: value,
+  //   // });
+  // };
+  const dropdownDestination = (e, { value }) => {
     if (value) {
       document.querySelector(".search-2").style.display = "flex";
     }
     console.log(value);
-    console.log(name);
     // setFormState({
     //   ...formState,
-    //   [name]: value,
+    //   ["status"]: value,
     // });
   };
 
-  const typeOptions = [
-    { key: 1, text: "Historical", value: "Historical" },
-    { key: 2, text: "Entertainment", value: "Entertainment" },
-    { key: 3, text: "Nature", value: "Nature" },
-    { key: 4, text: "Cultural", value: "Cultural" },
+  const destinationOptions = [
+    { key: 1, text: "North America", value: "North America" },
+    { key: 2, text: "South America", value: "South America" },
+    { key: 3, text: "Europe", value: "Europe" },
+    { key: 4, text: "Australia", value: "Australia" },
+    { key: 5, text: "Asia", value: "Asia" },
+    { key: 6, text: "Africa", value: "Africa" },
+    { key: 7, text: "Antarctica", value: "Antarctica" },
+  ];
+  const climateOptions = [
+    { key: 1, text: "Beach", value: "Beach" },
+    { key: 2, text: "Tropical", value: "Tropical" },
+    { key: 3, text: "Mediterranean", value: "Mediterranean" },
+    { key: 4, text: "Mountains", value: "Mountains" },
+    { key: 5, text: "Desert", value: "Desert" },
+    { key: 6, text: "Polar & Tundra", value: "Polar & Tundra" },
   ];
 
-  const tempOptions = [
-    { key: 1, text: "Hot", value: "Hot" },
-    { key: 2, text: "Warm", value: "Warm" },
-    { key: 3, text: "Cold", value: "Cold" },
+  const currencyOptions = [
+    { key: 1, text: "US Dollars", value: "US Dollars" },
+    { key: 2, text: "Canadian Dollars", value: "Canadian Dollars" },
+    { key: 4, text: "Euro", value: "Euro" },
+    { key: 5, text: "Turkish Lira", value: "Turkish Lira" },
+    { key: 6, text: "Indian Rupi", value: "Indian Rupi" },
+    { key: 7, text: "Polish złoty", value: "Poland złoty" },
   ];
 
-  const budgetOptions = [
-    { key: 1, text: "Economic", value: "Economic" },
-    { key: 2, text: "Mediocre", value: "Mediocre" },
-    { key: 3, text: "Deluxe", value: "Deluxe" },
-  ];
+  // const budgetOptions = [
+  //   { key: 1, text: "Economic", value: "Economic" },
+  //   { key: 2, text: "Mediocre", value: "Mediocre" },
+  //   { key: 3, text: "Deluxe", value: "Deluxe" },
+  // ];
 
   return (
     <div>
       <Container>
         <div className="home-search-container">
+          <h2>
+            Looking options from {ipData.city} / {ipData.countryCode}
+          </h2>
           <div className="search-1">
-            <h3>How many people is your trip for?</h3>
-            <Input
-              icon="users"
-              iconPosition="left"
-              type="number"
-              placeholder="Enter an amount..."
-              onChange={handleChange}
-              name="people"
+            <h3>Which part of the world would you like to explore?</h3>
+            <Dropdown
+              onChange={dropdownDestination}
+              options={destinationOptions}
+              placeholder="Select a destination..."
+              selection
+              name="destination"
             />
           </div>
           <div className="search-2">
-            <h3>What kind of a trip are you looking for?</h3>
+            <h3>Select your preferred climate</h3>
             <Dropdown
-              onChange={dropdownType}
-              options={typeOptions}
-              placeholder="Select a type..."
+              onChange={dropdownClimate}
+              options={climateOptions}
+              placeholder="Select a climate..."
               selection
-              name="type"
+              name="climate"
             />
           </div>
           <div className="search-3">
-            <h3>Select a temperature range</h3>
+            <h3>Select a preferred destination currency</h3>
             <Dropdown
-              onChange={dropdownTemp}
-              options={tempOptions}
-              placeholder="Select a temperature range..."
+              placeholder="Select a currency..."
               selection
-              name="temp"
+              options={currencyOptions}
+              name="currency"
+              onChange={dropdownCurrency}
             />
           </div>
-          <div className="search-4">
+          {/* <div className="search-4">
             <h3>What is your budget?</h3>
             <Dropdown
               onChange={dropdownBudget}
@@ -166,9 +171,9 @@ const Body = () => {
               selection
               name="budget"
             />
-          </div>
+          </div> */}
           <div className="search-button">
-            <Button animated color="red">
+            <Button animated color="red" onClick={citySearch}>
               <Button.Content visible>Get your results</Button.Content>
               <Button.Content hidden>
                 <Icon name="paper plane" />
@@ -179,6 +184,20 @@ const Body = () => {
         {/* <Divider horizontal style={{ color: "#d62b2b" }}>
           Results
         </Divider> */}
+        <div className="searched-cities">
+          <Link to="/search/Tokyo">
+            <h1>Tokyo</h1>
+          </Link>
+          <Link to="/search/Paris">
+            <h1>Paris</h1>
+          </Link>
+          <Link to="/search/London">
+            <h1>London</h1>
+          </Link>
+          <Link to="/search/Moscow">
+            <h1>Moscow</h1>
+          </Link>
+        </div>
       </Container>
     </div>
   );

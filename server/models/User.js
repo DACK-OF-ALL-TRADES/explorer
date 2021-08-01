@@ -28,11 +28,11 @@ const userSchema = new Schema({
   },
   city: {
     type: String,
-    required: true,
+    required: false,
   },
   country: {
     type: String,
-    required: true,
+    required: false,
   },
 });
 
