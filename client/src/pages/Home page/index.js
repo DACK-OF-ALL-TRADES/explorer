@@ -14,7 +14,7 @@ const Home = () => {
     console.log("Loading User");
   } else {
     userData = data.me;
-    console.log(userData);
+    // console.log(userData);
   }
 
   return (
