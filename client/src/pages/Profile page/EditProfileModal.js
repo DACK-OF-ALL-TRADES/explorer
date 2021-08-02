@@ -18,8 +18,7 @@ import {
 
 } from "../../utils/mutations";
 import { QUERY_ME } from "../../utils/queries";
-//import { Files } from "../PhotoUpload/Files";
-//import { Upload } from "../PhotoUpload/Upload";
+
 
 function EditProfileModal() {
   const [open, setOpen] = React.useState(false);
@@ -114,6 +113,7 @@ function EditProfileModal() {
   });
 
 
+
   const handleFirstNameSubmit = async () => {
     try {
       console.log("handle submit input ->" + firstNameText);
@@ -197,9 +197,9 @@ function EditProfileModal() {
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
       open={open}
-      trigger={<Button>Click here to update your profile</Button>}
-      size="mini"
-      style={{ minWidth: "335px" }}
+      trigger={<Button>Update your luggage</Button>}
+      size="medium"
+      style={{ minWidth: "105px" }}
     >
       <Modal.Header>
         Edit Profile{" "}
@@ -211,12 +211,12 @@ function EditProfileModal() {
       <Modal.Content image>
         <Modal.Description>
           <Image size="medium" src={pp} wrapped />
-          <Header>First Name</Header> 
+          <Header>Traveller's First Name</Header> 
           {/* FIRSTNAME................................. */}
           <Input
             name="first-name"
             type="text"
-            placeholder="Enter first name"
+            placeholder="first name"
             value={firstNameText}
             onChange={handleChange}
             action
@@ -228,11 +228,11 @@ function EditProfileModal() {
             </Button>
           </Input>
           {/* LASTNAME................................. */}
-          <Header>Last Name</Header>
+          <Header>Traveller's Last Name</Header>
           <Input
             name="last-name"
             type="text"
-            placeholder="Enter last name"
+            placeholder="last name"
             value={lastNameText}
             onChange={handleChange}
             action
@@ -244,11 +244,11 @@ function EditProfileModal() {
             </Button>
           </Input>
           {/* EMAIL................................. */}
-          <Header>Email Address</Header>
+          <Header>Where can we contact you?</Header>
           <Input
             name="email"
             type="text"
-            placeholder="Enter email address"
+            placeholder="email address"
             value={emailText}
             onChange={handleChange}
             action
@@ -260,11 +260,11 @@ function EditProfileModal() {
             </Button>
           </Input>
           {/* USERNAME................................. */}
-          <Header>Username</Header>
+          <Header>Traveller's Username</Header>
           <Input
             name="username"
             type="text"
-            placeholder="Enter username"
+            placeholder="username"
             value={usernameText}
             onChange={handleChange}
             action
@@ -275,6 +275,7 @@ function EditProfileModal() {
               update
             </Button>
           </Input>
+
           
          {/* PICTURE................................. */}
          {/* <Header>Profile Picture</Header>

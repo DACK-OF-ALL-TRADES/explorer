@@ -9,13 +9,14 @@ import "./EditProfileModal";
 import "./profile.css";
 
 const Profile = () => {
-  const { loading, data } = useQuery(QUERY_ME );
+  const { data } = useQuery(QUERY_ME );
   const user = data?.me || [];
   return (
     <div>
       <Nav />
       
         <Header user={user} />
+        
         <div style={{ paddingBottom: "20rem" }}></div> 
         <Footer />
     
