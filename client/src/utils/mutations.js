@@ -39,3 +39,47 @@ export const ADD_USER = gql`
     }
   }
 `;
+//Added the mutations for the profile
+export const UPDATE_FIRSTNAME = gql`
+  mutation addFirstName($firstname: String!) {
+    addFirstName(firstname: $firstname) {
+      token
+      user {
+        _id
+      }
+    }
+  }
+`;
+
+export const UPDATE_LASTNAME = gql`
+  mutation updateLastName($lastname: String!) {
+    updateLastName(lastname: $lastname) {
+      token
+      user {
+        _id
+      }
+    }
+  }
+`;
+
+export const UPDATE_EMAIL = gql`
+  mutation updateEmail($email: String!) {
+    updateEmail(email: $email) {
+      token
+      user {
+        _id
+      }
+    }
+  }
+`;
+
+export const UPDATE_USERNAME = gql`
+  mutation updateUsername($username: String!) {
+    updateUsername(username: $username) {
+      token
+      user {
+        _id
+      }
+    }
+  }
+`;

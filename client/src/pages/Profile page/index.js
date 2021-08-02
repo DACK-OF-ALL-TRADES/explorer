@@ -1,17 +1,24 @@
 import React from "react";
-import Head from "./Head";
+import Header from "./Header";
+//import Head from "./Head";
+import { useQuery } from "@apollo/client";
 import Nav from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { QUERY_ME } from "../../utils/queries";
+import "./EditProfileModal";
 import "./profile.css";
 
 const Profile = () => {
+  const { loading, data } = useQuery(QUERY_ME );
+  const user = data?.me || [];
   return (
     <div>
       <Nav />
-      <div className="profile-container">
-        <Head />
-      </div>
-      <Footer />
+      
+        <Header user={user} />
+        <div style={{ paddingBottom: "20rem" }}></div> 
+        <Footer />
+    
     </div>
   );
 };
