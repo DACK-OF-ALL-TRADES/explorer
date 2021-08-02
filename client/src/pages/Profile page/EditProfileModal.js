@@ -224,7 +224,7 @@ function EditProfileModal() {
           >
             <input />
             <Button type="submit" onClick={handleFirstNameSubmit}>
-              Save
+            update
             </Button>
           </Input>
           {/* LASTNAME................................. */}
@@ -240,7 +240,7 @@ function EditProfileModal() {
           >
             <input />
             <Button type="submit" onClick={handleLastNameSubmit}>
-              Save
+            update
             </Button>
           </Input>
           {/* EMAIL................................. */}
@@ -256,7 +256,7 @@ function EditProfileModal() {
           >
             <input />
             <Button type="submit" onClick={handleEmailSubmit}>
-              Save
+            update
             </Button>
           </Input>
           {/* USERNAME................................. */}
@@ -272,7 +272,7 @@ function EditProfileModal() {
           >
             <input />
             <Button type="submit" onClick={handleUsernameSubmit}>
-              Save
+              update
             </Button>
           </Input>
           

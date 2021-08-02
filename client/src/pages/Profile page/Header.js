@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, Container, Grid, Button } from "semantic-ui-react";
-//import pp from ".";
+import pp from "../../assets/misc/profile-pic.png"
 import EditProfileModal from "./EditProfileModal";
 
 
@@ -19,12 +19,12 @@ const Header = ({ user }) => {
         <h1>Profile Page</h1>
       </div>
       <Container text>
-        <Grid divided="vertically" style={{ marginTop: "3rem" }}>
+        <Grid divided="vertically" style={{ marginTop: "6rem" }}>
           <Grid.Row columns={2}>
-            {/*<Grid.Column>
-              <Image src={pp} size="medium" circular />
-            </Grid.Column>*/}
-            <Grid.Column verticalAlign="middle">
+            <Grid.Column verticalAlign="left">
+              <Image src={pp} size="medium" circular  />
+            </Grid.Column>
+            <Grid.Column verticalAlign="right">
               <h1 style={styles.nameTitle}>
                 {user.firstName} {user.lastName}
               </h1>
