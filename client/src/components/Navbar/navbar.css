@@ -36,7 +36,7 @@
   background-color: var(--explorer-red);
   position: relative;
   padding-right: 1rem;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.309);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.309);
 }
 .nav * {
   transition: 0.2s ease-in-out !important;

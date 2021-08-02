@@ -10,10 +10,23 @@ import {
 } from "semantic-ui-react";
 // import { Link } from "react-router-dom";
 // import CityResults from "./CityResults";
-// import cityList from "../../utils/cities";
+import cityList from "../../utils/cities";
+
+const styles = {
+  form_questions: {
+    marginTop: "2rem",
+  },
+  form_answer: {
+    color: "black",
+  },
+  form_radio: {
+    marginTop: "10px",
+  },
+};
 
 const Body = ({ user }) => {
   const [ipData, setIpData] = useState([]);
+
   // IP ADDRESS API FETCH........................................................
   useEffect(() => {
     fetch("https://api.techniknews.net/ipgeo/")
@@ -26,17 +39,16 @@ const Body = ({ user }) => {
           console.error(error);
         }
       );
+    console.log(cityList);
   }, []);
   // console.log(ipData);
 
-  const dropdownDestination = (e, { value }) => {
+  // Question1..............................................................
+  const [answer1, setAnswer1] = useState(null);
+  const question1Change = (e, { value }) => {
+    setAnswer1(value);
     console.log(value);
-    // setFormState({
-    //   ...formState,
-    //   ["status"]: value,
-    // });
   };
-
   const destinationOptions = [
     { key: 1, text: "North America", value: "North America" },
     { key: 2, text: "South America", value: "South America" },
@@ -47,37 +59,57 @@ const Body = ({ user }) => {
     { key: 7, text: "Antarctica", value: "Antarctica" },
   ];
 
+  // Question2..............................................................
+  const [answer2, setAnswer2] = useState(null);
+  const question2Change = (e, { value }) => {
+    setAnswer2(value);
+    console.log(value);
+  };
+
+  // Question3..............................................................
+  const [answer3, setAnswer3] = useState(null);
+  const question3Change = (e, { value }) => {
+    setAnswer3(value);
+    console.log(value);
+  };
+
+  // Search...................................................................
   const citySearch = () => {
     // document.querySelector(".searched-cities").style.display = "block";
     console.log("get cities");
   };
 
-  const [value, setValue] = useState(null);
-  const handleChange = (event, { value }) => setValue(value);
-
+  // Return................................................................................................
   return (
-    <div>
+    <div className="home-search">
       <Container>
         <div className="home-search-container">
           <h2>
             Looking options from {ipData.city} / {ipData.countryCode}
           </h2>
+          <h3>Please select your choices</h3>
           <div className="caret-container">
             <Icon name="caret down" className="caret" size="big" />
           </div>
 
-          {/* ......................................................................Question1................................................................................. */}
           <div className="body-form-container">
-            <div className="body-form-questions" style={{ marginTop: "2rem" }}>
-              <Message size="big">
+            {/* ......................................................................Question1................................................................................. */}
+            <div style={styles.form_questions}>
+              <Message size="big" color="red">
                 <Message.Header>
-                  <Message color="orange">
-                    Which part of the world would you like to explore?
+                  <Message color="red">
+                    <Icon name="question circle" size="big" />
+                    <span>
+                      Which part of the world would you like to explore?
+                    </span>
+                    <div style={{ textAlign: "right" }}>
+                      <small style={styles.form_answer}>{answer1}</small>
+                    </div>
                   </Message>
                 </Message.Header>
                 <Dropdown
                   style={{ marginTop: "1rem" }}
-                  onChange={dropdownDestination}
+                  onChange={question1Change}
                   options={destinationOptions}
                   placeholder="Select a destination..."
                   selection
@@ -86,468 +118,172 @@ const Body = ({ user }) => {
               </Message>
             </div>
             {/* ......................................................................Question2................................................................................. */}
-            <div className="body-form-questions" style={{ marginTop: "2rem" }}>
-              <Message size="big">
+            <div style={styles.form_questions}>
+              <Message size="big" color="red">
                 <Message.Header>
-                  <Message color="orange">
-                    What continent would you like to visit?
+                  <Message color="red">
+                    <Icon name="question circle" size="big" />
+                    <span>What type of climate do you prefer?</span>
+                    <div style={{ textAlign: "right" }}>
+                      <small style={styles.form_answer}>{answer2}</small>
+                    </div>
                   </Message>
                 </Message.Header>
                 <Form>
                   <Form.Field>
-                    <b>{value}</b>
-                  </Form.Field>
-                  <Form.Field>
                     <Radio
-                      label="Asia"
+                      style={styles.form_radio}
+                      label="Tropical"
                       name="radioGroup"
-                      value="Asia"
-                      checked={value === "Asia"}
-                      onChange={handleChange}
+                      value="Tropical"
+                      checked={answer2 === "Tropical"}
+                      onChange={question2Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
-                      label="Europe"
+                      style={styles.form_radio}
+                      label="Mediterranean"
                       name="radioGroup"
-                      value="Europe"
-                      checked={value === "Europe"}
-                      onChange={handleChange}
+                      value="Mediterranean"
+                      checked={answer2 === "Mediterranean"}
+                      onChange={question2Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
-                      label="North America"
+                      style={styles.form_radio}
+                      label="Temperate"
                       name="radioGroup"
-                      value="North America"
-                      checked={value === "North America"}
-                      onChange={handleChange}
+                      value="Temperate"
+                      checked={answer2 === "Temperate"}
+                      onChange={question2Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
-                      label="South America"
+                      style={styles.form_radio}
+                      label="Desert"
                       name="radioGroup"
-                      value="South America"
-                      checked={value === "South America"}
-                      onChange={handleChange}
+                      value="Desert"
+                      checked={answer2 === "Desert"}
+                      onChange={question2Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
+                      style={styles.form_radio}
                       label="Africa"
                       name="radioGroup"
                       value="Africa"
-                      checked={value === "Africa"}
-                      onChange={handleChange}
+                      checked={answer2 === "Africa"}
+                      onChange={question2Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
-                      label="Australia"
+                      style={styles.form_radio}
+                      label="Polar and Tundra"
                       name="radioGroup"
-                      value="Australia"
-                      checked={value === "Australia"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Antartica"
-                      name="radioGroup"
-                      value="Antartica"
-                      checked={value === "Antartica"}
-                      onChange={handleChange}
+                      value="Polar and Tundra"
+                      checked={answer2 === "Polar and Tundra"}
+                      onChange={question2Change}
                     />
                   </Form.Field>
                 </Form>
               </Message>
             </div>
             {/* ......................................................................Question2................................................................................. */}
-            <div className="body-form-questions" style={{ marginTop: "2rem" }}>
-              <Message size="big">
+            <div style={styles.form_questions}>
+              <Message size="big" color="red">
                 <Message.Header>
-                  <Message color="orange">
-                    What continent would you like to visit?
+                  <Message color="red">
+                    <Icon name="question circle" size="big" />
+                    <span>What most appeals to you?</span>
+                    <div style={{ textAlign: "right" }}>
+                      <small style={styles.form_answer}>{answer3}</small>
+                    </div>
                   </Message>
                 </Message.Header>
                 <Form>
                   <Form.Field>
-                    <b>{value}</b>
-                  </Form.Field>
-                  <Form.Field>
                     <Radio
-                      label="Asia"
+                      style={styles.form_radio}
+                      label="Relaxation, sandy beaches, nice bars..."
                       name="radioGroup"
-                      value="Asia"
-                      checked={value === "Asia"}
-                      onChange={handleChange}
+                      value="Relaxation, sandy beaches, nice bars..."
+                      checked={
+                        answer3 === "Relaxation, sandy beaches, nice bars..."
+                      }
+                      onChange={question3Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
-                      label="Europe"
+                      style={styles.form_radio}
+                      label="Partying, night clubs, disco disco!"
                       name="radioGroup"
-                      value="Europe"
-                      checked={value === "Europe"}
-                      onChange={handleChange}
+                      value="Partying, night clubs, disco disco!"
+                      checked={
+                        answer3 === "Partying, night clubs, disco disco!"
+                      }
+                      onChange={question3Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
-                      label="North America"
+                      style={styles.form_radio}
+                      label="Sun, sun, sun and nothing else."
                       name="radioGroup"
-                      value="North America"
-                      checked={value === "North America"}
-                      onChange={handleChange}
+                      value="Sun, sun, sun and nothing else."
+                      checked={answer3 === "Sun, sun, sun and nothing else."}
+                      onChange={question3Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
-                      label="South America"
+                      style={styles.form_radio}
+                      label="Attend a sport event."
                       name="radioGroup"
-                      value="South America"
-                      checked={value === "South America"}
-                      onChange={handleChange}
+                      value="Attend a sport event."
+                      checked={answer3 === "Attend a sport event."}
+                      onChange={question3Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
-                      label="Africa"
+                      style={styles.form_radio}
+                      label="Spend a day at the theme park."
                       name="radioGroup"
-                      value="Africa"
-                      checked={value === "Africa"}
-                      onChange={handleChange}
+                      value="Spend a day at the theme park."
+                      checked={answer3 === "Spend a day at the theme park."}
+                      onChange={question3Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
-                      label="Australia"
+                      style={styles.form_radio}
+                      label="Romantic strolls watching the sunset on golden sands."
                       name="radioGroup"
-                      value="Australia"
-                      checked={value === "Australia"}
-                      onChange={handleChange}
+                      value="Romantic strolls watching the sunset on golden sands."
+                      checked={
+                        answer3 ===
+                        "Romantic strolls watching the sunset on golden sands."
+                      }
+                      onChange={question3Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
-                      label="Antartica"
+                      style={styles.form_radio}
+                      label="Wildlife, cultural and historical experience"
                       name="radioGroup"
-                      value="Antartica"
-                      checked={value === "Antartica"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                </Form>
-              </Message>
-            </div>
-            {/* ......................................................................Question2................................................................................. */}
-            <div className="body-form-questions" style={{ marginTop: "2rem" }}>
-              <Message size="big">
-                <Message.Header>
-                  <Message color="orange">
-                    What continent would you like to visit?
-                  </Message>
-                </Message.Header>
-                <Form>
-                  <Form.Field>
-                    <b>{value}</b>
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Asia"
-                      name="radioGroup"
-                      value="Asia"
-                      checked={value === "Asia"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Europe"
-                      name="radioGroup"
-                      value="Europe"
-                      checked={value === "Europe"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="North America"
-                      name="radioGroup"
-                      value="North America"
-                      checked={value === "North America"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="South America"
-                      name="radioGroup"
-                      value="South America"
-                      checked={value === "South America"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Africa"
-                      name="radioGroup"
-                      value="Africa"
-                      checked={value === "Africa"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Australia"
-                      name="radioGroup"
-                      value="Australia"
-                      checked={value === "Australia"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Antartica"
-                      name="radioGroup"
-                      value="Antartica"
-                      checked={value === "Antartica"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                </Form>
-              </Message>
-            </div>
-            {/* ......................................................................Question2................................................................................. */}
-            <div className="body-form-questions" style={{ marginTop: "2rem" }}>
-              <Message size="big">
-                <Message.Header>
-                  <Message color="orange">
-                    What continent would you like to visit?
-                  </Message>
-                </Message.Header>
-                <Form>
-                  <Form.Field>
-                    <b>{value}</b>
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Asia"
-                      name="radioGroup"
-                      value="Asia"
-                      checked={value === "Asia"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Europe"
-                      name="radioGroup"
-                      value="Europe"
-                      checked={value === "Europe"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="North America"
-                      name="radioGroup"
-                      value="North America"
-                      checked={value === "North America"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="South America"
-                      name="radioGroup"
-                      value="South America"
-                      checked={value === "South America"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Africa"
-                      name="radioGroup"
-                      value="Africa"
-                      checked={value === "Africa"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Australia"
-                      name="radioGroup"
-                      value="Australia"
-                      checked={value === "Australia"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Antartica"
-                      name="radioGroup"
-                      value="Antartica"
-                      checked={value === "Antartica"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                </Form>
-              </Message>
-            </div>
-            {/* ......................................................................Question2................................................................................. */}
-            <div className="body-form-questions" style={{ marginTop: "2rem" }}>
-              <Message size="big">
-                <Message.Header>
-                  <Message color="orange">
-                    What continent would you like to visit?
-                  </Message>
-                </Message.Header>
-                <Form>
-                  <Form.Field>
-                    <b>{value}</b>
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Asia"
-                      name="radioGroup"
-                      value="Asia"
-                      checked={value === "Asia"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Europe"
-                      name="radioGroup"
-                      value="Europe"
-                      checked={value === "Europe"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="North America"
-                      name="radioGroup"
-                      value="North America"
-                      checked={value === "North America"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="South America"
-                      name="radioGroup"
-                      value="South America"
-                      checked={value === "South America"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Africa"
-                      name="radioGroup"
-                      value="Africa"
-                      checked={value === "Africa"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Australia"
-                      name="radioGroup"
-                      value="Australia"
-                      checked={value === "Australia"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Antartica"
-                      name="radioGroup"
-                      value="Antartica"
-                      checked={value === "Antartica"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                </Form>
-              </Message>
-            </div>
-            {/* ......................................................................Question2................................................................................. */}
-            <div className="body-form-questions" style={{ marginTop: "2rem" }}>
-              <Message size="big">
-                <Message.Header>
-                  <Message color="orange">
-                    What continent would you like to visit?
-                  </Message>
-                </Message.Header>
-                <Form>
-                  <Form.Field>
-                    <b>{value}</b>
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Asia"
-                      name="radioGroup"
-                      value="Asia"
-                      checked={value === "Asia"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Europe"
-                      name="radioGroup"
-                      value="Europe"
-                      checked={value === "Europe"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="North America"
-                      name="radioGroup"
-                      value="North America"
-                      checked={value === "North America"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="South America"
-                      name="radioGroup"
-                      value="South America"
-                      checked={value === "South America"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Africa"
-                      name="radioGroup"
-                      value="Africa"
-                      checked={value === "Africa"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Australia"
-                      name="radioGroup"
-                      value="Australia"
-                      checked={value === "Australia"}
-                      onChange={handleChange}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label="Antartica"
-                      name="radioGroup"
-                      value="Antartica"
-                      checked={value === "Antartica"}
-                      onChange={handleChange}
+                      value="Wildlife, cultural and historical experience"
+                      checked={
+                        answer3 ===
+                        "Wildlife, cultural and historical experience"
+                      }
+                      onChange={question3Change}
                     />
                   </Form.Field>
                 </Form>

@@ -2,8 +2,7 @@
 /* STYLE CSS */
 
 /* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Literata&family=Pacifico&family=Roboto&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Capriola&family=Pacifico&display=swap");
 /* root................................................. */
 *,
 *:before,
@@ -21,8 +20,8 @@
   --explorer-red: #d62b2b;
   --explorer-white: #ebebeb;
   --explorer-dark: #0c0c0c;
-  --craft-font: "Pacifico", cursive;
-  --craft-font2: "Fredericka the Great", cursive;
+  --explorer-pacifico: "Pacifico", cursive;
+  --explorer-caveat: "Capriola", sans-serif;
   --craft-font3: "Literata", serif;
   --roboto: "Roboto", sans-serif;
 }
@@ -31,10 +30,37 @@
 
 body {
   background-image: url(../../assets/misc/foggy_birds.png);
+  line-height: 100% !important;
 }
 
 .home-container {
   min-height: 70vh;
+}
+
+.jumbo {
+  display: flex;
+  height: 50vh;
+  width: 100vw;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbo h1 {
+  z-index: 2;
+  position: absolute;
+  text-align: center;
+  font-size: 7rem;
+  color: var(--explorer-red);
+  font-family: var(--explorer-pacifico);
+  animation: colorChange 10s infinite;
+}
+
+.video2-bg {
+  z-index: -1;
+  filter: brightness(100%);
+  min-height: 30vh !important;
+  min-width: 100vw !important;
 }
 
 .home-header {
@@ -43,17 +69,13 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  margin-top: 15%;
 }
 
 .home-header h1 {
-  font-family: var(--craft-font);
-  font-size: 4rem;
-  color: var(--explorer-red);
-  text-shadow: 3px 3px 0 var(--explorer-dark);
-}
-
-.home-header p {
-  font-size: 1.5rem;
+  font-family: var(--explorer-caveat);
+  font-size: 3rem;
+  color: var(--explorer-dark);
 }
 
 .home-header-body {
@@ -61,10 +83,11 @@ body {
 }
 
 .logo-name {
-  font-family: var(--craft-font);
+  font-family: var(--explorer-pacifico);
   font-size: 5rem;
   color: var(--explorer-red);
-  text-shadow: 3px 3px 0 var(--explorer-dark);
+  text-shadow: 2px 2px 0 #fac564, 4px 4px 0 var(--explorer-dark);
+  animation: colorChange 10s infinite;
 }
 
 .home-user-header {
@@ -107,7 +130,7 @@ body {
 }
 
 .home-header-info {
-  margin-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 
 .home-header-info-subtitle {
@@ -125,6 +148,28 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-image: url(../../assets/misc/food.png);
+}
+.home-search-container h2 {
+  font-size: 3rem;
+  font-family: var(--explorer-caveat);
+  margin-top: 3rem;
+}
+.home-search-container h3 {
+  font-size: 2rem;
+  font-family: var(--explorer-caveat);
+}
+.home-search {
+  background-image: url(../../assets/misc/food.png);
+  border-top: 3px solid black;
+}
+
+.home-search-container * span {
+  font-family: var(--explorer-caveat);
+}
+
+.home-search-container * label {
+  font-size: 1.5rem !important;
 }
 
 .search-1,
@@ -182,8 +227,29 @@ body {
   }
 }
 
+@keyframes colorChange {
+  0% {
+    color: var(--explorer-red);
+    text-shadow: 4px 4px 0 var(--explorer-dark), 6px 6px 0px #fac564,
+      9px 9px 0px #11441d;
+  }
+  50% {
+    color: #fac564;
+    text-shadow: 4px 4px 0 var(--explorer-dark), 6px 6px 0px var(--explorer-red),
+      9px 9px 0px #145e26;
+  }
+  100% {
+    color: var(--explorer-red);
+    text-shadow: 4px 4px 0 var(--explorer-dark), 6px 6px 0px #fac564,
+      9px 9px 0px #11441d;
+  }
+}
+
 @media (max-width: 475px) {
   .home-header h1 {
     font-size: 3rem;
+  }
+  .jumbo h1 {
+    font-size: 4rem;
   }
 }
