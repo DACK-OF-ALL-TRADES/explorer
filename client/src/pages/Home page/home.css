@@ -183,7 +183,7 @@ body {
 }
 
 .searched-cities {
-  display: none;
+  margin-top: 10rem;
 }
 
 .search-city-display {

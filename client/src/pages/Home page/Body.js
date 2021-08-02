@@ -12,6 +12,7 @@ import {
 // import { Link } from "react-router-dom";
 // import CityResults from "./CityResults";
 import cityList from "../../utils/cities";
+import CityCard from "./CityCard";
 
 const styles = {
   form_questions: {
@@ -25,9 +26,23 @@ const styles = {
     marginTop: "10px",
   },
 };
-
+let continent = [];
+let continent_climate = [];
+let continent_climate_pop = [];
 const Body = ({ user }) => {
   const [ipData, setIpData] = useState([]);
+  const [answer1, setAnswer1] = useState(null);
+  const [answer2, setAnswer2] = useState(null);
+  const [answer3, setAnswer3] = useState(null);
+  const [answer4, setAnswer4] = useState(null);
+  const [answer5, setAnswer5] = useState(null);
+  const [answer6, setAnswer6] = useState(null);
+  const [answer7, setAnswer7] = useState(null);
+  const [answer8, setAnswer8] = useState(null);
+  const [answer9, setAnswer9] = useState(null);
+  const [answer10, setAnswer10] = useState(null);
+  const [answer11, setAnswer11] = useState(null);
+  const [answer12, setAnswer12] = useState(null);
 
   // IP ADDRESS API FETCH........................................................
   useEffect(() => {
@@ -41,108 +56,176 @@ const Body = ({ user }) => {
           console.error(error);
         }
       );
-    console.log(cityList);
+    // console.log(cityList);
   }, []);
   // console.log(ipData);
+  const cityDataResults = {
+    question_1: answer1,
+    question_2: answer2,
+    question_3: answer3,
+    question_4: answer4,
+    question_5: answer5,
+    question_6: answer6,
+    question_7: answer7,
+    question_8: answer8,
+    question_9: answer9,
+    question_10: answer10,
+    question_11: answer11,
+    question_12: answer12,
+  };
+  // Search...................................................................
+
+  cityList.forEach((element) => {
+    if (element.continent === "Asia") {
+    }
+  });
+
+  let cityListResult = Object.values(cityDataResults);
+  const citySearch = () => {
+    // console.log(cityListResult);
+    if (cityListResult.includes(null)) {
+      alert("Please fill in all the questions...");
+    } else {
+      pickCities();
+    }
+  };
+
+  const pickCities = () => {
+    console.log(cityListResult);
+    // Continent
+    for (let i = 0; i < cityListResult.length; i++) {
+      const element = cityListResult[i];
+      console.log(element);
+    }
+
+    if (cityListResult[0] === "Any") {
+      continent = cityList;
+    } else {
+      cityList.forEach((element) => {
+        if (element.continent === cityListResult[0]) {
+          continent.push(element);
+        }
+      });
+    }
+    console.log(continent);
+    // Climate
+    if (cityListResult[1] === "Any") {
+      continent_climate = continent;
+    } else {
+      continent.forEach((element) => {
+        if (element.climate === cityListResult[1]) {
+          continent_climate.push(element);
+        }
+      });
+    }
+    console.log(continent_climate);
+    // Population
+    if (cityListResult[8] === "Doesn't matter") {
+      continent_climate_pop = continent_climate;
+    } else {
+      continent_climate.forEach((element) => {
+        if (element.pop === cityListResult[8]) {
+          continent_climate_pop.push(element);
+        }
+      });
+    }
+    // console.log("final reuslt");
+    console.log(continent_climate_pop);
+    // for (let i = 0; i < continent_climate_pop.length; i++) {
+    //   const city = continent_climate_pop[i];
+    //   console.log(city.city);
+    // }
+  };
+
+  continent_climate_pop.forEach((element) => {
+    console.log(element);
+  });
+
+  // 1, 2, 9
 
   // Question1..............................................................
+  // RESULT
   const destinationOptions = [
     { key: 1, text: "North America", value: "North America" },
     { key: 2, text: "South America", value: "South America" },
     { key: 3, text: "Europe", value: "Europe" },
-    { key: 4, text: "Australia", value: "Australia" },
+    { key: 4, text: "Oceania", value: "Oceania" },
     { key: 5, text: "Asia", value: "Asia" },
     { key: 6, text: "Africa", value: "Africa" },
     { key: 7, text: "Antarctica", value: "Antarctica" },
+    { key: 8, text: "Any", value: "Any" },
   ];
-  const [answer1, setAnswer1] = useState(null);
   const question1Change = (e, { value }) => {
     setAnswer1(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // Question2..............................................................
-  const [answer2, setAnswer2] = useState(null);
+  // RESULT
   const question2Change = (e, { value }) => {
     setAnswer2(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // Question3..............................................................
-  const [answer3, setAnswer3] = useState(null);
   const question3Change = (e, { value }) => {
     setAnswer3(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // Question4..............................................................
-  const [answer4, setAnswer4] = useState(null);
   const question4Change = (e, { value }) => {
     setAnswer4(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // Question5..............................................................
-  const [answer5, setAnswer5] = useState(null);
   const question5Change = (e, { value }) => {
     setAnswer5(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // Question6..............................................................
-  const [answer6, setAnswer6] = useState(null);
   const question6Change = (e, { value }) => {
     setAnswer6(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // Question7..............................................................
-  const [answer7, setAnswer7] = useState(null);
   const question7Change = (e, { value }) => {
     setAnswer7(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // Question8..............................................................
-  const [answer8, setAnswer8] = useState(null);
   const question8Change = (e, { value }) => {
     setAnswer8(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // Question9..............................................................
-  const [answer9, setAnswer9] = useState(null);
+  // RESULT
   const question9Change = (e, { value }) => {
     setAnswer9(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // Question10..............................................................
-  const [answer10, setAnswer10] = useState(null);
   const question10Change = (e, { value }) => {
     setAnswer10(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // Question11..............................................................
-  const [answer11, setAnswer11] = useState(null);
   const question11Change = (e, { value }) => {
     setAnswer11(value);
-    console.log(value);
+    // console.log(value);
   };
 
   // Question12..............................................................
-  const [answer12, setAnswer12] = useState(null);
   const question12Change = (e, { value }) => {
     setAnswer12(value);
-    console.log(value);
-  };
-
-  // Search...................................................................
-  const citySearch = () => {
-    console.log("get cities");
-
-    document.querySelector(".searched-cities").style.display = "block";
+    // console.log(value);
   };
 
   // Return................................................................................................
@@ -249,6 +332,16 @@ const Body = ({ user }) => {
                       name="radioGroup"
                       value="Polar and Tundra"
                       checked={answer2 === "Polar and Tundra"}
+                      onChange={question2Change}
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <Radio
+                      style={styles.form_radio}
+                      label="Any"
+                      name="radioGroup"
+                      value="Any"
+                      checked={answer2 === "Any"}
                       onChange={question2Change}
                     />
                   </Form.Field>
@@ -751,6 +844,16 @@ const Body = ({ user }) => {
                       onChange={question9Change}
                     />
                   </Form.Field>
+                  <Form.Field>
+                    <Radio
+                      style={styles.form_radio}
+                      label="Doesn't matter"
+                      name="radioGroup"
+                      value="Doesn't matter"
+                      checked={answer9 === "Doesn't matter"}
+                      onChange={question9Change}
+                    />
+                  </Form.Field>
                 </Form>
               </Message>
             </div>
@@ -1018,12 +1121,16 @@ const Body = ({ user }) => {
             </Button>
           </div>
         </div>
-        <div className="searched-cities">
-          {cityList.map((city) => {
-            return <h1>{city.city}</h1>;
-          })}
-          <h1>tokyo</h1>
-        </div>
+        <h1>CITIES</h1>
+        {cityListResult.map((element) => (
+          <h3>{element}</h3>
+        ))}
+        {/* {continent_climate_pop.map((element) => (
+          return {<CityCard city={element} />
+        ))} */}
+        {continent_climate_pop.forEach((element) => {
+          console.log(element);
+        })}
       </Container>
     </div>
   );
