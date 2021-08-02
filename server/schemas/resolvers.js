@@ -19,6 +19,7 @@ const resolvers = {
   },
 
   Mutation: {
+    
     addUser: async (
       parent,
       { username, email, password, firstname, lastname, city, country }
@@ -35,6 +36,55 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+
+  // adding the profile updates
+  addFirstName: async (parent, { firstName }, context) => {
+    if (context.user) {
+      context.user.firstName = firstName;
+      console.log(context.user);
+      return User.findOneAndUpdate({
+        _id: context.user._id,
+        firstName: firstName,
+      });
+    }
+    throw new AuthenticationError("You need to be logged in!");
+  },
+  updateLastName: async (parent, { lastName }, context) => {
+    if (context.user) {
+      console.log(context.user);
+      return User.findOneAndUpdate({
+        _id: context.user._id,
+        lastName: lastName,
+      });
+    }
+    throw new AuthenticationError("You need to be logged in!");
+  },
+  updateEmail: async (parent, { email }, context) => {
+    if (context.user) {
+      context.user.email = email;
+      console.log(context.user);
+      return User.findOneAndUpdate({
+        _id: context.user._id,
+        email: email,
+      });
+    }
+    throw new AuthenticationError("You need to be logged in!");
+  },
+  updateUsername: async (parent, { username }, context) => {
+    if (context.user) {
+      console.log(context.user);
+      return User.findOneAndUpdate({
+        _id: context.user._id,
+        username: username,
+      });
+    }
+    throw new AuthenticationError("You need to be logged in!");
+  },
+
+///////////////////////////////////////////////////////////////////////
+
+
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 

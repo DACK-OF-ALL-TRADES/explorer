@@ -47,3 +47,7 @@
   color: var(--explorer-red);
   text-shadow: 3px 3px 0 var(--explorer-dark);
 }
+.column{
+  background-color: rgb(184, 90, 90);
+}
+
