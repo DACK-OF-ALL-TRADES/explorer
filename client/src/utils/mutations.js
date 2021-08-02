@@ -41,8 +41,8 @@ export const ADD_USER = gql`
 `;
 //Added the mutations for the profile
 export const UPDATE_FIRSTNAME = gql`
-  mutation addFirstName($firstname: String!) {
-    addFirstName(firstname: $firstname) {
+  mutation addFirstName($firstName: String!) {
+    addFirstName(firstname: $firstName) {
       token
       user {
         _id
@@ -52,8 +52,8 @@ export const UPDATE_FIRSTNAME = gql`
 `;
 
 export const UPDATE_LASTNAME = gql`
-  mutation updateLastName($lastname: String!) {
-    updateLastName(lastname: $lastname) {
+  mutation updateLastName($lastName: String!) {
+    updateLastName(lastname: $lastName) {
       token
       user {
         _id

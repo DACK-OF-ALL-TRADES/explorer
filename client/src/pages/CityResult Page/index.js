@@ -32,11 +32,14 @@ const CityResult = () => {
       );
   }, []);
   console.log(cityWeatherData);
+  const city = window.location.pathname.split("/").pop();
+  console.log(city);
   return (
     <div>
       <Nav />
       <div style={{ paddingBottom: "60rem" }}>
         <h1>results</h1>
+        <h2>{city}</h2>
       </div>
       <Footer />
     </div>

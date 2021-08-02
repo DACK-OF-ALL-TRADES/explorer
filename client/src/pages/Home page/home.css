@@ -186,15 +186,6 @@ body {
   margin-top: 10rem;
 }
 
-.search-city-display {
-  display: flex;
-  margin: 5rem 0;
-}
-
-.city-card {
-  margin-top: 8rem !important;
-}
-
 .caret-container {
   display: flex;
   justify-content: center;

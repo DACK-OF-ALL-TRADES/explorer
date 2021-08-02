@@ -12,7 +12,6 @@ import {
 // import { Link } from "react-router-dom";
 // import CityResults from "./CityResults";
 import cityList from "../../utils/cities";
-import CityCard from "./CityCard";
 
 const styles = {
   form_questions: {
@@ -74,30 +73,21 @@ const Body = ({ user }) => {
     question_12: answer12,
   };
   // Search...................................................................
-
-  cityList.forEach((element) => {
-    if (element.continent === "Asia") {
-    }
-  });
-
   let cityListResult = Object.values(cityDataResults);
   const citySearch = () => {
     // console.log(cityListResult);
     if (cityListResult.includes(null)) {
       alert("Please fill in all the questions...");
     } else {
+      // continent_climate_pop.map((element) => console.log(element.city));
       pickCities();
     }
   };
-
   const pickCities = () => {
     console.log(cityListResult);
-    // Continent
-    for (let i = 0; i < cityListResult.length; i++) {
-      const element = cityListResult[i];
-      console.log(element);
-    }
 
+    // Continent
+    //...................................................
     if (cityListResult[0] === "Any") {
       continent = cityList;
     } else {
@@ -109,6 +99,7 @@ const Body = ({ user }) => {
     }
     console.log(continent);
     // Climate
+    //...................................................
     if (cityListResult[1] === "Any") {
       continent_climate = continent;
     } else {
@@ -120,6 +111,7 @@ const Body = ({ user }) => {
     }
     console.log(continent_climate);
     // Population
+    //...................................................
     if (cityListResult[8] === "Doesn't matter") {
       continent_climate_pop = continent_climate;
     } else {
@@ -129,17 +121,13 @@ const Body = ({ user }) => {
         }
       });
     }
-    // console.log("final reuslt");
+    //...................................................
+    console.log("final reuslt");
     console.log(continent_climate_pop);
-    // for (let i = 0; i < continent_climate_pop.length; i++) {
-    //   const city = continent_climate_pop[i];
-    //   console.log(city.city);
-    // }
+    localStorage.setItem("cities", JSON.stringify(continent_climate_pop));
+    window.location.assign("/cities");
+    //...................................................
   };
-
-  continent_climate_pop.forEach((element) => {
-    console.log(element);
-  });
 
   // 1, 2, 9
 
@@ -1121,16 +1109,6 @@ const Body = ({ user }) => {
             </Button>
           </div>
         </div>
-        <h1>CITIES</h1>
-        {cityListResult.map((element) => (
-          <h3>{element}</h3>
-        ))}
-        {/* {continent_climate_pop.map((element) => (
-          return {<CityCard city={element} />
-        ))} */}
-        {continent_climate_pop.forEach((element) => {
-          console.log(element);
-        })}
       </Container>
     </div>
   );

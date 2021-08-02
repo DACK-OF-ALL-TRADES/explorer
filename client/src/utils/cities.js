@@ -932,7 +932,6 @@ const cityList = [
     image: "",
     youtube: "",
   },
-
   {
     city: "Fukuoka",
     country: "Japan",
@@ -942,7 +941,6 @@ const cityList = [
     image: "",
     youtube: "",
   },
-
   {
     city: "Abu Dhabi",
     country: "UAE",
@@ -952,7 +950,6 @@ const cityList = [
     image: "",
     youtube: "",
   },
-
   {
     city: "Jeju",
     country: "South Korea",
@@ -971,7 +968,6 @@ const cityList = [
     image: "",
     youtube: "",
   },
-
   {
     city: "Rhodes",
     country: "Greece",
@@ -981,7 +977,6 @@ const cityList = [
     image: "",
     youtube: "",
   },
-
   {
     city: "Rio de Janeiro",
     country: "Brazil",
@@ -1000,7 +995,6 @@ const cityList = [
     image: "",
     youtube: "",
   },
-
   {
     city: "Bangalore",
     country: "India",
@@ -1010,7 +1004,6 @@ const cityList = [
     image: "https://images.pexels.com/photos/2889701/pexels-photo-2889701.jpeg",
     youtube: "",
   },
-
   {
     city: "Reykjavik",
     Country: "Iceland",
@@ -1020,27 +1013,6 @@ const cityList = [
     image: "",
     youtube: "",
   },
-
-  {
-    city: "Nepal",
-    Country: "Federal Democratic Republic of Nepal",
-    continent: "Asia",
-    climate: "Polar",
-    pop: "Less popular places – less crowded",
-    image: "",
-    youtube: "",
-  },
-
-  {
-    city: "Reykjavik",
-    Country: "Iceland",
-    continent: "Europe",
-    climate: "Polar",
-    pop: "Less popular places – less crowded",
-    image: "",
-    youtube: "",
-  },
-
   {
     city: "Nepal",
     Country: "Federal Democratic Republic of Nepal",

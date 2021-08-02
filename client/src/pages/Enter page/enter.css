@@ -65,19 +65,20 @@
 body > .grid {
   height: 100%;
 }
+
 .image {
   margin-top: 7px;
-
 }
+
 .column {
   width: 100%;
   min-width: 27vw;
   margin: 8rem 0;
-  background-color: var(--explorer-red) !important;
-  
+  background-color: #4f4f4ff5 !important;
   border-radius: 5px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.255);
 }
+
 .enter-body .title-header {
   display: block !important;
   float: left;

@@ -1,24 +1,14 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
-import {
-  Button,
-  Header,
-  Image,
-  Modal,
-  Input,
-  Icon,
- 
-} from "semantic-ui-react";
-import pp from "../../assets/misc/profile-pic.png"
+import { Button, Header, Image, Modal, Input, Icon } from "semantic-ui-react";
+import pp from "../../assets/misc/profile-pic.png";
 import {
   UPDATE_FIRSTNAME,
   UPDATE_LASTNAME,
   UPDATE_EMAIL,
   UPDATE_USERNAME,
-
 } from "../../utils/mutations";
 import { QUERY_ME } from "../../utils/queries";
-
 
 function EditProfileModal() {
   const [open, setOpen] = React.useState(false);
@@ -26,14 +16,13 @@ function EditProfileModal() {
   const [lastNameText, setlastNameText] = useState("");
   const [emailText, setEmailText] = useState("");
   const [usernameText, setUsernameText] = useState("");
- 
 
   const [addFirstName] = useMutation(UPDATE_FIRSTNAME, {
     update(cache, { data: { addFirstName } }) {
       try {
         const { me } = cache.readQuery({ query: QUERY_ME });
         cache.writeQuery({
-          query: QUERY_ME ,
+          query: QUERY_ME,
           data: { me: { addFirstName, ...me } },
         });
       } catch (e) {
@@ -41,9 +30,9 @@ function EditProfileModal() {
       }
 
       // update me object's cache
-      const { me } = cache.readQuery({ query: QUERY_ME  });
+      const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
-        query: QUERY_ME ,
+        query: QUERY_ME,
         data: { me: { ...me.firstName, me } },
       });
     },
@@ -52,9 +41,9 @@ function EditProfileModal() {
   const [updateLastName] = useMutation(UPDATE_LASTNAME, {
     update(cache, { data: { updateLastName } }) {
       try {
-        const { me } = cache.readQuery({ query: QUERY_ME  });
+        const { me } = cache.readQuery({ query: QUERY_ME });
         cache.writeQuery({
-          query:QUERY_ME ,
+          query: QUERY_ME,
           data: { me: { updateLastName, ...me } },
         });
       } catch (e) {
@@ -62,9 +51,9 @@ function EditProfileModal() {
       }
 
       // update me object's cache
-      const { me } = cache.readQuery({ query: QUERY_ME  });
+      const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
-        query: QUERY_ME ,
+        query: QUERY_ME,
         data: { me: { ...me.lastName, me } },
       });
     },
@@ -73,9 +62,9 @@ function EditProfileModal() {
   const [updateEmail] = useMutation(UPDATE_EMAIL, {
     update(cache, { data: { updateEmail } }) {
       try {
-        const { me } = cache.readQuery({ query: QUERY_ME  });
+        const { me } = cache.readQuery({ query: QUERY_ME });
         cache.writeQuery({
-          query:QUERY_ME ,
+          query: QUERY_ME,
           data: { me: { updateEmail, ...me } },
         });
       } catch (e) {
@@ -83,9 +72,9 @@ function EditProfileModal() {
       }
 
       // update me object's cache
-      const { me } = cache.readQuery({ query: QUERY_ME  });
+      const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
-        query: QUERY_ME ,
+        query: QUERY_ME,
         data: { me: { ...me.email, me } },
       });
     },
@@ -94,9 +83,9 @@ function EditProfileModal() {
   const [updateUsername] = useMutation(UPDATE_USERNAME, {
     update(cache, { data: { updateUsername } }) {
       try {
-        const { me } = cache.readQuery({ query: QUERY_ME  });
+        const { me } = cache.readQuery({ query: QUERY_ME });
         cache.writeQuery({
-          query: QUERY_ME ,
+          query: QUERY_ME,
           data: { me: { updateUsername, ...me } },
         });
       } catch (e) {
@@ -106,18 +95,16 @@ function EditProfileModal() {
       // update me object's cache
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
-        query: QUERY_ME ,
+        query: QUERY_ME,
         data: { me: { ...me.username, me } },
       });
     },
   });
 
-
-
   const handleFirstNameSubmit = async () => {
     try {
       console.log("handle submit input ->" + firstNameText);
-      const { data } = await addFirstName({
+      await addFirstName({
         variables: {
           firstName: firstNameText,
         },
@@ -132,7 +119,7 @@ function EditProfileModal() {
   const handleLastNameSubmit = async () => {
     try {
       console.log("handle submit input ->" + lastNameText);
-      const { data } = await updateLastName({
+      await updateLastName({
         variables: {
           lastName: lastNameText,
         },
@@ -147,7 +134,7 @@ function EditProfileModal() {
   const handleEmailSubmit = async () => {
     try {
       console.log("handle submit input ->" + emailText);
-      const { data } = await updateEmail({
+      await updateEmail({
         variables: {
           email: emailText,
         },
@@ -162,7 +149,7 @@ function EditProfileModal() {
   const handleUsernameSubmit = async () => {
     try {
       console.log("handle submit input ->" + usernameText);
-      const { data } = await updateUsername({
+      await updateUsername({
         variables: {
           username: usernameText,
         },
@@ -189,7 +176,6 @@ function EditProfileModal() {
     if (name === "username") {
       setUsernameText(value);
     }
-    
   };
 
   return (
@@ -198,7 +184,7 @@ function EditProfileModal() {
       onOpen={() => setOpen(true)}
       open={open}
       trigger={<Button>Update your luggage</Button>}
-      size="medium"
+      size="large"
       style={{ minWidth: "105px" }}
     >
       <Modal.Header>
@@ -211,7 +197,7 @@ function EditProfileModal() {
       <Modal.Content image>
         <Modal.Description>
           <Image size="medium" src={pp} wrapped />
-          <Header>Traveller's First Name</Header> 
+          <Header>Traveller's First Name</Header>
           {/* FIRSTNAME................................. */}
           <Input
             name="first-name"
@@ -224,7 +210,7 @@ function EditProfileModal() {
           >
             <input />
             <Button type="submit" onClick={handleFirstNameSubmit}>
-            update
+              update
             </Button>
           </Input>
           {/* LASTNAME................................. */}
@@ -240,7 +226,7 @@ function EditProfileModal() {
           >
             <input />
             <Button type="submit" onClick={handleLastNameSubmit}>
-            update
+              update
             </Button>
           </Input>
           {/* EMAIL................................. */}
@@ -256,7 +242,7 @@ function EditProfileModal() {
           >
             <input />
             <Button type="submit" onClick={handleEmailSubmit}>
-            update
+              update
             </Button>
           </Input>
           {/* USERNAME................................. */}
@@ -276,11 +262,10 @@ function EditProfileModal() {
             </Button>
           </Input>
 
-          
-         {/* PICTURE................................. */}
-         {/* <Header>Profile Picture</Header>
+          {/* PICTURE................................. */}
+          {/* <Header>Profile Picture</Header>
           <Upload />
-           <Files /> */} 
+           <Files /> */}
         </Modal.Description>
       </Modal.Content>
     </Modal>
