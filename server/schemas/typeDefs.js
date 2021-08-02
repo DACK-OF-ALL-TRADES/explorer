@@ -32,6 +32,10 @@ const typeDefs = gql`
       country: String
     ): Auth
     login(email: String!, password: String!): Auth
+    addFirstName(firstName: String!): Auth
+    updateLastName(lastName: String!): Auth
+    updateEmail(email: String!): Auth
+    updateUsername(username: String!): Auth
   }
 `;
 
