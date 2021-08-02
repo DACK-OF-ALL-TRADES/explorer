@@ -39,11 +39,12 @@ body {
 
 .jumbo {
   display: flex;
-  height: 50vh;
+  height: 30vh;
   width: 100vw;
   object-fit: cover;
   justify-content: center;
   align-items: center;
+  margin-bottom: 4.9rem;
 }
 
 .jumbo h1 {
@@ -53,14 +54,15 @@ body {
   font-size: 7rem;
   color: var(--explorer-red);
   font-family: var(--explorer-pacifico);
-  animation: colorChange 10s infinite;
+  animation: colorChange 4s infinite;
 }
 
 .video2-bg {
   z-index: -1;
-  filter: brightness(100%);
-  min-height: 30vh !important;
-  min-width: 100vw !important;
+  filter: brightness(140%);
+  height: 50vh;
+  object-fit: cover;
+  width: 100vw !important;
 }
 
 .home-header {
@@ -69,7 +71,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 15%;
+  margin-top: 2rem;
 }
 
 .home-header h1 {
@@ -87,7 +89,7 @@ body {
   font-size: 5rem;
   color: var(--explorer-red);
   text-shadow: 2px 2px 0 #fac564, 4px 4px 0 var(--explorer-dark);
-  animation: colorChange 10s infinite;
+  animation: colorChange 3s infinite;
 }
 
 .home-user-header {
@@ -172,10 +174,6 @@ body {
   font-size: 1.5rem !important;
 }
 
-.search-1,
-.search-2,
-.search-3,
-.search-4,
 .search-button {
   display: flex;
   justify-content: center;
@@ -184,10 +182,6 @@ body {
   margin: 1.5rem 0;
 }
 
-.search-2,
-.search-3,
-.search-4,
-.search-button,
 .searched-cities {
   display: none;
 }
