@@ -67,13 +67,14 @@ body > .grid {
 }
 .image {
   margin-top: 7px;
+
 }
 .column {
   width: 100%;
   min-width: 27vw;
   margin: 8rem 0;
   background-color: var(--explorer-red) !important;
-  color:white;
+  
   border-radius: 5px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.255);
 }
