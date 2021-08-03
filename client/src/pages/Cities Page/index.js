@@ -6,8 +6,8 @@ import "./cities.css";
 
 const Cities = () => {
   const cityData = localStorage.getItem("cities");
-  // console.log("cities: ", JSON.parse(cityData));
   const cities = JSON.parse(cityData);
+  console.log("cities: ", cities);
   return (
     <div>
       <Nav />
@@ -27,7 +27,7 @@ const Cities = () => {
                   meta={cityInfo.country}
                   className="city-card"
                   key={cityInfo.city}
-                  href={"/search/" + cityInfo.city.replace(/\s/g, "")}
+                  href={"/search/" + cityInfo.id}
                   color="red"
                 />
               );
@@ -39,7 +39,7 @@ const Cities = () => {
                   meta={cityInfo.country}
                   className="city-card"
                   key={cityInfo.city}
-                  href={"/search/" + cityInfo.city.replace(/\s/g, "")}
+                  href={"/search/" + cityInfo.id}
                   color="red"
                 />
               );
