@@ -17,7 +17,7 @@ const CityResult = () => {
   const [cityWeatherData, setcityWeatherData] = useState([]);
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${"ottawa"}&units=metric&appid=${
+      `https://api.openweathermap.org/data/2.5/weather?q=${"Izmir"}&units=metric&appid=${
         process.env.REACT_APP_API_KEY
       }`
     )
@@ -32,11 +32,14 @@ const CityResult = () => {
       );
   }, []);
   console.log(cityWeatherData);
+  const city = window.location.pathname.split("/").pop();
+  console.log(city);
   return (
     <div>
       <Nav />
       <div style={{ paddingBottom: "60rem" }}>
         <h1>results</h1>
+        <h2>{city}</h2>
       </div>
       <Footer />
     </div>

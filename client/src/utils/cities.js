@@ -1,5 +1,6 @@
 const cityList = [
   {
+    id: 1,
     city: "Hong Kong",
     country: "China",
     continent: "Asia",
@@ -10,6 +11,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 2,
     city: "Bangkok",
     country: "Thailand",
     continent: "Asia",
@@ -20,6 +22,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 3,
     city: "London",
     country: "United Kingdom",
     continent: "Europe",
@@ -29,6 +32,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 4,
     city: "Macau",
     country: "China",
     continent: "Asia",
@@ -40,6 +44,7 @@ const cityList = [
   },
 
   {
+    id: 5,
     city: "Singapore",
     country: "Singapore",
     continent: "Asia",
@@ -51,6 +56,7 @@ const cityList = [
   },
 
   {
+    id: 6,
     city: "Paris",
     country: "France",
     continent: "Europe",
@@ -62,6 +68,7 @@ const cityList = [
   },
 
   {
+    id: 7,
     city: "Dubai",
     country: "UAE",
     continent: "Asia",
@@ -73,6 +80,7 @@ const cityList = [
   },
 
   {
+    id: 8,
     city: "New York City",
     country: "US",
     continent: "North America",
@@ -83,6 +91,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 9,
     city: "Kuala Lumpur",
     country: "Malaysia",
     continent: "Asia",
@@ -93,6 +102,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 10,
     city: "Istanbul",
     country: "Turkey",
     continent: "Asia",
@@ -103,6 +113,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 11,
     city: "Delhi",
     country: "India",
     continent: "Asia",
@@ -114,6 +125,7 @@ const cityList = [
   },
 
   {
+    id: 12,
     city: "Antalya",
     country: "Turkey",
     continent: "Asia",
@@ -125,6 +137,7 @@ const cityList = [
   },
 
   {
+    id: 13,
     city: "Shenzhen",
     country: "China",
     continent: "Asia",
@@ -136,6 +149,7 @@ const cityList = [
   },
 
   {
+    id: 14,
     city: "Mumbai",
     country: "India",
     continent: "Asia",
@@ -147,6 +161,7 @@ const cityList = [
   },
 
   {
+    id: 15,
     city: "Phuket",
     country: "Thailand",
     continent: "Asia",
@@ -158,6 +173,7 @@ const cityList = [
   },
 
   {
+    id: 16,
     city: "Rome",
     country: "Italy",
     continent: "Europe",
@@ -169,6 +185,7 @@ const cityList = [
   },
 
   {
+    id: 17,
     city: "Tokyo",
     country: "Japan",
     continent: "Asia",
@@ -180,6 +197,7 @@ const cityList = [
   },
 
   {
+    id: 18,
     city: "Pattaya",
     country: "Thailand",
     continent: "Asia",
@@ -190,6 +208,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 19,
     city: "Taipei",
     country: "Taiwan",
     continent: "Asia",
@@ -199,6 +218,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 20,
     city: "Mecca",
     country: "Saudi Arabia",
     continent: "Asia",
@@ -209,6 +229,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 21,
     city: "Guangzhou",
     country: "China",
     continent: "Asia",
@@ -219,6 +240,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 23,
     city: "Prague",
     country: "Czechia",
     continent: "Erope",
@@ -229,6 +251,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 24,
     city: "Medina",
     country: "Saudi Arabia",
     continent: "Asia",
@@ -239,6 +262,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 25,
     city: "Seoul",
     country: "South Korea",
     continent: "Asia",
@@ -249,6 +273,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 26,
     city: "Amsterdam",
     country: "Netherlands",
     continent: "Europe",
@@ -259,6 +284,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 27,
     city: "Agra",
     country: "India",
     continent: "Asia",
@@ -270,6 +296,7 @@ const cityList = [
   },
 
   {
+    id: 28,
     city: "Miami",
     country: "US",
     continent: "North America",
@@ -281,6 +308,7 @@ const cityList = [
   },
 
   {
+    id: 29,
     city: "Osaka",
     country: "Japan",
     continent: "Asia",
@@ -292,6 +320,7 @@ const cityList = [
   },
 
   {
+    id: 30,
     city: "Los Angeles",
     country: "US",
     continent: "North America",
@@ -303,6 +332,7 @@ const cityList = [
   },
 
   {
+    id: 31,
     city: "Shanghai",
     country: "China",
     continent: "Asia",
@@ -314,6 +344,7 @@ const cityList = [
   },
 
   {
+    id: 32,
     city: "Ho Chi Minh City",
     country: "Vietnam",
     continent: "Asia",
@@ -324,6 +355,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 33,
     city: "Denpasar",
     country: "Indonesia",
     continent: "Asia",
@@ -334,6 +366,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 34,
     city: "Barcelona",
     country: "Spain",
     continent: "Europe",
@@ -343,6 +376,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 35,
     city: "Las Vegas",
     country: "US",
     continent: "North America",
@@ -354,6 +388,7 @@ const cityList = [
   },
 
   {
+    id: 36,
     city: "Milan",
     country: "Italy",
     continent: "Europe",
@@ -365,6 +400,7 @@ const cityList = [
   },
 
   {
+    id: 37,
     city: "Chennai",
     country: "India",
     continent: "Asia",
@@ -376,6 +412,7 @@ const cityList = [
   },
 
   {
+    id: 38,
     city: "Vienna",
     country: "Austria",
     continent: "Europe",
@@ -387,6 +424,7 @@ const cityList = [
   },
 
   {
+    id: 39,
     city: "Johor Bahru",
     country: "Malaysia",
     continent: "Asia",
@@ -397,6 +435,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 40,
     city: "Jaipur",
     country: "India",
     continent: "Asia",
@@ -408,6 +447,7 @@ const cityList = [
   },
 
   {
+    id: 41,
     city: "Cancun",
     country: "Mexico",
     continent: "North America",
@@ -419,6 +459,7 @@ const cityList = [
   },
 
   {
+    id: 42,
     city: "Berlin",
     country: "Germany",
     continent: "Europe",
@@ -430,6 +471,7 @@ const cityList = [
   },
 
   {
+    id: 43,
     city: "Cairo",
     country: "Egypt",
     continent: "Africa",
@@ -441,6 +483,7 @@ const cityList = [
   },
 
   {
+    id: 44,
     city: "Athens",
     country: "Greece",
     continent: "Europe",
@@ -452,6 +495,7 @@ const cityList = [
   },
 
   {
+    id: 45,
     city: "Orlando",
     country: "US",
     continent: "North America",
@@ -463,6 +507,7 @@ const cityList = [
   },
 
   {
+    id: 46,
     city: "Moscow",
     country: "Russia",
     continent: "Europe",
@@ -474,6 +519,7 @@ const cityList = [
   },
 
   {
+    id: 47,
     city: "Venice",
     country: "Italy",
     continent: "Europe",
@@ -485,6 +531,7 @@ const cityList = [
   },
 
   {
+    id: 48,
     city: "Madrid",
     country: "Spain",
     continent: "Europe",
@@ -496,6 +543,7 @@ const cityList = [
   },
 
   {
+    id: 49,
     city: "Ha Long",
     country: "Vietnam",
     continent: "Asia",
@@ -506,6 +554,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 50,
     city: "Riyadh",
     country: "Saudi Arabia",
     continent: "Asia",
@@ -515,6 +564,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 51,
     city: "Dublin",
     country: "Ireland",
     continent: "Europe",
@@ -526,6 +576,7 @@ const cityList = [
   },
 
   {
+    id: 52,
     city: "Florence",
     country: "Italy",
     continent: "Europe",
@@ -537,6 +588,7 @@ const cityList = [
   },
 
   {
+    id: 53,
     city: "Ha Noi",
     country: "Vietnam",
     continent: "Asia",
@@ -548,6 +600,7 @@ const cityList = [
   },
 
   {
+    id: 54,
     city: "Toronto",
     country: "Canada",
     continent: "North America",
@@ -559,6 +612,7 @@ const cityList = [
   },
 
   {
+    id: 55,
     city: "Johannesburg",
     country: "South Africa",
     continent: "Africa",
@@ -569,6 +623,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 56,
     city: "Sydney",
     country: "Australia",
     continent: "Oceania",
@@ -579,6 +634,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 57,
     city: "Munich",
     country: "Germany",
     continent: "Europe",
@@ -590,6 +646,7 @@ const cityList = [
   },
 
   {
+    id: 58,
     city: "Jakarta",
     country: "Indonesia",
     continent: "Asia",
@@ -599,6 +656,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 59,
     city: "Beijing",
     country: "China",
     continent: "Asia",
@@ -609,6 +667,7 @@ const cityList = [
   },
 
   {
+    id: 60,
     city: "St. Petersburg",
     country: "Russia",
     continent: "Europe",
@@ -619,6 +678,7 @@ const cityList = [
   },
 
   {
+    id: 61,
     city: "Brussels",
     country: "Belgium",
     continent: "Europe",
@@ -629,6 +689,7 @@ const cityList = [
   },
 
   {
+    id: 62,
     city: "Jerusalem",
     country: "Israel",
     continent: "Asia",
@@ -639,6 +700,7 @@ const cityList = [
   },
 
   {
+    id: 63,
     city: "Budapest",
     country: "Hungary",
     continent: "Europe",
@@ -649,6 +711,7 @@ const cityList = [
   },
 
   {
+    id: 64,
     city: "Lisbon",
     country: "Portugal",
     continent: "Europe",
@@ -659,6 +722,7 @@ const cityList = [
   },
 
   {
+    id: 65,
     city: "Dammam",
     country: "Saudi Arabia",
     continent: "Asia",
@@ -669,6 +733,7 @@ const cityList = [
   },
 
   {
+    id: 66,
     city: "Penang Island",
     country: "Malaysia",
     continent: "Asia",
@@ -679,6 +744,7 @@ const cityList = [
   },
 
   {
+    id: 67,
     city: "Heraklion",
     country: "Greece",
     continent: "Europe",
@@ -689,6 +755,7 @@ const cityList = [
   },
 
   {
+    id: 68,
     city: "Kyoto",
     country: "Japan",
     continent: "Asia",
@@ -699,6 +766,7 @@ const cityList = [
   },
 
   {
+    id: 69,
     city: "Zhuhai",
     country: "China",
     continent: "Asia",
@@ -709,6 +777,7 @@ const cityList = [
   },
 
   {
+    id: 70,
     city: "Vancouver",
     country: "Canada",
     continent: "North America",
@@ -718,6 +787,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 71,
     city: "Chiang Mai",
     country: "Thailand",
     continent: "Asia",
@@ -727,6 +797,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 72,
     city: "Copenhagen",
     country: "Denmark",
     continent: "Europe",
@@ -736,6 +807,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 73,
     city: "San Francisco",
     country: "US",
     continent: "North America",
@@ -745,6 +817,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 74,
     city: "Melbourne",
     country: "Australia",
     continent: "Oceania",
@@ -754,6 +827,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 75,
     city: "Krakow",
     country: "Poland",
     continent: "Europe",
@@ -764,6 +838,7 @@ const cityList = [
   },
 
   {
+    id: 76,
     city: "Marrakech",
     country: "Morocco",
     continent: "Africa",
@@ -773,6 +848,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 77,
     city: "Kolkatta",
     country: "India",
     continent: "Asia",
@@ -782,6 +858,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 78,
     city: "Cebu",
     country: "Philippines",
     continent: "Asia",
@@ -791,6 +868,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 79,
     city: "Auckland",
     country: "New Zealand",
     continent: "Oceania",
@@ -800,6 +878,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 80,
     city: "Tel Aviv",
     country: "Israel",
     continent: "Asia",
@@ -809,6 +888,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 81,
     city: "Guilin",
     country: "China",
     continent: "Asia",
@@ -819,6 +899,7 @@ const cityList = [
   },
 
   {
+    id: 82,
     city: "Honolulu",
     country: "US",
     continent: "North America",
@@ -829,6 +910,7 @@ const cityList = [
   },
 
   {
+    id: 83,
     city: "Hurgada",
     country: "Egypt",
     continent: "Africa",
@@ -839,6 +921,7 @@ const cityList = [
   },
 
   {
+    id: 84,
     city: "Warsaw",
     country: "Poland",
     continent: "Europe",
@@ -849,6 +932,7 @@ const cityList = [
   },
 
   {
+    id: 85,
     city: "Mugla",
     country: "Turkey",
     continent: "Asia",
@@ -859,6 +943,7 @@ const cityList = [
   },
 
   {
+    id: 86,
     city: "Buenos Aires City",
     country: "Argentina",
     continent: "South America",
@@ -868,6 +953,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 87,
     city: "Chiba",
     country: "Japan",
     continent: "Asia",
@@ -878,6 +964,7 @@ const cityList = [
   },
 
   {
+    id: 88,
     city: "Frankfurt",
     country: "Germany",
     continent: "Europe",
@@ -887,6 +974,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 89,
     city: "Stockholm",
     country: "Sweden",
     continent: "Europe",
@@ -896,6 +984,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 90,
     city: "Lima",
     country: "Peru",
     continent: "South America",
@@ -906,6 +995,7 @@ const cityList = [
   },
 
   {
+    id: 91,
     city: "Da Nang",
     country: "Vietnam",
     continent: "Asia",
@@ -915,6 +1005,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 92,
     city: "Batam",
     country: "Indonesia",
     continent: "Asia",
@@ -924,6 +1015,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 93,
     city: "Nice",
     country: "France",
     continent: "Europe",
@@ -932,8 +1024,8 @@ const cityList = [
     image: "https://www.touropia.com/gfx/d/best-places-to-visit-in-france/french_riviera.jpg?v=8a2a731f9dd5287d9bddd4aa5b3be9b7",
     youtube: "",
   },
-
   {
+    id: 94,
     city: "Fukuoka",
     country: "Japan",
     continent: "Asia",
@@ -942,8 +1034,8 @@ const cityList = [
     image: "https://images.unsplash.com/photo-1605088298038-2876387a80c1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVrdW9rYXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
     youtube: "",
   },
-
   {
+    id: 95,
     city: "Abu Dhabi",
     country: "UAE",
     continent: "Asia",
@@ -952,8 +1044,8 @@ const cityList = [
     image: "https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Triathlon/Articles/10+of+the+Most+Famous+Triathlons/Abu+Dhabi-carousel.jpg",
     youtube: "",
   },
-
   {
+    id: 96,
     city: "Jeju",
     country: "South Korea",
     continent: "Asia",
@@ -963,6 +1055,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 97,
     city: "Porto",
     country: "Portugal",
     continent: "Europe",
@@ -971,8 +1064,8 @@ const cityList = [
     image: "https://deih43ym53wif.cloudfront.net/riberia-porto_7a56c88171.jpeg",
     youtube: "",
   },
-
   {
+    id: 98,
     city: "Rhodes",
     country: "Greece",
     continent: "Europe",
@@ -981,8 +1074,8 @@ const cityList = [
     image: "https://theculturetrip.com/wp-content/uploads/2014/06/4768612125_8e3fe5b476_b.jpg",
     youtube: "",
   },
-
   {
+    id: 99,
     city: "Rio de Janeiro",
     country: "Brazil",
     continent: "South America",
@@ -992,6 +1085,7 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 100,
     city: "Krabi",
     country: "Thailand",
     continent: "Asia",
@@ -1000,8 +1094,8 @@ const cityList = [
     image: "http://static.asiawebdirect.com/m/phuket/portals/krabi-hotels-com/homepage/seedo/top10-krabi-attractions/pagePropertiesImage/best-krabi-attractions.jpg.jpg",
     youtube: "",
   },
-
   {
+    id: 101,
     city: "Bangalore",
     country: "India",
     continent: "Asia",
@@ -1010,6 +1104,7 @@ const cityList = [
     image: "https://img.traveltriangle.com/blog/wp-content/tr:w-700,h-400/uploads/2015/05/Mysore-Palace.jpg",
     youtube: "",
   },
+<<<<<<< HEAD
 
   {
     city: "Reykjavik",
@@ -1036,6 +1131,24 @@ const cityList = [
     Country: "Cuba",
     continent: "South America",
     climate: "Tropical",
+=======
+  {
+    id: 102,
+    city: "Reykjavik",
+    Country: "Iceland",
+    continent: "Europe",
+    climate: "Polar",
+    pop: "Less popular places – less crowded",
+    image: "",
+    youtube: "",
+  },
+  {
+    id: 103,
+    city: "Nepal",
+    Country: "Federal Democratic Republic of Nepal",
+    continent: "Asia",
+    climate: "Polar",
+>>>>>>> 338c61ca1a1cced01522552c2a4a4a425ee9eda4
     pop: "Less popular places – less crowded",
     image: "https://www.tripsavvy.com/thmb/vS85biVcD4j-A0ZIfTlwqawnwl0=/2054x1459/filters:fill(auto,1)/classic-pink-car-havana-5c3fde6146e0fb00013e9dfe.jpg",
     youtube: "",

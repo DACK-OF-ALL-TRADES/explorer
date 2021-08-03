@@ -13,7 +13,9 @@ const Home = () => {
   if (loading) {
     console.log("Loading User");
   } else {
-    userData = data.me;
+    if (data !== undefined) {
+      userData = data.me;
+    }
     // console.log(userData);
   }
 

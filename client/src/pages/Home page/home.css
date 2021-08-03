@@ -180,19 +180,11 @@ body {
   align-items: center;
   flex-direction: column;
   margin: 1.5rem 0;
+  min-width: 200px;
 }
 
 .searched-cities {
   margin-top: 10rem;
-}
-
-.search-city-display {
-  display: flex;
-  margin: 5rem 0;
-}
-
-.city-card {
-  margin-top: 8rem !important;
 }
 
 .caret-container {
