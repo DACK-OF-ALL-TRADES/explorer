@@ -75,17 +75,13 @@ const Body = ({ user }) => {
   // Search...................................................................
   let cityListResult = Object.values(cityDataResults);
   const citySearch = () => {
-    // console.log(cityListResult);
     if (cityListResult.includes(null)) {
       alert("Please fill in all the questions...");
     } else {
-      // continent_climate_pop.map((element) => console.log(element.city));
       pickCities();
     }
   };
   const pickCities = () => {
-    console.log(cityListResult);
-
     // Continent
     //...................................................
     if (cityListResult[0] === "Any") {
@@ -97,7 +93,6 @@ const Body = ({ user }) => {
         }
       });
     }
-    console.log(continent);
     // Climate
     //...................................................
     if (cityListResult[1] === "Any") {
@@ -109,7 +104,6 @@ const Body = ({ user }) => {
         }
       });
     }
-    console.log(continent_climate);
     // Population
     //...................................................
     if (cityListResult[8] === "Doesn't matter") {
@@ -122,8 +116,8 @@ const Body = ({ user }) => {
       });
     }
     //...................................................
-    console.log("final reuslt");
-    console.log(continent_climate_pop);
+    // console.log("final reuslt");
+    // console.log(continent_climate_pop);
     localStorage.setItem("cities", JSON.stringify(continent_climate_pop));
     window.location.assign("/cities");
     //...................................................
@@ -145,75 +139,63 @@ const Body = ({ user }) => {
   ];
   const question1Change = (e, { value }) => {
     setAnswer1(value);
-    // console.log(value);
   };
 
   // Question2..............................................................
   // RESULT
   const question2Change = (e, { value }) => {
     setAnswer2(value);
-    // console.log(value);
   };
 
   // Question3..............................................................
   const question3Change = (e, { value }) => {
     setAnswer3(value);
-    // console.log(value);
   };
 
   // Question4..............................................................
   const question4Change = (e, { value }) => {
     setAnswer4(value);
-    // console.log(value);
   };
 
   // Question5..............................................................
   const question5Change = (e, { value }) => {
     setAnswer5(value);
-    // console.log(value);
   };
 
   // Question6..............................................................
   const question6Change = (e, { value }) => {
     setAnswer6(value);
-    // console.log(value);
   };
 
   // Question7..............................................................
   const question7Change = (e, { value }) => {
     setAnswer7(value);
-    // console.log(value);
   };
 
   // Question8..............................................................
   const question8Change = (e, { value }) => {
     setAnswer8(value);
-    // console.log(value);
   };
 
   // Question9..............................................................
   // RESULT
   const question9Change = (e, { value }) => {
     setAnswer9(value);
-    // console.log(value);
   };
 
   // Question10..............................................................
   const question10Change = (e, { value }) => {
     setAnswer10(value);
-    // console.log(value);
   };
 
   // Question11..............................................................
   const question11Change = (e, { value }) => {
     setAnswer11(value);
-    // console.log(value);
   };
 
   // Question12..............................................................
   const question12Change = (e, { value }) => {
     setAnswer12(value);
-    // console.log(value);
   };
 
   // Return................................................................................................

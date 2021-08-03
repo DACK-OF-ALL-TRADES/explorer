@@ -17,7 +17,7 @@ const CityResult = () => {
   const [cityWeatherData, setcityWeatherData] = useState([]);
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${"ottawa"}&units=metric&appid=${
+      `https://api.openweathermap.org/data/2.5/weather?q=${"Izmir"}&units=metric&appid=${
         process.env.REACT_APP_API_KEY
       }`
     )

@@ -6,7 +6,7 @@ import "./cities.css";
 
 const Cities = () => {
   const cityData = localStorage.getItem("cities");
-  console.log("cities: ", JSON.parse(cityData));
+  // console.log("cities: ", JSON.parse(cityData));
   const cities = JSON.parse(cityData);
   return (
     <div>
