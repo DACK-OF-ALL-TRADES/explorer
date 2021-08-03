@@ -61,7 +61,7 @@ const Head = ({ user }) => {
               <Grid.Column>
                 <Image
                   src={plans}
-                  style={{ marginTop: "1rem", width: "100%", height: "auto" }}
+                  style={{ marginTop: "1rem", width: "75%", height: "auto" }}
                 />
               </Grid.Column>
               <Grid.Column>
@@ -88,7 +88,7 @@ const Head = ({ user }) => {
                 <Image
                   src={adventure}
                   size="big"
-                  style={{ marginTop: "1rem", width: "100%", height: "auto" }}
+                  style={{ marginTop: "1rem", width: "75%", height: "auto" }}
                 />
               </Grid.Column>
             </Grid.Row>

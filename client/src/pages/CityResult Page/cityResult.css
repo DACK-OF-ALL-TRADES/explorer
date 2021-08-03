@@ -28,6 +28,15 @@
 
 /* Cities........................................................ */
 
+.citypage {
+  background: rgb(250, 250, 250) !important;
+  background: linear-gradient(
+    129deg,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(208, 238, 255, 1) 100%
+  ) !important;
+}
+
 .citypage-title {
   display: flex;
   justify-content: center;
@@ -37,23 +46,25 @@
 
 .citypage-cityimage {
   height: 400px;
-  width: 600px;
-  border: 2px solid black;
+  width: 550px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgb(84, 84, 84);
 }
 
 .citypage-intro {
-  margin-top: 2rem;
+  padding: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20rem;
 }
+
 .citypage-intro h1 {
-  font-size: 6rem;
+  font-size: 5.5rem;
   color: var(--explorer-red);
   font-family: var(--explorer-pacifico);
   text-shadow: 3px 3px 0 var(--explorer-dark);
 }
+
 .citypage-intro h3 {
   font-size: 3rem;
   color: var(--explorer-dark);
@@ -61,7 +72,8 @@
 }
 
 .citypage-intro * .column {
-  background-image: url(../../assets/misc/foggy_birds.png) !important;
+  background-color: #f1f7fb !important;
+  /* background-image: url(../../assets/misc/foggy_birds.png) !important; */
   box-shadow: none !important;
 }
 
@@ -72,9 +84,63 @@
   margin-top: 2rem;
   font-family: var(--explorer-caveat);
 }
+
 .city-weather p {
   padding: 10px 0;
 }
+
 .weather-title {
   font-size: 1.7rem !important;
+}
+
+.city-hotel-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+  background: rgb(250, 250, 250) !important;
+  background: linear-gradient(
+    129deg,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(208, 238, 255, 1) 100%
+  ) !important;
+}
+
+.title-hotel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(250, 250, 250) !important;
+  background: linear-gradient(
+    129deg,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(208, 238, 255, 1) 100%
+  ) !important;
+  margin-top: 5rem;
+}
+
+.title-hotel h1 {
+  font-size: 3rem;
+  color: var(--explorer-dark);
+  font-family: var(--explorer-pacifico);
+}
+
+.hotel-img {
+  height: 150px !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+}
+
+.video-responsive iframe {
+  width: 100%;
+}
+/* 
+.video-responsive {
+  margin: 5rem 0;
+} */
+
+.city-video-container .column {
+  background-color: #f1f7fb !important;
+  /* background-image: url(../../assets/misc/foggy_birds.png) !important; */
+  box-shadow: none !important;
 }

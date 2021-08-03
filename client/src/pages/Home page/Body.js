@@ -214,7 +214,7 @@ const Body = ({ user }) => {
           <div className="body-form-container">
             {/* ......................................................................Question1................................................................................. */}
             <div style={styles.form_questions}>
-              <Message size="big" color="red">
+              <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   1
                 </Label>
@@ -241,7 +241,7 @@ const Body = ({ user }) => {
             </div>
             {/* ......................................................................Question2................................................................................. */}
             <div style={styles.form_questions}>
-              <Message size="big" color="red">
+              <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   2
                 </Label>
@@ -320,7 +320,7 @@ const Body = ({ user }) => {
             </div>
             {/* ......................................................................Question3................................................................................. */}
             <div style={styles.form_questions}>
-              <Message size="big" color="red">
+              <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   3
                 </Label>
@@ -419,7 +419,7 @@ const Body = ({ user }) => {
             </div>
             {/* ......................................................................Question4................................................................................. */}
             <div style={styles.form_questions}>
-              <Message size="big" color="red">
+              <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   4
                 </Label>
@@ -488,7 +488,7 @@ const Body = ({ user }) => {
             </div>
             {/* ......................................................................Question5................................................................................. */}
             <div style={styles.form_questions}>
-              <Message size="big" color="red">
+              <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   5
                 </Label>
@@ -557,7 +557,7 @@ const Body = ({ user }) => {
             </div>
             {/* ......................................................................Question6................................................................................. */}
             <div style={styles.form_questions}>
-              <Message size="big" color="red">
+              <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   6
                 </Label>
@@ -614,6 +614,16 @@ const Body = ({ user }) => {
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
+                      label="Kebab"
+                      name="radioGroup"
+                      value="Kebab"
+                      checked={answer6 === "Kebab"}
+                      onChange={question6Change}
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <Radio
+                      style={styles.form_radio}
                       label="Hamburger"
                       name="radioGroup"
                       value="Hamburger"
@@ -626,7 +636,7 @@ const Body = ({ user }) => {
             </div>
             {/* ......................................................................Question7................................................................................. */}
             <div style={styles.form_questions}>
-              <Message size="big" color="red">
+              <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   7
                 </Label>
@@ -697,7 +707,7 @@ const Body = ({ user }) => {
             </div>
             {/* ......................................................................Question8................................................................................. */}
             <div style={styles.form_questions}>
-              <Message size="big" color="red">
+              <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   8
                 </Label>
@@ -768,7 +778,7 @@ const Body = ({ user }) => {
             </div>
             {/* ......................................................................Question9................................................................................. */}
             <div style={styles.form_questions}>
-              <Message size="big" color="red">
+              <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   9
                 </Label>
@@ -829,7 +839,7 @@ const Body = ({ user }) => {
             </div>
             {/* ......................................................................Question10................................................................................. */}
             <div style={styles.form_questions}>
-              <Message size="big" color="red">
+              <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   10
                 </Label>
@@ -919,7 +929,7 @@ const Body = ({ user }) => {
             </div>
             {/* ......................................................................Question11................................................................................. */}
             <div style={styles.form_questions}>
-              <Message size="big" color="red">
+              <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   11
                 </Label>
@@ -998,7 +1008,7 @@ const Body = ({ user }) => {
             </div>
             {/* ......................................................................Question12................................................................................. */}
             <div style={styles.form_questions}>
-              <Message size="big" color="red">
+              <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   12
                 </Label>

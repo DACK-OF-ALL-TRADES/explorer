@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 import cityData from "../../utils/cities";
 import { useBusinessSearch } from "../../utils/yelp-api/useBusinessSearch";
 import "./cityResult.css";
-import { Grid, Card } from "semantic-ui-react";
+import { Grid, Card, Image, Icon, Rating, Container } from "semantic-ui-react";
 
 const CityResult = () => {
   let singleCity;
@@ -23,16 +23,17 @@ const CityResult = () => {
   // console.log(singleCity);
   // console.log(cityName);
   // Yelp Fetch API
-  // const term = "Hotels";
-  // const locationParam = cityName;
+  const term = "hotels";
+  const locationParam = cityName;
   // const [businesses, amountResults, searchParams, setSearchParams] =
-  //   useBusinessSearch(term, locationParam);
+  const [businesses] = useBusinessSearch(term, locationParam);
   // console.log(businesses);
   // console.log(amountResults);
   // console.log(searchParams);
 
-  // WEATHER API FETCH........................................................
+  // API FETCH........................................................
   const [cityWeatherData, setcityWeatherData] = useState();
+  const [cityCovidData, setCityCovidData] = useState();
   useEffect(() => {
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
@@ -41,18 +42,37 @@ const CityResult = () => {
       .then(
         (result) => {
           setcityWeatherData(result);
-          // console.log(cityWeatherData);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+    fetch(`https://api.quarantine.country/api/v1/summary/latest`)
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          getCovidCity(result);
         },
         (error) => {
           console.error(error);
         }
       );
   }, []);
-
+  const getCovidCity = (covid) => {
+    const cData = covid.data.regions;
+    if (covid !== undefined) {
+      for (const prop in cData) {
+        if (cData[prop].name === singleCity.country) {
+          setCityCovidData(cData[prop]);
+          console.log(cityCovidData);
+        }
+      }
+    }
+  };
   return (
     <div>
       <Nav />
-      <div>
+      <div className="citypage">
         <div className="citypage-intro">
           <Grid stackable divided="vertically">
             <Grid.Row columns={2}>
@@ -65,7 +85,10 @@ const CityResult = () => {
               </Grid.Column>
               <Grid.Column textAlign="center">
                 <h1>{singleCity.city}</h1>
-                <h3>{singleCity.country}</h3>
+                <h3>
+                  <Icon name="map marker alternate" />
+                  {singleCity.country}
+                </h3>
                 {cityWeatherData !== undefined && (
                   <div className="city-weather">
                     <Card color="teal">
@@ -101,9 +124,90 @@ const CityResult = () => {
                     </Card>
                   </div>
                 )}
+                {cityCovidData !== undefined && (
+                  <Card color="teal" centered>
+                    <Card.Content>
+                      <Card.Header>Covid Cases</Card.Header>
+                      <Card.Meta>{singleCity.country}</Card.Meta>
+                      <Card.Description textAlign="left">
+                        <b>
+                          <Icon name="heartbeat" />
+                          Deaths today:
+                          {cityCovidData.change.deaths} <br />
+                          <br />
+                          <Icon name="meh" />
+                          Active cases:
+                          {cityCovidData.change.active_cases}
+                        </b>
+                      </Card.Description>
+                    </Card.Content>
+                  </Card>
+                )}
               </Grid.Column>
             </Grid.Row>
           </Grid>
+        </div>
+        <Container>
+          <Grid stackable divided="vertically" className="city-video-container">
+            <Grid.Row columns={2}>
+              <Grid.Column textAlign="center">
+                <h1>Description about city etc...</h1>
+              </Grid.Column>
+              <Grid.Column>
+                <div className="video-responsive">
+                  <iframe
+                    width="853"
+                    height="480"
+                    src={`https://www.youtube.com/embed/${"kzDPSM95y58"}`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="Embedded youtube"
+                  />
+                </div>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Container>
+        <div className="title-hotel">
+          <h1>Hotels</h1>
+        </div>
+        <div className="city-hotel-cards">
+          <Card.Group centered>
+            {businesses !== undefined &&
+              businesses
+                .filter((item, index) => index < 10)
+                .map((business) => (
+                  <Card color="blue" key={business.name} href={business.url}>
+                    {business.image_url === "" ? (
+                      <Image
+                        className="hotel-img"
+                        src="https://img2.10bestmedia.com/Images/Photos/378649/Park-Hyatt-New-York-Manhattan-Sky-Suite-Master-Bedroom-low-res_54_990x660.jpg"
+                      />
+                    ) : (
+                      <Image className="hotel-img" src={business.image_url} />
+                    )}
+                    <Card.Content>
+                      <Card.Header>{business.name}</Card.Header>
+                      <Card.Meta>Tel: {business.display_phone}</Card.Meta>
+                      <Card.Description>
+                        <p>Address:</p>
+                        <small>{business.location.address1}</small>
+                        <small>{business.location.address2}</small>
+                        <small>{business.location.address3}</small>
+                      </Card.Description>
+                    </Card.Content>
+                    <Card.Content extra>
+                      <Rating
+                        maxRating={5}
+                        defaultRating={business.rating}
+                        icon="star"
+                        disabled
+                      />
+                    </Card.Content>
+                  </Card>
+                ))}
+          </Card.Group>
         </div>
       </div>
       <Footer />

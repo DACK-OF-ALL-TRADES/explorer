@@ -129,7 +129,7 @@ const cityList = [
     city: "Antalya",
     country: "Turkey",
     continent: "Asia",
-    climate: "Tropical",
+    climate: "Mediterranean",
     pop: "Most popular places – more crowded",
     image:
       "https://clickstay.s3-eu-west-1.amazonaws.com/images/blog/post/Antalya.jpg",
