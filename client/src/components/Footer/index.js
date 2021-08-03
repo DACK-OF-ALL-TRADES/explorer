@@ -18,7 +18,10 @@ const Footer = () => {
           <div>
             45.4215° N, 75.6972° W | Ottawa, CA
             <br />
-            <a className="footer__btn" href="mailto:kemal.demirgil@hotmail.com">
+            <a
+              className="footer__btn"
+              href="mailto:explorer.guide.me@gmail.com"
+            >
               Email Us
             </a>
           </div>
@@ -39,7 +42,7 @@ const Footer = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="mailto:kemal.demirgil@hotmail.com"
+                  href="mailto:explorer.guide.me@gmail.com"
                 >
                   <Icon name="mail" size="big" style={{ margin: "0.5rem" }} />
                 </a>
@@ -63,22 +66,22 @@ const Footer = () => {
             <h2 className="nav__title">Find your ideal travel spot</h2>
             <ul className="nav__ul nav__ul--extra">
               <li>
-                <Link to="/#">Cold areas</Link>
+                <Link to="/Europe">Europe</Link>
               </li>
               <li>
-                <Link to="/#">Warm areas</Link>
+                <Link to="/Asia">Asia</Link>
               </li>
               <li>
-                <Link to="/#">Cultural</Link>
+                <Link to="/NorthAmerica">North America</Link>
               </li>
               <li>
-                <Link to="/#">Entertainment</Link>
+                <Link to="/SouthAmerica">South America</Link>
               </li>
               <li>
-                <Link to="/#">History</Link>
+                <Link to="/Africa">Africa</Link>
               </li>
               <li>
-                <Link to="/#">Kids choice</Link>
+                <Link to="/Oceania">Oceania</Link>
               </li>
             </ul>
           </li>
@@ -96,7 +99,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.termsfeed.com/live/6537dbef-3a17-458d-9b90-763ff9ee6f7a"
+                  href="https://www.termsfeed.com/live/7cacca9f-0965-4509-903d-17a5f0e327fc"
                   target="_blank"
                   rel="noreferrer"
                 >

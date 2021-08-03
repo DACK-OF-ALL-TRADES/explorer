@@ -15,6 +15,12 @@ import Home from "./pages/Home page";
 import Profile from "./pages/Profile page";
 import CityResult from "./pages/CityResult Page";
 import Cities from "./pages/Cities Page";
+import Asia from "./pages/Continents/Asia";
+import Africa from "./pages/Continents/Africa";
+import Europe from "./pages/Continents/Europe";
+import NorthAmerica from "./pages/Continents/NorthAmerica";
+import SouthAmerica from "./pages/Continents/SouthAmerica";
+import Oceania from "./pages/Continents/Oceania";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -62,6 +68,24 @@ function App() {
           </Route>
           <Route exact path="/search/:city">
             <CityResult />
+          </Route>
+          <Route exact path="/Asia">
+            <Asia />
+          </Route>
+          <Route exact path="/Europe">
+            <Europe />
+          </Route>
+          <Route exact path="/NorthAmerica">
+            <NorthAmerica />
+          </Route>
+          <Route exact path="/SouthAmerica">
+            <SouthAmerica />
+          </Route>
+          <Route exact path="/Africa">
+            <Africa />
+          </Route>
+          <Route exact path="/Oceania">
+            <Oceania />
           </Route>
         </div>
       </Router>

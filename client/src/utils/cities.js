@@ -240,6 +240,17 @@ const cityList = [
     youtube: "",
   },
   {
+    id: 22,
+    city: "Izmir",
+    country: "Turkey",
+    continent: "Asia",
+    climate: "Mediterranean",
+    pop: "Most popular places – more crowded",
+    image:
+      "https://ephesuskusadasitours.com/wp-content/uploads/2020/01/%C4%B0zmir-Tours-1-1.jpg",
+    youtube: "",
+  },
+  {
     id: 23,
     city: "Prague",
     country: "Czechia",
@@ -897,7 +908,7 @@ const cityList = [
   },
 
   {
-    id: 88,
+    id: 80,
     city: "Frankfurt",
     country: "Germany",
     continent: "Europe",
@@ -908,7 +919,7 @@ const cityList = [
     youtube: "",
   },
   {
-    id: 89,
+    id: 81,
     city: "Stockholm",
     country: "Sweden",
     continent: "Europe",
@@ -919,7 +930,7 @@ const cityList = [
     youtube: "",
   },
   {
-    id: 90,
+    id: 82,
     city: "Lima",
     country: "Peru",
     continent: "South America",
@@ -931,7 +942,7 @@ const cityList = [
   },
 
   {
-    id: 91,
+    id: 83,
     city: "Da Nang",
     country: "Vietnam",
     continent: "Asia",
@@ -942,7 +953,7 @@ const cityList = [
     youtube: "",
   },
   {
-    id: 92,
+    id: 84,
     city: "Batam",
     country: "Indonesia",
     continent: "Asia",
@@ -953,7 +964,7 @@ const cityList = [
     youtube: "",
   },
   {
-    id: 93,
+    id: 85,
     city: "Nice",
     country: "France",
     continent: "Europe",
@@ -964,7 +975,7 @@ const cityList = [
     youtube: "",
   },
   {
-    id: 94,
+    id: 86,
     city: "Fukuoka",
     country: "Japan",
     continent: "Asia",
@@ -975,7 +986,7 @@ const cityList = [
     youtube: "",
   },
   {
-    id: 95,
+    id: 87,
     city: "Abu Dhabi",
     country: "UAE",
     continent: "Asia",
@@ -986,7 +997,7 @@ const cityList = [
     youtube: "",
   },
   {
-    id: 96,
+    id: 88,
     city: "Jeju",
     country: "South Korea",
     continent: "Asia",
@@ -997,7 +1008,7 @@ const cityList = [
     youtube: "",
   },
   {
-    id: 97,
+    id: 89,
     city: "Porto",
     country: "Portugal",
     continent: "Europe",
@@ -1007,7 +1018,7 @@ const cityList = [
     youtube: "",
   },
   {
-    id: 98,
+    id: 90,
     city: "Rhodes",
     country: "Greece",
     continent: "Europe",
@@ -1018,7 +1029,7 @@ const cityList = [
     youtube: "",
   },
   {
-    id: 99,
+    id: 91,
     city: "Rio de Janeiro",
     country: "Brazil",
     continent: "South America",
@@ -1029,7 +1040,7 @@ const cityList = [
     youtube: "",
   },
   {
-    id: 100,
+    id: 92,
     city: "Krabi",
     country: "Thailand",
     continent: "Asia",
@@ -1040,7 +1051,7 @@ const cityList = [
     youtube: "",
   },
   {
-    id: 101,
+    id: 93,
     city: "Bangalore",
     country: "India",
     continent: "Asia",
@@ -1051,7 +1062,7 @@ const cityList = [
     youtube: "",
   },
   {
-    id: 102,
+    id: 94,
     city: "Reykjavik",
     Country: "Iceland",
     continent: "Europe",
@@ -1063,7 +1074,7 @@ const cityList = [
   },
 
   {
-    id: 103,
+    id: 95,
     city: "Nepal",
     Country: "Federal Democratic Republic of Nepal",
     continent: "Asia",
@@ -1075,7 +1086,7 @@ const cityList = [
   },
 
   {
-    id: 104,
+    id: 96,
     city: "Havana",
     Country: "Cuba",
     continent: "South America",

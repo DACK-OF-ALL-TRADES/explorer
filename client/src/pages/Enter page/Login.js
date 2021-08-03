@@ -59,15 +59,30 @@ const Login = (props) => {
       <div>
         <div className="enter-container">
           <Background />
-          <h1 className="enter-logo">Explorer</h1>
-          <div className="ui middle aligned center aligned grid">
+          <h1
+            className="enter-logo"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="3500"
+            data-aos-delay="1000"
+          >
+            Explorer
+          </h1>
+          <div
+            className="ui middle aligned center aligned grid"
+            data-aos="fade-down"
+          >
             <div className="column">
-              <h2 className="ui image header">
+              <h2 className="ui image header" data-aos="fade-up-right">
                 <div className="content">
                   <h3>Login</h3>
                 </div>
               </h2>
-              <form className="ui large form" onSubmit={handleFormSubmit}>
+              <form
+                className="ui large form"
+                onSubmit={handleFormSubmit}
+                data-aos="fade-up-right"
+              >
                 <div className="ui stacked segment enter-body">
                   <div className="title-header">
                     <small>Email Address</small>
@@ -117,7 +132,13 @@ const Login = (props) => {
                       />
                     </div>
                   </div>
-                  <Button type="submit" color="red" animated="fade" fluid>
+                  <Button
+                    type="submit"
+                    color="red"
+                    animated="fade"
+                    fluid
+                    data-aos="fade-down-right"
+                  >
                     <Button.Content visible>Login</Button.Content>
                     <Button.Content hidden>Explore the world</Button.Content>
                   </Button>
@@ -125,7 +146,7 @@ const Login = (props) => {
 
                 <div className="ui error message"></div>
               </form>
-              <Link to="/">
+              <Link to="/" data-aos="fade-up-left">
                 <Button animated fluid color="black">
                   <Button.Content visible>Create an account</Button.Content>
                   <Button.Content hidden>

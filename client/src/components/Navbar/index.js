@@ -15,7 +15,7 @@ const Nav = () => {
     <div>
       <div className="nav">
         <input type="checkbox" id="nav-check" />
-        <div className="nav-header">
+        <div className="nav-header" data-aos="fade-right">
           <div className="nav-title">
             <Link to="/home">Explorer</Link>
           </div>
@@ -28,7 +28,7 @@ const Nav = () => {
           </label>
         </div>
 
-        <div className="nav-links">
+        <div className="nav-links" data-aos="fade-left">
           {/* if on saved page, display search page else display saved page */}
           {window.location.pathname === "/home" ? (
             <Link to="/profile">Profile</Link>

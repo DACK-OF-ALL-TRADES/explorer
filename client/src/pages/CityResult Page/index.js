@@ -14,7 +14,7 @@ const CityResult = () => {
   // console.log(cityData);
   cityData.forEach((data) => {
     // console.log(data);
-    if (data.id == cityID) {
+    if (data.id === parseInt(cityID)) {
       // console.log("city->", data);
       singleCity = data;
       cityName = data.city;

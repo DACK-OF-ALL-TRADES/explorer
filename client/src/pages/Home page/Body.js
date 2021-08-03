@@ -203,17 +203,17 @@ const Body = ({ user }) => {
     <div className="home-search">
       <Container>
         <div className="home-search-container">
-          <h2>
+          <h2 id="search" data-aos="fade-up">
             Looking options from {ipData.city} / {ipData.countryCode}
           </h2>
-          <h3>Please select your choices</h3>
+          <h3 data-aos="fade-down">Please select your choices</h3>
           <div className="caret-container">
             <Icon name="caret down" className="caret" size="huge" />
           </div>
 
           <div className="body-form-container">
             {/* ......................................................................Question1................................................................................. */}
-            <div style={styles.form_questions}>
+            <div style={styles.form_questions} data-aos="fade-up-left">
               <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   1
@@ -240,7 +240,7 @@ const Body = ({ user }) => {
               </Message>
             </div>
             {/* ......................................................................Question2................................................................................. */}
-            <div style={styles.form_questions}>
+            <div style={styles.form_questions} data-aos="fade-up-right">
               <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   2
@@ -319,7 +319,7 @@ const Body = ({ user }) => {
               </Message>
             </div>
             {/* ......................................................................Question3................................................................................. */}
-            <div style={styles.form_questions}>
+            <div style={styles.form_questions} data-aos="fade-up-left">
               <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   3
@@ -418,7 +418,7 @@ const Body = ({ user }) => {
               </Message>
             </div>
             {/* ......................................................................Question4................................................................................. */}
-            <div style={styles.form_questions}>
+            <div style={styles.form_questions} data-aos="fade-up-right">
               <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   4
@@ -487,7 +487,7 @@ const Body = ({ user }) => {
               </Message>
             </div>
             {/* ......................................................................Question5................................................................................. */}
-            <div style={styles.form_questions}>
+            <div style={styles.form_questions} data-aos="fade-up-left">
               <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   5
@@ -556,7 +556,7 @@ const Body = ({ user }) => {
               </Message>
             </div>
             {/* ......................................................................Question6................................................................................. */}
-            <div style={styles.form_questions}>
+            <div style={styles.form_questions} data-aos="fade-up-right">
               <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   6
@@ -635,7 +635,7 @@ const Body = ({ user }) => {
               </Message>
             </div>
             {/* ......................................................................Question7................................................................................. */}
-            <div style={styles.form_questions}>
+            <div style={styles.form_questions} data-aos="fade-up-left">
               <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   7
@@ -706,7 +706,7 @@ const Body = ({ user }) => {
               </Message>
             </div>
             {/* ......................................................................Question8................................................................................. */}
-            <div style={styles.form_questions}>
+            <div style={styles.form_questions} data-aos="fade-up-right">
               <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   8
@@ -777,7 +777,7 @@ const Body = ({ user }) => {
               </Message>
             </div>
             {/* ......................................................................Question9................................................................................. */}
-            <div style={styles.form_questions}>
+            <div style={styles.form_questions} data-aos="fade-up-left">
               <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   9
@@ -838,7 +838,7 @@ const Body = ({ user }) => {
               </Message>
             </div>
             {/* ......................................................................Question10................................................................................. */}
-            <div style={styles.form_questions}>
+            <div style={styles.form_questions} data-aos="fade-up-right">
               <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   10
@@ -928,7 +928,7 @@ const Body = ({ user }) => {
               </Message>
             </div>
             {/* ......................................................................Question11................................................................................. */}
-            <div style={styles.form_questions}>
+            <div style={styles.form_questions} data-aos="fade-up-left">
               <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   11
@@ -1007,7 +1007,7 @@ const Body = ({ user }) => {
               </Message>
             </div>
             {/* ......................................................................Question12................................................................................. */}
-            <div style={styles.form_questions}>
+            <div style={styles.form_questions} data-aos="fade-up-right">
               <Message size="small" color="red">
                 <Label color="red" attached="top right">
                   12
@@ -1092,7 +1092,11 @@ const Body = ({ user }) => {
             {/* END OF QUESTIONS..................................................................... */}
           </div>
 
-          <div className="search-button">
+          <div
+            className="search-button"
+            data-aos="fade-up"
+            data-aos-duration="4000"
+          >
             <Button animated color="red" fluid onClick={citySearch}>
               <Button.Content visible>Get your results</Button.Content>
               <Button.Content hidden>

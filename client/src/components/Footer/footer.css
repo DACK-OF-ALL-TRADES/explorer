@@ -16,19 +16,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--explorer-red) var(--explorer-white);
 }
 
 :root {
   --explorer-red: #d62b2b;
   --explorer-white: #ebebeb;
   --explorer-dark: #0c0c0c;
-  --craft-font: "Pacifico", cursive;
-  --craft-font2: "Fredericka the Great", cursive;
+  --explorer-pacifico: "Pacifico", cursive;
+  --explorer-caveat: "Capriola", sans-serif;
   --craft-font3: "Literata", serif;
   --roboto: "Roboto", sans-serif;
 }
 
-/*  */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--explorer-white);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--explorer-red);
+}
 /* Footer............................................. */
 
 .footer {

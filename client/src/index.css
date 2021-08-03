@@ -16,16 +16,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--roboto);
-  transition: 0.4s ease-in-out;
+  scrollbar-width: thin;
+  scrollbar-color: var(--explorer-red) var(--explorer-white);
 }
 
 :root {
-  --craft: #10d48e;
-  --craft-dark: #1d2622;
-  --craft-light: #d5d6d6;
-  --craft-font: "Pacifico", cursive;
-  --craft-font2: "Fredericka the Great", cursive;
+  --explorer-red: #d62b2b;
+  --explorer-white: #ebebeb;
+  --explorer-dark: #0c0c0c;
+  --explorer-pacifico: "Pacifico", cursive;
+  --explorer-caveat: "Capriola", sans-serif;
   --craft-font3: "Literata", serif;
   --roboto: "Roboto", sans-serif;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--explorer-white);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--explorer-red);
 }

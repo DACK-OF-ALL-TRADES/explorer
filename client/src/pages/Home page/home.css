@@ -14,6 +14,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--explorer-red) var(--explorer-white);
 }
 
 :root {
@@ -26,7 +28,23 @@
   --roboto: "Roboto", sans-serif;
 }
 
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--explorer-white);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--explorer-red);
+}
+
 /* Home............................................. */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-image: url(../../assets/misc/foggy_birds.png);
@@ -78,6 +96,7 @@ body {
   font-family: var(--explorer-caveat);
   font-size: 3rem;
   color: var(--explorer-dark);
+  text-align: center;
 }
 
 .home-header-body {
@@ -115,12 +134,27 @@ body {
   margin-top: 2rem;
 }
 
+.home-2buttons {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.accordion-home {
+  display: flex;
+  align-items: center;
+}
+
 .center-items {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80%;
+  height: 60%;
   flex-direction: column;
+}
+
+.center-items * {
+  font-family: var(--explorer-caveat) !important;
 }
 
 .info-explorer {
@@ -224,11 +258,29 @@ body {
   }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 700px) {
   .home-header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .jumbo h1 {
     font-size: 4rem;
+  }
+  .center-items * {
+    font-size: 80%;
+  }
+  .home-message {
+    padding-bottom: 4rem !important;
+  }
+  .home-message .header {
+    font-size: 1.3rem !important;
+  }
+}
+
+@media (max-width: 475px) {
+  .home-header h1 {
+    font-size: 2rem;
+  }
+  .jumbo h1 {
+    font-size: 3rem;
   }
 }

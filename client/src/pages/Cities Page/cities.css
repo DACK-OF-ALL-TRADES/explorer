@@ -14,6 +14,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--explorer-red) var(--explorer-white);
 }
 
 :root {
@@ -24,6 +26,18 @@
   --explorer-caveat: "Capriola", sans-serif;
   --craft-font3: "Literata", serif;
   --roboto: "Roboto", sans-serif;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--explorer-white);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--explorer-red);
 }
 
 /* Cities........................................................ */

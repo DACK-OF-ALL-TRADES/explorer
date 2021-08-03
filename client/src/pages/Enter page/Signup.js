@@ -53,20 +53,35 @@ const Signup = () => {
     <div>
       <div className="enter-container">
         <Background />
-        <h1 className="enter-logo">Explorer</h1>
-        <div className="ui middle aligned center aligned grid">
+        <h1
+          className="enter-logo"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="3500"
+          data-aos-delay="1000"
+        >
+          Explorer
+        </h1>
+        <div
+          className="ui middle aligned center aligned grid"
+          data-aos="fade-down"
+        >
           <div className="column">
-            <h2 className="ui image header">
+            <h2 className="ui image header" data-aos="fade-up-right">
               <div className="content">
                 <h3>Create an account</h3>
               </div>
             </h2>
-            <form className="ui large form" onSubmit={handleFormSubmit}>
+            <form
+              className="ui large form"
+              onSubmit={handleFormSubmit}
+              data-aos="fade-up-right"
+            >
               <div className="ui stacked segment enter-body">
                 <div className="title-header">
                   <small>First Name</small>
                 </div>
-                <div className="field">
+                <div className="field" data-aos="fade-up">
                   <div className="ui left icon input">
                     <i className="user icon"></i>
                     <Popup
@@ -89,7 +104,7 @@ const Signup = () => {
                 <div className="title-header">
                   <small>Last Name</small>
                 </div>
-                <div className="field">
+                <div className="field" data-aos="fade-up-right">
                   <div className="ui left icon input">
                     <i className="user icon"></i>
                     <Popup
@@ -112,7 +127,7 @@ const Signup = () => {
                 <div className="title-header">
                   <small>Username</small>
                 </div>
-                <div className="field">
+                <div className="field" data-aos="fade-up-left">
                   <div className="ui left icon input">
                     <i className="user icon"></i>
                     <Popup
@@ -135,7 +150,7 @@ const Signup = () => {
                 <div className="title-header">
                   <small>Email Address</small>
                 </div>
-                <div className="field">
+                <div className="field" data-aos="fade-up-left">
                   <div className="ui left icon input">
                     <i className="user icon"></i>
                     <Popup
@@ -159,7 +174,7 @@ const Signup = () => {
                 <div className="title-header">
                   <small>Password</small>
                 </div>
-                <div className="field">
+                <div className="field" data-aos="fade-down-right">
                   <div className="ui left icon input">
                     <i className="lock icon"></i>
                     <Popup
@@ -180,7 +195,13 @@ const Signup = () => {
                     />
                   </div>
                 </div>
-                <Button type="submit" color="red" animated="fade" fluid>
+                <Button
+                  type="submit"
+                  color="red"
+                  animated="fade"
+                  fluid
+                  data-aos="fade-up"
+                >
                   <Button.Content visible>
                     <Icon name="user plus" />
                     Create account
@@ -190,7 +211,7 @@ const Signup = () => {
               </div>
               <div className="ui error message"></div>
             </form>
-            <Link to="/login">
+            <Link to="/login" data-aos="fade-up-left">
               <Button animated fluid color="black">
                 <Button.Content visible>Login instead</Button.Content>
                 <Button.Content hidden>
