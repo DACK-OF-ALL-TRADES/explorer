@@ -35,18 +35,20 @@ const CityResult = () => {
   const [cityWeatherData, setcityWeatherData] = useState();
   const [cityCovidData, setCityCovidData] = useState();
   useEffect(() => {
-    fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
-    )
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setcityWeatherData(result);
-        },
-        (error) => {
-          console.error(error);
-        }
-      );
+    if (process.env.REACT_APP_API_KEY) {
+      fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+      )
+        .then((res) => res.json())
+        .then(
+          (result) => {
+            setcityWeatherData(result);
+          },
+          (error) => {
+            console.error(error);
+          }
+        );
+    }
     fetch(`https://api.quarantine.country/api/v1/summary/latest`)
       .then((res) => res.json())
       .then(
