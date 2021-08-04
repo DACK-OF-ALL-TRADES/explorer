@@ -63,31 +63,8 @@ const Head = ({ user }) => {
       </div>
       <div className="home-header" data-aos="fade-right">
         <h1>Where do you want to go {user.firstname}?</h1>
-        <Step.Group stackable="tablet">
-          <Step>
-            <Icon name="info circle" />
-            <Step.Content>
-              <Step.Title>Information</Step.Title>
-              <Step.Description>Enter your trip details</Step.Description>
-            </Step.Content>
-          </Step>
-          <Step>
-            <Icon name="options" />
-            <Step.Content>
-              <Step.Title>Options</Step.Title>
-              <Step.Description>Select the suitable option</Step.Description>
-            </Step.Content>
-          </Step>
-          <Step>
-            <Icon name="plane" />
-            <Step.Content>
-              <Step.Title>Start the Adventure</Step.Title>
-              <Step.Description>Explore the world</Step.Description>
-            </Step.Content>
-          </Step>
-        </Step.Group>
         <div className="home-2buttons">
-          <Message>
+          <Message color="red">
             <Button
               onClick={randomCity}
               color="red"
@@ -114,6 +91,29 @@ const Head = ({ user }) => {
             </Button>
           </Message>
         </div>
+        <Step.Group stackable="tablet">
+          <Step>
+            <Icon name="info circle" />
+            <Step.Content>
+              <Step.Title>Information</Step.Title>
+              <Step.Description>Enter your trip details</Step.Description>
+            </Step.Content>
+          </Step>
+          <Step>
+            <Icon name="options" />
+            <Step.Content>
+              <Step.Title>Options</Step.Title>
+              <Step.Description>Select the suitable option</Step.Description>
+            </Step.Content>
+          </Step>
+          <Step>
+            <Icon name="plane" />
+            <Step.Content>
+              <Step.Title>Start the Adventure</Step.Title>
+              <Step.Description>Explore the world</Step.Description>
+            </Step.Content>
+          </Step>
+        </Step.Group>
       </div>
       <Container>
         <div className="home-img-container">

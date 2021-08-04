@@ -21,7 +21,7 @@ const cityList = [
     image:
       "https://lp-cms-production.imgix.net/2021-03/GettyRF_512268647.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850",
     youtube: "",
-    position: "{{lat: 13.756331, lng: 100.501765 }}",
+    position: { lat: 13.756331, lng: 100.501765 },
   },
   {
     id: 3,
@@ -819,7 +819,7 @@ const cityList = [
 
   {
     id: 66,
-    city: "Penang Island",
+    city: "Penang",
     country: "Malaysia",
     continent: "Asia",
     climate: "Tropical",

@@ -8,6 +8,8 @@ import {
   Radio,
   Message,
   Label,
+  Modal,
+  Header,
 } from "semantic-ui-react";
 // import { Link } from "react-router-dom";
 // import CityResults from "./CityResults";
@@ -29,6 +31,7 @@ let continent = [];
 let continent_climate = [];
 let continent_climate_pop = [];
 const Body = ({ user }) => {
+  const [open, setOpen] = React.useState(false);
   const [ipData, setIpData] = useState([]);
   const [answer1, setAnswer1] = useState(null);
   const [answer2, setAnswer2] = useState(null);
@@ -68,7 +71,8 @@ const Body = ({ user }) => {
   let cityListResult = Object.values(cityDataResults);
   const citySearch = () => {
     if (cityListResult.includes(null)) {
-      alert("Please fill in all the questions...");
+      setOpen(true);
+      // alert("Please fill in all the questions...");
     } else {
       pickCities();
     }
@@ -763,6 +767,29 @@ const Body = ({ user }) => {
               </Button.Content>
             </Button>
           </div>
+          <Modal
+            basic
+            onClose={() => setOpen(false)}
+            onOpen={() => setOpen(true)}
+            open={open}
+            size="small"
+          >
+            <Header icon>
+              <Icon name="alarm" />
+              Please Fill All Questions
+            </Header>
+            <Modal.Content>
+              <p>
+                You've got an empty question, please fill in your options and
+                try again.
+              </p>
+            </Modal.Content>
+            <Modal.Actions>
+              <Button color="green" inverted onClick={() => setOpen(false)}>
+                <Icon name="checkmark" /> OK
+              </Button>
+            </Modal.Actions>
+          </Modal>
         </div>
       </Container>
     </div>

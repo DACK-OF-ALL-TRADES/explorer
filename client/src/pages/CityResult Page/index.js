@@ -35,9 +35,13 @@ const CityResult = () => {
         .then(
           (result) => {
             setcityWeatherData(result);
+            console.log(cityWeatherData);
           },
           (error) => {
             console.error(error);
+            if (error.code === "LOCATION_NOT_FOUND") {
+              return null;
+            }
           }
         );
     }
@@ -83,7 +87,10 @@ const CityResult = () => {
                   <Icon name="map marker alternate" />
                   {singleCity.country}
                 </h3>
-                {cityWeatherData !== undefined && (
+                {cityWeatherData === undefined ||
+                cityWeatherData.main === undefined ? (
+                  ""
+                ) : (
                   <div className="city-weather">
                     <Card color="teal">
                       <Card.Content>
