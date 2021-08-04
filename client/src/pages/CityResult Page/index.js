@@ -5,32 +5,23 @@ import cityData from "../../utils/cities";
 import { useBusinessSearch } from "../../utils/yelp-api/useBusinessSearch";
 import "./cityResult.css";
 import { Grid, Card, Image, Icon, Rating, Container } from "semantic-ui-react";
-import Map from '../../components/Map/Map'
+import Map from "../../components/Map/Map";
 
 const CityResult = () => {
   let singleCity;
   let cityName = "";
   const cityID = window.location.pathname.split("/").pop();
-  // console.log("cityID", cityID);
-  // console.log(cityData);
   cityData.forEach((data) => {
-    // console.log(data);
     if (data.id === parseInt(cityID)) {
-      // console.log("city->", data);
       singleCity = data;
       cityName = data.city;
     }
   });
-  // console.log(singleCity);
-  // console.log(cityName);
-  // Yelp Fetch API
+  // // Yelp Fetch API
   const term = "Events";
   const locationParam = cityName;
-  // const [businesses, amountResults, searchParams, setSearchParams] =
   const [businesses] = useBusinessSearch(term, locationParam);
-  // console.log(businesses);
-  // console.log(amountResults);
-  // console.log(searchParams);
+  console.log(businesses);
 
   // API FETCH........................................................
   const [cityWeatherData, setcityWeatherData] = useState();
@@ -60,18 +51,18 @@ const CityResult = () => {
           console.error(error);
         }
       );
-  }, []);
-  const getCovidCity = (covid) => {
-    const cData = covid.data.regions;
-    if (covid !== undefined) {
-      for (const prop in cData) {
-        if (cData[prop].name === singleCity.country) {
-          setCityCovidData(cData[prop]);
-          console.log(cityCovidData);
+    const getCovidCity = (covid) => {
+      const cData = covid.data.regions;
+      if (covid !== undefined) {
+        for (const prop in cData) {
+          if (cData[prop].name === singleCity.country) {
+            setCityCovidData(cData[prop]);
+            console.log(cityCovidData);
+          }
         }
       }
-    }
-  };
+    };
+  }, []);
   return (
     <div>
       <Nav />
@@ -153,8 +144,10 @@ const CityResult = () => {
         <Container>
           <Grid stackable divided="vertically" className="city-video-container">
             <Grid.Row columns={2}>
-              <Grid.Column >
-                <Map />
+              <Grid.Column>
+                <div>
+                  <Map />
+                </div>
               </Grid.Column>
               <Grid.Column>
                 <div className="video-responsive">
@@ -177,6 +170,25 @@ const CityResult = () => {
         </div>
         <div className="city-hotel-cards">
           <Card.Group centered>
+            {businesses === undefined && (
+              <div>
+                <h3>Couldn't get any information about this city</h3>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <img
+                    alt="city not found..."
+                    width="100%"
+                    height="auto"
+                    src="https://media.giphy.com/media/hPSMHzgHQeFuE/giphy.gif"
+                  />
+                </div>
+              </div>
+            )}
             {businesses !== undefined &&
               businesses
                 .filter((item, index) => index < 10)
