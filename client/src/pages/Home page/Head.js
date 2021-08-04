@@ -43,7 +43,7 @@ const panel2 = [
 
 const Head = ({ user }) => {
   const randomCity = () => {
-    var randomnumber = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+    var randomnumber = Math.floor(Math.random() * (95 - 0 + 1)) + 0;
     console.log(randomnumber);
     window.location.assign(`/search/${randomnumber}`);
   };
