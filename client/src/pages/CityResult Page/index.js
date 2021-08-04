@@ -23,7 +23,7 @@ const CityResult = () => {
   // console.log(singleCity);
   // console.log(cityName);
   // Yelp Fetch API
-  const term = "hotels";
+  const term = "Events";
   const locationParam = cityName;
   // const [businesses, amountResults, searchParams, setSearchParams] =
   const [businesses] = useBusinessSearch(term, locationParam);
