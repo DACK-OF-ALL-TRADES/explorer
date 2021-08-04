@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { Button, Header, Image, Modal, Input, Icon } from "semantic-ui-react";
@@ -12,6 +13,7 @@ import { QUERY_ME } from "../../utils/queries";
 
 function EditProfileModal() {
   const [open, setOpen] = React.useState(false);
+  // const [openTravel, setOpenTravel] = React.useState(false);//for the saved places
   const [firstNameText, setfirstNameText] = useState("");
   const [lastNameText, setlastNameText] = useState("");
   const [emailText, setEmailText] = useState("");
@@ -177,27 +179,40 @@ function EditProfileModal() {
       setUsernameText(value);
     }
   };
+  
+
+
 
   return (
     <Modal
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
       open={open}
-      trigger={<Button>Update your luggage</Button>}
-      size="large"
-      style={{ minWidth: "105px" }}
+      trigger={<Button className="luggage-button">Update your luggage</Button>}
+      
+
+      // onCloseTravel={() => setOpenTravel(false)}
+      // onOpenTravel={() => setOpenTravel(true)}
+      // openTravel={openTravel}
+      // trigger={<Button className="travel-button">Your travel Bucket List</Button>}
+      
+      // size="medium"
+      // style={{ minWidth: "305px"
+      //           }}
+      
+
     >
       <Modal.Header>
-        Edit Profile{" "}
+        Traveller's Profile{" "}
         <Button icon style={{ float: "right" }} onClick={() => setOpen(false)}>
           <Icon name="close" />
         </Button>
       </Modal.Header>
 
       <Modal.Content image>
-        <Modal.Description>
-          <Image size="medium" src={pp} wrapped />
-          <Header>Traveller's First Name</Header>
+        <Modal.Description className>
+          <Image src={pp} size='medium' className= "enter-profile" wrapped />
+          <Header> First Name</Header>
           {/* FIRSTNAME................................. */}
           <Input
             name="first-name"
@@ -209,12 +224,12 @@ function EditProfileModal() {
             fluid
           >
             <input />
-            <Button type="submit" onClick={handleFirstNameSubmit}>
+            <Button type="submit" color="blue" onClick={handleFirstNameSubmit}>
               update
             </Button>
           </Input>
           {/* LASTNAME................................. */}
-          <Header>Traveller's Last Name</Header>
+          <Header> Last Name</Header>
           <Input
             name="last-name"
             type="text"
@@ -225,7 +240,7 @@ function EditProfileModal() {
             fluid
           >
             <input />
-            <Button type="submit" onClick={handleLastNameSubmit}>
+            <Button type="submit" color="blue" onClick={handleLastNameSubmit}>
               update
             </Button>
           </Input>
@@ -241,12 +256,12 @@ function EditProfileModal() {
             fluid
           >
             <input />
-            <Button type="submit" onClick={handleEmailSubmit}>
+            <Button type="submit" color="blue" onClick={handleEmailSubmit}>
               update
             </Button>
           </Input>
           {/* USERNAME................................. */}
-          <Header>Traveller's Username</Header>
+          <Header> Username</Header>
           <Input
             name="username"
             type="text"
@@ -257,15 +272,12 @@ function EditProfileModal() {
             fluid
           >
             <input />
-            <Button type="submit" onClick={handleUsernameSubmit}>
+            <Button type="submit" color="blue" onClick={handleUsernameSubmit}>
               update
             </Button>
           </Input>
 
-          {/* PICTURE................................. */}
-          {/* <Header>Profile Picture</Header>
-          <Upload />
-           <Files /> */}
+         
         </Modal.Description>
       </Modal.Content>
     </Modal>

@@ -101,3 +101,28 @@ body > .grid {
 .content h3 {
   font-size: 2rem !important;
 }
+ .luggage-button{
+  margin: 0;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* .travel-button{
+  margin: 0;
+  position: absolute;
+  top: 75%;
+  right: 26%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}   */
+
+
+.enter-profile{
+  margin: 0;
+  position: absolute;
+  left: 30%;
+  
+
+} 
