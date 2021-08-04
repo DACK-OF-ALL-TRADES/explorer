@@ -261,6 +261,18 @@ const cityList = [
     position: { lat: 23.12911, lng: 113.264385 },
   },
   {
+    id: 22,
+    city: "Izmir",
+    country: "Turkey",
+    continent: "Asia",
+    climate: "Mediterranean",
+    pop: "Most popular places – more crowded",
+    image:
+      "https://ephesuskusadasitours.com/wp-content/uploads/2020/01/%C4%B0zmir-Tours-1-1.jpg",
+    youtube: "",
+    position: { lat: 38.4237, lng: 27.1428 },
+  },
+  {
     id: 23,
     city: "Prague",
     country: "Czechia",
@@ -975,7 +987,7 @@ const cityList = [
   },
 
   {
-    id: 88,
+    id: 80,
     city: "Frankfurt",
     country: "Germany",
     continent: "Europe",
@@ -987,7 +999,7 @@ const cityList = [
     position: { lat: 50110922, lng: 8.682127 },
   },
   {
-    id: 89,
+    id: 81,
     city: "Stockholm",
     country: "Sweden",
     continent: "Europe",
@@ -999,7 +1011,7 @@ const cityList = [
     position: { lat: 59.329323, lng: 18.068581 },
   },
   {
-    id: 90,
+    id: 82,
     city: "Lima",
     country: "Peru",
     continent: "South America",
@@ -1012,7 +1024,7 @@ const cityList = [
   },
 
   {
-    id: 91,
+    id: 83,
     city: "Da Nang",
     country: "Vietnam",
     continent: "Asia",
@@ -1024,7 +1036,7 @@ const cityList = [
     position: { lat: 16.054456, lng: 108.071722 },
   },
   {
-    id: 92,
+    id: 84,
     city: "Batam",
     country: "Indonesia",
     continent: "Asia",
@@ -1036,7 +1048,7 @@ const cityList = [
     position: { lat: 1.130078, lng: 104.052921 },
   },
   {
-    id: 93,
+    id: 85,
     city: "Nice",
     country: "France",
     continent: "Europe",
@@ -1048,7 +1060,7 @@ const cityList = [
     position: { lat: 43.710173, lng: 7.261953 },
   },
   {
-    id: 94,
+    id: 86,
     city: "Fukuoka",
     country: "Japan",
     continent: "Asia",
@@ -1060,7 +1072,7 @@ const cityList = [
     position: { lat: 33.590184, lng: 130.401689 },
   },
   {
-    id: 95,
+    id: 87,
     city: "Abu Dhabi",
     country: "UAE",
     continent: "Asia",
@@ -1072,7 +1084,7 @@ const cityList = [
     position: { lat: 24.453884, lng: 54.377344 },
   },
   {
-    id: 96,
+    id: 88,
     city: "Jeju",
     country: "South Korea",
     continent: "Asia",
@@ -1084,7 +1096,7 @@ const cityList = [
     position: { lat: 33.499621, lng: 126.531188 },
   },
   {
-    id: 97,
+    id: 89,
     city: "Porto",
     country: "Portugal",
     continent: "Europe",
@@ -1095,7 +1107,7 @@ const cityList = [
     position: { lat: 41.157944, lng: -8.629105 },
   },
   {
-    id: 98,
+    id: 90,
     city: "Rhodes",
     country: "Greece",
     continent: "Europe",
@@ -1107,7 +1119,7 @@ const cityList = [
     position: { lat: 36.434963, lng: 28.217483 },
   },
   {
-    id: 99,
+    id: 91,
     city: "Rio de Janeiro",
     country: "Brazil",
     continent: "South America",
@@ -1119,7 +1131,7 @@ const cityList = [
     position: { lat: -22.906847, lng: -43.172896 },
   },
   {
-    id: 100,
+    id: 92,
     city: "Krabi",
     country: "Thailand",
     continent: "Asia",
@@ -1131,7 +1143,7 @@ const cityList = [
     position: { lat: 8.0863, lng: 98.906284 },
   },
   {
-    id: 101,
+    id: 93,
     city: "Bangalore",
     country: "India",
     continent: "Asia",
@@ -1143,7 +1155,7 @@ const cityList = [
     position: { lat: 12.971599, lng: 77.594563 },
   },
   {
-    id: 102,
+    id: 94,
     city: "Reykjavik",
     Country: "Iceland",
     continent: "Europe",
@@ -1156,7 +1168,7 @@ const cityList = [
   },
 
   {
-    id: 103,
+    id: 95,
     city: "Nepal",
     Country: "Federal Democratic Republic of Nepal",
     continent: "Asia",
@@ -1169,7 +1181,7 @@ const cityList = [
   },
 
   {
-    id: 104,
+    id: 96,
     city: "Havana",
     Country: "Cuba",
     continent: "South America",
