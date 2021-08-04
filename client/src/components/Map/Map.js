@@ -27,7 +27,7 @@ export class Maps extends React.Component {
     return (
       <Map
         google={this.props.google}
-        zoom={6}
+        zoom={7}
         style={mapStyles}
         initialCenter={{
           lat: lat,

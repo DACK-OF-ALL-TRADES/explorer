@@ -971,7 +971,7 @@ const cityList = [
     pop: "Less popular places – less crowded",
     image: "https://media.timeout.com/images/101714767/image.jpg",
     youtube: "",
-    position: {lat:37.77493 , lng:122.419415 },
+    position: {lat:37.77493 , lng:-122.419415 },
 
   },
   {
