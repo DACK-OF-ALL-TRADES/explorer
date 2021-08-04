@@ -21,7 +21,7 @@ const cityList = [
     image:
       "https://lp-cms-production.imgix.net/2021-03/GettyRF_512268647.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850",
     youtube: "",
-    position: "{{lat: 13.756331, lng: 100.501765 }}",
+    position: {lat: 13.756331, lng: 100.501765 },
   },
   {
     id: 3,
@@ -124,7 +124,7 @@ const cityList = [
   },
   {
     id: 11,
-    city: "Delhi",
+    city: "New Delhi",
     country: "India",
     continent: "Asia",
     climate: "Tropical",
@@ -132,7 +132,7 @@ const cityList = [
     image:
       "https://media.istockphoto.com/photos/taj-mahal-pool-picture-id500078980?k=6&m=500078980&s=612x612&w=0&h=qWZuk7Skibf8q0f10OZQuY3ZOqUWqSWJS8MeHPDkmh4=",
     youtube: "",
-    position: { lat: 28.704059, lng: 77.10249 },
+    position: { lat: 28.613939, lng: 77.209021 },
   },
 
   {
@@ -210,7 +210,7 @@ const cityList = [
     image:
       "https://previews.123rf.com/images/richie0703/richie07031906/richie0703190600128/124998998-tokyo-japan-june-12-2019-shibuya-crossing-a-world-famous-and-iconic-intersection-in-shibuya-tokyo-hu.jpg",
     youtube: "",
-    position: { lat: 35.676192, lng: 139.650311 },
+    position: { lat: 35.6804, lng: 139.769017 },
   },
 
   {
@@ -276,7 +276,7 @@ const cityList = [
     id: 23,
     city: "Prague",
     country: "Czechia",
-    continent: "Erope",
+    continent: "Europe",
     climate: "Temperate",
     pop: "Most popular places – more crowded",
     image:
@@ -294,7 +294,7 @@ const cityList = [
     image:
       "https://i.pinimg.com/originals/57/93/ec/5793ece334c258d03ff9a24126aef656.jpg",
     youtube: "",
-    position: { lat: 23.524654, lng: 39.569184 },
+    position: { lat: 24.524654, lng: 39.569184 },
   },
   {
     id: 25,
@@ -318,7 +318,7 @@ const cityList = [
     image:
       "https://www.onhisowntrip.com/wp-content/uploads/2020/05/Netherlands-Tourism.jpg",
     youtube: "",
-    position: { lat: 53.367573, lng: 4.904139 },
+    position: { lat: 52.367573, lng: 4.904139 },
   },
   {
     id: 27,
@@ -356,7 +356,7 @@ const cityList = [
     image:
       "https://mk0matchateacomwrs9r.kinstacdn.com/wp-content/uploads/2019/01/agathe-marty-1061172-unsplash-1024x683.jpg",
     youtube: "",
-    position: { lat: 36.045822, lng: -95.852258 },
+    position: { lat: 34.693725, lng: 135.502254 },
   },
 
   {
@@ -482,7 +482,7 @@ const cityList = [
     image:
       "https://www.sutra.my/wp-content/uploads/2019/05/dataran-jb-1-960x636.jpg",
     youtube: "",
-    position: { lat: 1.485368, lng: 103.761815 },
+    position: { lat: 1.492659, lng: 103.741359 },
   },
   {
     id: 40,
@@ -611,7 +611,7 @@ const cityList = [
     image:
       "https://asianwaytravelcom.files.wordpress.com/2017/09/13528310_10201709271329885_1744513689222707595_o.jpg?w=1400",
     youtube: "",
-    position: { lat: 20.910051, lng: 107.183902 },
+    position: { lat: 20.971198, lng: 107.044807 },
   },
   {
     id: 50,
@@ -762,7 +762,7 @@ const cityList = [
     image:
       "https://cdn.destguides.com/files/store/itinerary/334/background_image/jpeg_wide-ce97ec9f2ed40c9a3e8621c0ca2a92e9.jpeg",
     youtube: "",
-    position: { lat: 50.58034, lng: 4.35171 },
+    position: { lat: 50.85034, lng: 4.35171 },
   },
 
   {
@@ -996,7 +996,7 @@ const cityList = [
     image:
       "http://www.luxxu.net/blog/wp-content/uploads/2018/02/6-Of-The-Most-Iconic-Places-To-Visit-in-Frankfurt-06.jpg",
     youtube: "",
-    position: { lat: 50110922, lng: 8.682127 },
+    position: { lat: 50.110922, lng: 8.682127 },
   },
   {
     id: 81,
@@ -1033,7 +1033,7 @@ const cityList = [
     image:
       "https://media.istockphoto.com/photos/danang-marble-mountains-da-nang-picture-id1068769384?k=6&m=1068769384&s=612x612&w=0&h=nT4cSZ9WDjo8PvBiQKlNp9Ik90OGZJOA_WXfaM7dQMQ=",
     youtube: "",
-    position: { lat: 16.054456, lng: 108.071722 },
+    position: { lat: 16.054407, lng: 108.202167 },
   },
   {
     id: 84,
