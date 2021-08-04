@@ -179,6 +179,9 @@ function EditProfileModal() {
       setUsernameText(value);
     }
   };
+  
+
+
 
   return (
     <Modal
@@ -186,6 +189,7 @@ function EditProfileModal() {
       onOpen={() => setOpen(true)}
       open={open}
       trigger={<Button className="luggage-button">Update your luggage</Button>}
+      
 
       // onCloseTravel={() => setOpenTravel(false)}
       // onOpenTravel={() => setOpenTravel(true)}
