@@ -5,6 +5,7 @@ import cityData from "../../utils/cities";
 import { useBusinessSearch } from "../../utils/yelp-api/useBusinessSearch";
 import "./cityResult.css";
 import { Grid, Card, Image, Icon, Rating, Container } from "semantic-ui-react";
+import Map from '../../components/Map/Map'
 
 const CityResult = () => {
   let singleCity;
@@ -152,8 +153,8 @@ const CityResult = () => {
         <Container>
           <Grid stackable divided="vertically" className="city-video-container">
             <Grid.Row columns={2}>
-              <Grid.Column textAlign="center">
-                <h1>Description about city etc...</h1>
+              <Grid.Column >
+                <Map />
               </Grid.Column>
               <Grid.Column>
                 <div className="video-responsive">
