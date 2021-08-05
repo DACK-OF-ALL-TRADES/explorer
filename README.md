@@ -55,11 +55,23 @@ The app has the following features
    
 ## 🧰 Dependencies and Tools:
  1. __Dependencies__ - In order to run the app, we installed the following dependencies:
+
+   
+| MERN App      | Client  Side  |    Server Side
+| ------------- | ------------- | ------------- |
+| Content Cell  | @apollo/client": "^3.3.5"  | Content Cell  |
+| Content Cell  | @testing-library/jest-dom": "^5.11.4"  | Content Cell  |
+| Content Cell  | @testing-library/react": "^11.1.0"  | Content Cell  |
+| Content Cell  | graphql": "^15.4.0"  | Content Cell  |
+
+
+
+
    MERN App                    |  Client  Side              |  Client  Side
 :-------------------------:   |:-------------------------: |:-------------------------:
-![](/assets/ss1.png)      |  "@apollo/client": "^3.3.5",
-                    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
+![](/assets/ss1.png)      |  "@apollo/client": "^3.3.5",|
+                   | "@testing-library/jest-dom": "^5.11.4", |
+    "@testing-library/react": "^11.1.0", 
     "@testing-library/user-event": "^12.1.10",
     "graphql": "^15.4.0",
     "jwt-decode": "^3.1.2",
