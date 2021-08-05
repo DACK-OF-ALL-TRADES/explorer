@@ -145,7 +145,7 @@ We will try to implement the following functionalities in our app as an addition
 asdasdasdasdas
 
 ## Meet the Team 
-![Ashton](/misc/Ashton.svg)
+![Ashton](explorer/client/src/assets/misc/Ashton.png =50x50)
 
 
 
