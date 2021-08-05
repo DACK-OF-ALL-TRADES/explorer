@@ -50,11 +50,41 @@ The app has the following features
  * Not only that, once you click on the city of your choice, you are provided with the __details__ about the city that includes its __location__ on the map, __video__ to guide the traveller a bit more about the place, list of __hotels__ that are avaiable in that area to name a few.
  * Given the current scenario, the user can also view the total number of __active COVID cases__ in that area and then decide if they wish to travel to the city or not
  * On clicking the __Profile page__, the user can update his details and also view the cities that he would have saved while conducting the search
+ * You can save all the cities that you like as __favorites__ in your __Profile page__ which you can view and edit as required.
 
    
-
-
 ## 🧰 Dependencies and Tools:
+ 1. __Dependencies__ - In order to run the app, we installed the following dependencies:
+   MERN App                    |  Client  Side              |  Client  Side
+:-------------------------:   |:-------------------------: |:-------------------------:
+![](/assets/ss1.png)      |  "@apollo/client": "^3.3.5",
+                    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "graphql": "^15.4.0",
+    "jwt-decode": "^3.1.2",
+    "pexels": "^1.2.1",
+    "query-string": "^7.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"           |![](/assets/ss2.png)
+
+ 
+  
+ 2. __Frameworks__ : We used the following frameworks to obtain font icons for our website and ready-to-use front-end components!
+   * Font Awesome
+   * Bulma
+ 3. __Database__: We used it in order to create our input and seed it into our web app
+ 
+    * My SQL
+ 4. __Frontend, Backend and Styling__ : For this app, we skipped the html layout for our front end and used the normal styling techniches that has been used till now
+   * Handlebars
+   * CSS3
+   * JavaScript
+
+_Along with it,we deployed our app through __Heroku__ web host andConfigured an additional add on __JAWS DB__ in order to relate our code and database._
 
 
 ## 🌄 Working Video :
