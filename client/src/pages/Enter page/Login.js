@@ -146,7 +146,7 @@ const Login = (props) => {
 
                 <div className="ui error message"></div>
               </form>
-              <Link to="/" data-aos="fade-up-left">
+              <Link to="/signup" data-aos="fade-up-left">
                 <Button animated fluid color="black">
                   <Button.Content visible>Create an account</Button.Content>
                   <Button.Content hidden>
