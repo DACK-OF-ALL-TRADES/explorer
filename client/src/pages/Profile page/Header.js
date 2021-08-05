@@ -1,7 +1,8 @@
 import React from "react";
-import { Image, Container, Grid } from "semantic-ui-react";
+import { Image, Container, Grid,Button} from "semantic-ui-react";
 import pp from "../../assets/misc/profile-pic.png";
 import EditProfileModal from "./EditProfileModal";
+import { Link } from "react-router-dom";
 
 const styles = {
   nameTitle: {
@@ -12,27 +13,49 @@ const styles = {
 const Header = ({ user }) => {
   return (
     <div>
+   
+      <div className="nav-title">
+          <Link to="/home"></Link>
+      </div>
+   
+
+    
       <div className="profile-header">
         <h1>Profile Page</h1>
       </div>
-      <Container text>
-        <Grid divided="vertically" style={{ marginTop: "6rem" }}>
-          <Grid.Row columns={2}>
-            <Grid.Column>
-              <Image src={pp} size="medium" circular verticalAlign="middle" />
-            </Grid.Column>
-            <Grid.Column verticalAlign="middle">
-              <h1 style={styles.nameTitle}>
-                {user.firstName} {user.lastName}
-              </h1>
-              <h1>Welcome Aboard {user.username}</h1>
-              {"\n"}
-              <p>{user.email}</p>
+          
+      <Container text className="profile-container">
+     
+        
+          <Grid divided="vertically">
+           <Button floated='right' color='white'><Link to="/CityCards">Your Saved Cities</Link></Button>
+            <Grid>
+              <Grid.Column width={2}>
+              
+              
+              
+                <Image src={pp} size="medium" circular verticalAlign="middle" />
+                
+                
+                
+              </Grid.Column>
+              <Grid.Column width={2}>
+                <h1 style={styles.nameTitle}>
+                  {user.firstName} {user.lastName}
+                </h1>
 
-              <EditProfileModal />
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
+                <h1>Welcome aboard {user.username}</h1>
+                {"\n"}
+                <p>{user.email}</p>
+
+
+                <EditProfileModal />
+              </Grid.Column>
+
+
+            </Grid>
+          </Grid>
+        
       </Container>
     </div>
   );

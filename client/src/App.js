@@ -8,9 +8,10 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
-
+import Main from "./pages/Landing Page/main";
 import Login from "./pages/Enter page/Login";
 import Signup from "./pages/Enter page/Signup";
+import CityCard from "./pages/Profile page/CityCards";
 import Home from "./pages/Home page";
 import Profile from "./pages/Profile page";
 import CityResult from "./pages/CityResult Page";
@@ -51,11 +52,19 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <Route exact path="/">
+        <Route exact path="/">
+            <Main />
+          </Route>
+
+          <Route exact path="/signup">
             <Signup />
           </Route>
+         
           <Route exact path="/login">
             <Login />
+          </Route>
+          <Route exact path="/CityCards">
+            <CityCard />
           </Route>
           <Route exact path="/home">
             <Home />

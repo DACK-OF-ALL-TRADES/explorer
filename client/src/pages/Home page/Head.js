@@ -43,7 +43,7 @@ const panel2 = [
 
 const Head = ({ user }) => {
   const randomCity = () => {
-    var randomnumber = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+    var randomnumber = Math.floor(Math.random() * (95 - 0 + 1)) + 0;
     console.log(randomnumber);
     window.location.assign(`/search/${randomnumber}`);
   };
@@ -87,30 +87,32 @@ const Head = ({ user }) => {
           </Step>
         </Step.Group>
         <div className="home-2buttons">
-          <Button
-            onClick={randomCity}
-            color="red"
-            animated="fade"
-            style={{ margin: "1rem" }}
-          >
-            <Button.Content visible>Take me somewhere random</Button.Content>
-            <Button.Content hidden>
-              Discover
-              <Icon name="paper plane" />
-            </Button.Content>
-          </Button>
-          <Button
-            color="red"
-            href="#search"
-            style={{ margin: "1rem" }}
-            animated="fade"
-          >
-            <Button.Content visible>Pick an option for me</Button.Content>
-            <Button.Content hidden>
-              Complete the questions
-              <Icon name="pencil" />
-            </Button.Content>
-          </Button>
+          <Message>
+            <Button
+              onClick={randomCity}
+              color="red"
+              animated="fade"
+              style={{ margin: "1rem" }}
+            >
+              <Button.Content visible>Take me somewhere random</Button.Content>
+              <Button.Content hidden>
+                Discover
+                <Icon name="paper plane" />
+              </Button.Content>
+            </Button>
+            <Button
+              color="red"
+              href="#search"
+              style={{ margin: "1rem" }}
+              animated="fade"
+            >
+              <Button.Content visible>Pick an option for me</Button.Content>
+              <Button.Content hidden>
+                Complete the questions
+                <Icon name="pencil" />
+              </Button.Content>
+            </Button>
+          </Message>
         </div>
       </div>
       <Container>

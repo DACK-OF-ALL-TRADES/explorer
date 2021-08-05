@@ -30,7 +30,7 @@ const Login = (props) => {
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
+    // console.log(formState);
     try {
       const { data } = await login({
         variables: { ...formState },
@@ -42,7 +42,7 @@ const Login = (props) => {
       alert(e);
     }
     if (data) {
-      console.log(data);
+      // console.log(data);
     } else {
       console.log(error);
     }
@@ -146,7 +146,7 @@ const Login = (props) => {
 
                 <div className="ui error message"></div>
               </form>
-              <Link to="/" data-aos="fade-up-left">
+              <Link to="/signup" data-aos="fade-up-left">
                 <Button animated fluid color="black">
                   <Button.Content visible>Create an account</Button.Content>
                   <Button.Content hidden>

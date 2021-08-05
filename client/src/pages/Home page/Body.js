@@ -38,10 +38,6 @@ const Body = ({ user }) => {
   const [answer6, setAnswer6] = useState(null);
   const [answer7, setAnswer7] = useState(null);
   const [answer8, setAnswer8] = useState(null);
-  const [answer9, setAnswer9] = useState(null);
-  const [answer10, setAnswer10] = useState(null);
-  const [answer11, setAnswer11] = useState(null);
-  const [answer12, setAnswer12] = useState(null);
 
   // IP ADDRESS API FETCH........................................................
   useEffect(() => {
@@ -67,10 +63,6 @@ const Body = ({ user }) => {
     question_6: answer6,
     question_7: answer7,
     question_8: answer8,
-    question_9: answer9,
-    question_10: answer10,
-    question_11: answer11,
-    question_12: answer12,
   };
   // Search...................................................................
   let cityListResult = Object.values(cityDataResults);
@@ -106,7 +98,7 @@ const Body = ({ user }) => {
     }
     // Population
     //...................................................
-    if (cityListResult[8] === "Doesn't matter") {
+    if (cityListResult[6] === "Doesn't matter") {
       continent_climate_pop = continent_climate;
     } else {
       continent_climate.forEach((element) => {
@@ -175,27 +167,6 @@ const Body = ({ user }) => {
   // Question8..............................................................
   const question8Change = (e, { value }) => {
     setAnswer8(value);
-  };
-
-  // Question9..............................................................
-  // RESULT
-  const question9Change = (e, { value }) => {
-    setAnswer9(value);
-  };
-
-  // Question10..............................................................
-  const question10Change = (e, { value }) => {
-    setAnswer10(value);
-  };
-
-  // Question11..............................................................
-  const question11Change = (e, { value }) => {
-    setAnswer11(value);
-  };
-
-  // Question12..............................................................
-  const question12Change = (e, { value }) => {
-    setAnswer12(value);
   };
 
   // Return................................................................................................
@@ -495,7 +466,7 @@ const Body = ({ user }) => {
                 <Message.Header>
                   <Message color="red">
                     <Icon name="question circle" size="big" />
-                    <span>What would you prefer to wear?</span>
+                    <span>Which one do you like the most?</span>
                     <div style={{ textAlign: "right" }}>
                       <small style={styles.form_answer}>{answer5}</small>
                     </div>
@@ -505,50 +476,60 @@ const Body = ({ user }) => {
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="T-shirt"
+                      label="Pizza Napolitano"
                       name="radioGroup"
-                      value="T-shirt"
-                      checked={answer5 === "T-shirt"}
+                      value="Pizza Napolitano"
+                      checked={answer5 === "Pizza Napolitano"}
                       onChange={question5Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="Long sleeve shirt"
+                      label="Hanoi-style pho"
                       name="radioGroup"
-                      value="Long sleeve shirt"
-                      checked={answer5 === "Long sleeve shirt"}
+                      value="Hanoi-style pho"
+                      checked={answer5 === "Hanoi-style pho"}
                       onChange={question5Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="Nothing"
+                      label="Biryani"
                       name="radioGroup"
-                      value="Nothing"
-                      checked={answer5 === "Nothing"}
+                      value="Biryani"
+                      checked={answer5 === "Biryani"}
                       onChange={question5Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="Formal wear"
+                      label="Borscht"
                       name="radioGroup"
-                      value="Formal wear"
-                      checked={answer5 === "Formal wear"}
+                      value="Borscht"
+                      checked={answer5 === "Borscht"}
                       onChange={question5Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="Jacket"
+                      label="Kebab"
                       name="radioGroup"
-                      value="Jacket"
-                      checked={answer5 === "Jacket"}
+                      value="Kebab"
+                      checked={answer5 === "Kebab"}
+                      onChange={question5Change}
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <Radio
+                      style={styles.form_radio}
+                      label="Hamburger"
+                      name="radioGroup"
+                      value="Hamburger"
+                      checked={answer5 === "Hamburger"}
                       onChange={question5Change}
                     />
                   </Form.Field>
@@ -564,7 +545,9 @@ const Body = ({ user }) => {
                 <Message.Header>
                   <Message color="red">
                     <Icon name="question circle" size="big" />
-                    <span>Which one do you like the most?</span>
+                    <span>
+                      Which drink would you prefer to have after a long day?
+                    </span>
                     <div style={{ textAlign: "right" }}>
                       <small style={styles.form_answer}>{answer6}</small>
                     </div>
@@ -574,60 +557,50 @@ const Body = ({ user }) => {
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="Pizza Napolitano"
+                      label="Tea"
                       name="radioGroup"
-                      value="Pizza Napolitano"
-                      checked={answer6 === "Pizza Napolitano"}
+                      value="Tea"
+                      checked={answer6 === "Tea"}
                       onChange={question6Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="Hanoi-style pho"
+                      label="Cosmopolitan cocktail"
                       name="radioGroup"
-                      value="Hanoi-style pho"
-                      checked={answer6 === "Hanoi-style pho"}
+                      value="Cosmopolitan cocktail"
+                      checked={answer6 === "Cosmopolitan cocktail"}
                       onChange={question6Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="Biryani"
+                      label="A cold beer"
                       name="radioGroup"
-                      value="Biryani"
-                      checked={answer6 === "Biryani"}
+                      value="A cold beer"
+                      checked={answer6 === "A cold beer"}
                       onChange={question6Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="Borscht"
+                      label="A margarita"
                       name="radioGroup"
-                      value="Borscht"
-                      checked={answer6 === "Borscht"}
+                      value="A margarita"
+                      checked={answer6 === "A margarita"}
                       onChange={question6Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="Kebab"
+                      label="A matcha"
                       name="radioGroup"
-                      value="Kebab"
-                      checked={answer6 === "Kebab"}
-                      onChange={question6Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="Hamburger"
-                      name="radioGroup"
-                      value="Hamburger"
-                      checked={answer6 === "Hamburger"}
+                      value="A matcha"
+                      checked={answer6 === "A matcha"}
                       onChange={question6Change}
                     />
                   </Form.Field>
@@ -643,9 +616,7 @@ const Body = ({ user }) => {
                 <Message.Header>
                   <Message color="red">
                     <Icon name="question circle" size="big" />
-                    <span>
-                      Which drink would you prefer to have after a long day?
-                    </span>
+                    <span>Do you want to visit?</span>
                     <div style={{ textAlign: "right" }}>
                       <small style={styles.form_answer}>{answer7}</small>
                     </div>
@@ -655,50 +626,42 @@ const Body = ({ user }) => {
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="Tea"
+                      label="Most popular places – more crowded"
                       name="radioGroup"
-                      value="Tea"
-                      checked={answer7 === "Tea"}
+                      value="Most popular places – more crowded"
+                      checked={answer7 === "Most popular places – more crowded"}
                       onChange={question7Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="Cosmopolitan cocktail"
+                      label="Between most popular and least popular"
                       name="radioGroup"
-                      value="Cosmopolitan cocktail"
-                      checked={answer7 === "Cosmopolitan cocktail"}
+                      value="Between most popular and least popular"
+                      checked={
+                        answer7 === "Between most popular and least popular"
+                      }
                       onChange={question7Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="A cold beer"
+                      label="Less popular places – less crowded"
                       name="radioGroup"
-                      value="A cold beer"
-                      checked={answer7 === "A cold beer"}
+                      value="Less popular places – less crowded"
+                      checked={answer7 === "Less popular places – less crowded"}
                       onChange={question7Change}
                     />
                   </Form.Field>
                   <Form.Field>
                     <Radio
                       style={styles.form_radio}
-                      label="A margarita"
+                      label="Doesn't matter"
                       name="radioGroup"
-                      value="A margarita"
-                      checked={answer7 === "A margarita"}
-                      onChange={question7Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="A matcha"
-                      name="radioGroup"
-                      value="A matcha"
-                      checked={answer7 === "A matcha"}
+                      value="Doesn't matter"
+                      checked={answer7 === "Doesn't matter"}
                       onChange={question7Change}
                     />
                   </Form.Field>
@@ -714,231 +677,9 @@ const Body = ({ user }) => {
                 <Message.Header>
                   <Message color="red">
                     <Icon name="question circle" size="big" />
-                    <span>
-                      How would you like to travel between attractions?
-                    </span>
-                    <div style={{ textAlign: "right" }}>
-                      <small style={styles.form_answer}>{answer8}</small>
-                    </div>
-                  </Message>
-                </Message.Header>
-                <Form>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="By rental car"
-                      name="radioGroup"
-                      value="By rental car"
-                      checked={answer8 === "By rental car"}
-                      onChange={question8Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="By train/subway"
-                      name="radioGroup"
-                      value="By train/subway"
-                      checked={answer8 === "By train/subway"}
-                      onChange={question8Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="By bus"
-                      name="radioGroup"
-                      value="By bus"
-                      checked={answer8 === "By bus"}
-                      onChange={question8Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="By bicycle"
-                      name="radioGroup"
-                      value="By bicycle"
-                      checked={answer8 === "By bicycle"}
-                      onChange={question8Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="By foot/walking"
-                      name="radioGroup"
-                      value="By foot/walking"
-                      checked={answer8 === "By foot/walking"}
-                      onChange={question8Change}
-                    />
-                  </Form.Field>
-                </Form>
-              </Message>
-            </div>
-            {/* ......................................................................Question9................................................................................. */}
-            <div style={styles.form_questions} data-aos="fade-up-left">
-              <Message size="small" color="red">
-                <Label color="red" attached="top right">
-                  9
-                </Label>
-                <Message.Header>
-                  <Message color="red">
-                    <Icon name="question circle" size="big" />
-                    <span>Do you want to visit?</span>
-                    <div style={{ textAlign: "right" }}>
-                      <small style={styles.form_answer}>{answer9}</small>
-                    </div>
-                  </Message>
-                </Message.Header>
-                <Form>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="Most popular places – more crowded"
-                      name="radioGroup"
-                      value="Most popular places – more crowded"
-                      checked={answer9 === "Most popular places – more crowded"}
-                      onChange={question9Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="Between most popular and least popular"
-                      name="radioGroup"
-                      value="Between most popular and least popular"
-                      checked={
-                        answer9 === "Between most popular and least popular"
-                      }
-                      onChange={question9Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="Less popular places – less crowded"
-                      name="radioGroup"
-                      value="Less popular places – less crowded"
-                      checked={answer9 === "Less popular places – less crowded"}
-                      onChange={question9Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="Doesn't matter"
-                      name="radioGroup"
-                      value="Doesn't matter"
-                      checked={answer9 === "Doesn't matter"}
-                      onChange={question9Change}
-                    />
-                  </Form.Field>
-                </Form>
-              </Message>
-            </div>
-            {/* ......................................................................Question10................................................................................. */}
-            <div style={styles.form_questions} data-aos="fade-up-right">
-              <Message size="small" color="red">
-                <Label color="red" attached="top right">
-                  10
-                </Label>
-                <Message.Header>
-                  <Message color="red">
-                    <Icon name="question circle" size="big" />
-                    <span>
-                      What's the one product you never leave home without?
-                    </span>
-                    <div style={{ textAlign: "right" }}>
-                      <small style={styles.form_answer}>{answer10}</small>
-                    </div>
-                  </Message>
-                </Message.Header>
-                <Form>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="Lip balm"
-                      name="radioGroup"
-                      value="Lip balm"
-                      checked={answer10 === "Lip balm"}
-                      onChange={question10Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="Sunscreen"
-                      name="radioGroup"
-                      value="Sunscreen"
-                      checked={answer10 === "Sunscreen"}
-                      onChange={question10Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="Something colorful like a bright lip color or cheek tint"
-                      name="radioGroup"
-                      value="Something colorful like a bright lip color or cheek tint"
-                      checked={
-                        answer10 ===
-                        "Something colorful like a bright lip color or cheek tint"
-                      }
-                      onChange={question10Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="Something soothing like a hand crème or body butter"
-                      name="radioGroup"
-                      value="Something soothing like a hand crème or body butter"
-                      checked={
-                        answer10 ===
-                        "Something soothing like a hand crème or body butter"
-                      }
-                      onChange={question10Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="Just one? I can't pick just one!"
-                      name="radioGroup"
-                      value="Just one? I can't pick just one!"
-                      checked={answer10 === "Just one? I can't pick just one!"}
-                      onChange={question10Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="I would leave the home without any of them"
-                      name="radioGroup"
-                      value="I would leave the home without any of them"
-                      checked={
-                        answer10 ===
-                        "I would leave the home without any of them"
-                      }
-                      onChange={question10Change}
-                    />
-                  </Form.Field>
-                </Form>
-              </Message>
-            </div>
-            {/* ......................................................................Question11................................................................................. */}
-            <div style={styles.form_questions} data-aos="fade-up-left">
-              <Message size="small" color="red">
-                <Label color="red" attached="top right">
-                  11
-                </Label>
-                <Message.Header>
-                  <Message color="red">
-                    <Icon name="question circle" size="big" />
                     <span>What book will you bring with your suitcase?</span>
                     <div style={{ textAlign: "right" }}>
-                      <small style={styles.form_answer}>{answer11}</small>
+                      <small style={styles.form_answer}>{answer8}</small>
                     </div>
                   </Message>
                 </Message.Header>
@@ -949,8 +690,8 @@ const Body = ({ user }) => {
                       label="Favorite magazine"
                       name="radioGroup"
                       value="Favorite magazine"
-                      checked={answer11 === "Favorite magazine"}
-                      onChange={question11Change}
+                      checked={answer8 === "Favorite magazine"}
+                      onChange={question8Change}
                     />
                   </Form.Field>
                   <Form.Field>
@@ -959,8 +700,8 @@ const Body = ({ user }) => {
                       label="Travelers guide book"
                       name="radioGroup"
                       value="Travelers guide book"
-                      checked={answer11 === "Travelers guide book"}
-                      onChange={question11Change}
+                      checked={answer8 === "Travelers guide book"}
+                      onChange={question8Change}
                     />
                   </Form.Field>
                   <Form.Field>
@@ -969,8 +710,8 @@ const Body = ({ user }) => {
                       label="Phrase book"
                       name="radioGroup"
                       value="Phrase book"
-                      checked={answer11 === "Phrase book"}
-                      onChange={question11Change}
+                      checked={answer8 === "Phrase book"}
+                      onChange={question8Change}
                     />
                   </Form.Field>
                   <Form.Field>
@@ -979,8 +720,8 @@ const Body = ({ user }) => {
                       label="A good novel"
                       name="radioGroup"
                       value="A good novel"
-                      checked={answer11 === "A good novel"}
-                      onChange={question11Change}
+                      checked={answer8 === "A good novel"}
+                      onChange={question8Change}
                     />
                   </Form.Field>
                   <Form.Field>
@@ -989,8 +730,8 @@ const Body = ({ user }) => {
                       label="Educational book"
                       name="radioGroup"
                       value="Educational book"
-                      checked={answer11 === "Educational book"}
-                      onChange={question11Change}
+                      checked={answer8 === "Educational book"}
+                      onChange={question8Change}
                     />
                   </Form.Field>
                   <Form.Field>
@@ -999,90 +740,8 @@ const Body = ({ user }) => {
                       label="None"
                       name="radioGroup"
                       value="None"
-                      checked={answer11 === "None"}
-                      onChange={question11Change}
-                    />
-                  </Form.Field>
-                </Form>
-              </Message>
-            </div>
-            {/* ......................................................................Question12................................................................................. */}
-            <div style={styles.form_questions} data-aos="fade-up-right">
-              <Message size="small" color="red">
-                <Label color="red" attached="top right">
-                  12
-                </Label>
-                <Message.Header>
-                  <Message color="red">
-                    <Icon name="question circle" size="big" />
-                    <span>What song will you jam to on your vacation?</span>
-                    <div style={{ textAlign: "right" }}>
-                      <small style={styles.form_answer}>{answer12}</small>
-                    </div>
-                  </Message>
-                </Message.Header>
-                <Form>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="'Summer Breeze' by Seals and Crofts (1972)"
-                      name="radioGroup"
-                      value="'Summer Breeze' by Seals and Crofts (1972)"
-                      checked={
-                        answer12 ===
-                        "'Summer Breeze' by Seals and Crofts (1972)"
-                      }
-                      onChange={question12Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="'Sun is Shining' by Bob Marley and the Wailers (1971)"
-                      name="radioGroup"
-                      value="'Sun is Shining' by Bob Marley and the Wailers (1971)"
-                      checked={
-                        answer12 ===
-                        "'Sun is Shining' by Bob Marley and the Wailers (1971)"
-                      }
-                      onChange={question12Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="'Hotel California' by the Eagles (1976)"
-                      name="radioGroup"
-                      value="'Hotel California' by the Eagles (1976)"
-                      checked={
-                        answer12 === "'Hotel California' by the Eagles (1976)"
-                      }
-                      onChange={question12Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="'Summer of '69'' by Bryan Adams (1985)"
-                      name="radioGroup"
-                      value="'Summer of '69'' by Bryan Adams (1985)"
-                      checked={
-                        answer12 === "'Summer of '69'' by Bryan Adams (1985)"
-                      }
-                      onChange={question12Change}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      style={styles.form_radio}
-                      label="'Summertime Sadness' by Lana Del Rey (2012)"
-                      name="radioGroup"
-                      value="'Summertime Sadness' by Lana Del Rey (2012)"
-                      checked={
-                        answer12 ===
-                        "'Summertime Sadness' by Lana Del Rey (2012)"
-                      }
-                      onChange={question12Change}
+                      checked={answer8 === "None"}
+                      onChange={question8Change}
                     />
                   </Form.Field>
                 </Form>
