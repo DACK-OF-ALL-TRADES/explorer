@@ -56,22 +56,6 @@ The app has the following features
 ## 🧰 Dependencies and Tools:
  1. __Dependencies__ - In order to run the app, we installed the following dependencies:
 
-   
-| MERN App      | Client  Side  |    Server Side
-| ------------- | ------------- | ------------- |
-|apollo-server-express  | @apollo/client  | nodemon  |
-| express  | @testing-library/jest-dom  | |
-| google-maps-react  | @testing-library/react |   |
-| semantic-ui-css  | graphql |   |
-| semantic-ui-react  | jwt-decode |  |
-| yelp-fusion  | query-string |   |
-|   | react |  |
-|  | react-dom | |
-|  | react-router-dom |  |
-|   | react-scripts |  |
-|   | web-vitals |  |
-|   | graphql |   |
-
  _Client Side_
  ````
  "dependencies": {
@@ -92,19 +76,32 @@ The app has the following features
  
 ````
 
+_Server Side_
 
-
-
-
-
-
-
-
-
-
-
-    
+ ````
+ "dependencies": {
+    "apollo-server-express": "^2.12.0",
+    "bcrypt": "^5.0.0",
+    "express": "^4.17.1",
+    "graphql": "^15.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.9",
+    "query-string": "^7.0.1"
+  }
+  ````
   
+  _Root Directory 
+   ````
+ "dependencies": {
+    "apollo-server-express": "^3.1.1",
+    "express": "^4.17.1",
+    "google-maps-react": "^2.0.6",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.3",
+    "yelp-fusion": "^3.0.0"
+  }
+  
+    ````
 
  
   
