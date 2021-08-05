@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/github/languages/count/DACK-OF-ALL-TRADES/explorer?color=green&label=Languages&logo=github&logoColor=green">
   <img src="https://img.shields.io/github/languages/top/DACK-OF-ALL-TRADES/explorer?color=blue&label=ReactJS&logo=react&logoColor=white">
   <img src="https://img.shields.io/github/repo-size/DACK-OF-ALL-TRADES/explorer?color=purple&label=Repo%20Size&logo=github&logoColor=purple">
-  <img src=”https://img.shields.io/github/badge/DACK-OF-ALL-TRADES/explorer?color=green&label=Editor&logo=visual-studio-code&logoColor=blue">
+  <img src="https://img.shields.io/github/badge/DACK-OF-ALL-TRADES/explorer?color=green&label=Editor&logo=visual-studio-code&logoColor=blue">
                                                                                     
 </p>
 
