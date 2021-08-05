@@ -43,7 +43,13 @@ The app has the following features
  * The steps involved in designing mainy dealt with designing thefull stack code and using queries and mutations for retrieving, adding, updating, and deleting data.
  
    ## Working
- * You are greeted with a Landing  Page from where you can navigate to either the login or the signup page as per your requirement. 
+ * You are greeted with a __Landing Page__ from where you can navigate to either the __login__ or the __signup__ page as per your requirement.
+ * Once logged in, the user is presented with the __Home Page__ , where he can know more about the app, navigate to his _Profile Page_ or simply _logout_
+ * On _top_ of the home page, the user will have the option of exploring the __top 10__ cities around the world that are famous as a travel destination or they can search as per the __continent__ of their choice and selet a place to visit directly.
+ * As we scroll down you will reach a __set of questions__ which when __answered__ will provide a __list of cities__ from around the world for you that are most suited for your  perfect holiday.
+ * Not only that, once you click on the city of your choice, you are provided with the __details__ about the city that includes its __location__ on the map, __video__ to guide the traveller a bit more about the place, list of __hotels__ that are avaiable in that area to name a few.
+ * Given the current scenario, the user can also view the total number of __active COVID cases__ in that area and then decide if they wish to travel to the city or not
+ * On clicking the __Profile page__, the user can update his details and also view the cities that he would have saved while conducting the search
 
    
 
