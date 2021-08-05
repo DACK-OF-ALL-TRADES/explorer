@@ -72,6 +72,26 @@ The app has the following features
 |   | web-vitals |  |
 |   | graphql |   |
 
+ _Client Side_
+ ````
+ "dependencies": {
+    "@apollo/client": "^3.3.5",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "graphql": "^15.4.0",
+    "jwt-decode": "^3.1.2",
+    "pexels": "^1.2.1",
+    "query-string": "^7.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
+  }
+ 
+````
+
 
 
 
