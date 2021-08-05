@@ -8,7 +8,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2017/09/aqua-luna-hong-kong.jpg",
-    youtube: "",
+    youtube: "/72__Mdioty8",
   },
   {
     id: 2,
@@ -18,8 +18,8 @@ const cityList = [
     climate: "Tropical",
     pop: "Most popular places – more crowded",
     image:
-      "https://lp-cms-production.imgix.net/2021-03/GettyRF_512268647.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850",
-    youtube: "",
+    "https://lp-cms-production.imgix.net/2021-03/GettyRF_512268647.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850",
+    youtube: "/21mKbR-4VTA"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const cityList = [
     climate: "Temperate",
     pop: "Most popular places – more crowded",
     image: "https://www.india.com/wp-content/uploads/2018/08/london-1.jpg",
-    youtube: "",
+    youtube: "/45ETZ1xvHS0" 
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK-5kGGRQgxLPXoCyaZ4aBJ9NJi6XIb2R2FTb6A56qucKYO374OtUgnc_ah6O8-7bF5GQ&usqp=CAU",
-    youtube: "",
+    youtube: "/oOuD_nfM7f0" 
   },
 
   {
@@ -52,7 +52,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://www.belaroundtheworld.com/wp-content/uploads/2018/06/Singapore-111.jpg",
-    youtube: "https://www.youtube.com/watch?v=C25hvsaN9oo",
+    youtube: "/P_q3BdrFsLI"
   },
 
   {
@@ -64,7 +64,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://media.darpanmagazine.com/library/uploads/lifestyle/content/paris.jpg",
-    youtube: "",
+    youtube: "AQ6GmpMu5L8",
   },
 
   {
@@ -76,7 +76,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://www.worldatlas.com/upload/a3/f2/5a/shutterstock-151616084.jpg",
-    youtube: "",
+    youtube: "rBYpB-PnYfg"
   },
 
   {
@@ -88,7 +88,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://i0.wp.com/www.eatthis.com/wp-content/uploads/2019/02/new-york-city.jpg?fit=1200%2C879&ssl=1",
-    youtube: "",
+    youtube: "MtCMtC50gwY"
   },
   {
     id: 9,
@@ -99,7 +99,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://assets.traveltriangle.com/blog/wp-content/uploads/2016/02/Petronas-Twin-Towers-in-Kuala-Lumpur.jpg",
-    youtube: "",
+    youtube: "0MfneG2aWPg"
   },
   {
     id: 10,
@@ -110,7 +110,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://www.ekathimerini.com/wp-content/uploads/2020/07/agia_sophia_web-320x200.jpg",
-    youtube: "",
+    youtube: "niCzGnzQblM"
   },
   {
     id: 11,
@@ -121,7 +121,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://media.istockphoto.com/photos/taj-mahal-pool-picture-id500078980?k=6&m=500078980&s=612x612&w=0&h=qWZuk7Skibf8q0f10OZQuY3ZOqUWqSWJS8MeHPDkmh4=",
-    youtube: "",
+    youtube: "4TEKZxO8TLI"
   },
 
   {
@@ -133,7 +133,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://clickstay.s3-eu-west-1.amazonaws.com/images/blog/post/Antalya.jpg",
-    youtube: "",
+    youtube: "ReB07PGaZM4"
   },
 
   {
@@ -145,7 +145,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://www.topchinatravel.com/pic/city/shenzhen/blog/famous-landmark-buildings-in-shenzhen-02.jpg",
-    youtube: "",
+    youtube: "lcrfk6OoZIw"
   },
 
   {
@@ -157,7 +157,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://i.pinimg.com/originals/85/d5/99/85d59953a34db05888071aeea71dc7ae.jpg",
-    youtube: "",
+    youtube: "ufFPtBs4O4g"
   },
 
   {
@@ -169,7 +169,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://a.cdn-hotels.com/gdcs/production153/d1771/2e6084f5-c182-4f94-b793-7dd79bb78762.jpg",
-    youtube: "",
+    youtube: "embed/iXCW5t7asms"
   },
 
   {
@@ -181,7 +181,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://cdn.thecrazytourist.com/wp-content/uploads/2020/11/ccimage-shutterstock_789412159.jpg",
-    youtube: "",
+    youtube: "DEJx0CYrDHk"
   },
 
   {
@@ -193,7 +193,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "https://previews.123rf.com/images/richie0703/richie07031906/richie0703190600128/124998998-tokyo-japan-june-12-2019-shibuya-crossing-a-world-famous-and-iconic-intersection-in-shibuya-tokyo-hu.jpg",
-    youtube: "",
+    youtube: "/cS-hFKC_RKI",
   },
 
   {
@@ -205,7 +205,7 @@ const cityList = [
     pop: "Most popular places – more crowded",
     image:
       "http://static.asiawebdirect.com/m/bangkok/portals/pattaya-bangkok-com/homepage/pattaya-top10s/top10-attractions-pattaya-beach/pagePropertiesImage/pattaya66.jpg",
-    youtube: "",
+    youtube: "fT4rFo__5mE"
   },
   {
     id: 19,
@@ -215,7 +215,7 @@ const cityList = [
     climate: "Tropical",
     pop: "Most popular places – more crowded",
     image: "https://media.nomadicmatt.com/2021/taipeithings1a.jpg",
-    youtube: "",
+    youtube: "/ZNC9V1J-ebg"
   },
   {
     id: 20,
