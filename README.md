@@ -16,22 +16,36 @@
 </p>
 
  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://explorer-guide.herokuapp.com/)
+ 
+ 
+## Table of Contents
+* [Introduction](#introduction)
+* [Description](#des)
+* [Dependencies and Tools](#api)
+* [Working Video](#details)
+* [Deployment](#installations)
+* [Credits](#credits)
+* [issues](#issues)
+ 
 
 ## 🌲 About:
 
-## 📓 Usage:
+## 📓 Description:
 
 
-## 🧰 Tools & Dependencies:
+## 🧰 Dependencies and Tools:
 
-## 🌄 Images:
+
+## 🌄 Working Video :
 
 📃 Page1                    | 📃 Page2
 :-------------------------:   |:-------------------------:
 ![](/assets/ss1.png)      |![](/assets/ss2.png)
 
 
-## 📊 Notes:
+## 💻 Deployment:
+
+## 📊 Credits:
 
 > lorem ipsum....
 
