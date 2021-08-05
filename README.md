@@ -15,7 +15,7 @@
                                                                                     
 </p>
 
- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://explorer-guide.herokuapp.com/)
+
  
  
 ## Table of Contents
@@ -54,7 +54,7 @@ The app has the following features
 
    
 ## 🧰 Dependencies and Tools:
- 1. __Dependencies__ - In order to run the app, we installed the following dependencies:
+ In order to run the app, we installed the following dependencies:
 
  _Client Side_
  ````
@@ -90,8 +90,8 @@ _Server Side_
   }
   ````
   
-  _Root Directory 
-   ````
+  _Root Directory_
+  ````
  "dependencies": {
     "apollo-server-express": "^3.1.1",
     "express": "^4.17.1",
@@ -101,22 +101,10 @@ _Server Side_
     "yelp-fusion": "^3.0.0"
   }
   
-    ````
+ ````
+ _An __.env__ file has also been created in order to store the sensitive API key values. 
 
  
-  
- 2. __Frameworks__ : We used the following frameworks to obtain font icons for our website and ready-to-use front-end components!
-   * Font Awesome
-   * Bulma
- 3. __Database__: We used it in order to create our input and seed it into our web app
- 
-    * My SQL
- 4. __Frontend, Backend and Styling__ : For this app, we skipped the html layout for our front end and used the normal styling techniches that has been used till now
-   * Handlebars
-   * CSS3
-   * JavaScript
-
-_Along with it,we deployed our app through __Heroku__ web host andConfigured an additional add on __JAWS DB__ in order to relate our code and database._
 
 
 ## 🌄 Working Video :
@@ -127,6 +115,9 @@ _Along with it,we deployed our app through __Heroku__ web host andConfigured an 
 
 
 ## 💻 Deployment:
+_The app has been deployed through the __Heroku__ web host and hasthe key value pairs configured for proper deployment and functioning of the app 
+The app can also be visited by visitng the cite from here :_  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://explorer-guide.herokuapp.com/)
+
 
 ## 📊 Credits:
 
