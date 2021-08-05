@@ -146,11 +146,11 @@ The project is the final project assigned by the Carleton University Coding Boot
 asdasdasdasdas
 
 ## Meet the Team 
-![Kemal Demirgil](https://github.com/kemaldemirgil)
-![Dipti Razdan](https://github.com/Dipti2021)
-![Ashton Headley](https://github.com/ashiemotto)
-![Todd Kelly](https://github.com/ToddKelly)
-![Colleen Collins](https://github.com/ColleenCollins8)
+ [Kemal Demirgil](https://github.com/kemaldemirgil)
+ [Dipti Razdan](https://github.com/Dipti2021)
+ [Ashton Headley](https://github.com/ashiemotto)
+ [Todd Kelly](https://github.com/ToddKelly)
+ [Colleen Collins](https://github.com/ColleenCollins8)
 
 
 ## ©️ License:
