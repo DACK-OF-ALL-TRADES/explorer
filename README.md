@@ -138,15 +138,19 @@ We will try to implement the following functionalities in our app as an addition
 
 ## 📊 Credits:
 
-> lorem ipsum....
+The project is the final project assigned by the Carleton University Coding Bootcamp, our instructor and the TA's
+
 
 
 ## 📮 Issues:
 asdasdasdasdas
 
 ## Meet the Team 
-![Ashton](explorer/client/src/assets/misc/Ashton.png)
-
+![Kemal Demirgil](https://github.com/kemaldemirgil)
+![Dipti Razdan](https://github.com/Dipti2021)
+![Ashton Headley](https://github.com/ashiemotto)
+![Todd Kelly](https://github.com/ToddKelly)
+![Colleen Collins](https://github.com/ColleenCollins8)
 
 
 ## ©️ License:
