@@ -9,7 +9,7 @@ const cityList = [
     image:
       "https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2017/09/aqua-luna-hong-kong.jpg",
     youtube: "72__Mdioty8",
-    position: {},
+    position: { lat: 22.3193, lng: 114.1694 },
   },
   {
     id: 2,
