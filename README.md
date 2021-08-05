@@ -146,7 +146,7 @@ The project is the final project assigned by the Carleton University Coding Boot
 asdasdasdasdas
 
 ## Meet the Team 
- ![image3](client/public/avatars/Kemal.png= 50x50)
+ ![image3](client/public/avatars/Kemal.png | width=50)
  [Kemal Demirgil](https://github.com/kemaldemirgil)
  [Dipti Razdan](https://github.com/Dipti2021)
  [Ashton Headley](https://github.com/ashiemotto)
