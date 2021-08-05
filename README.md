@@ -145,7 +145,7 @@ We will try to implement the following functionalities in our app as an addition
 asdasdasdasdas
 
 ## Meet the Team 
-![Ashton](../assets/misc/ashton.svg =50x50)
+![Ashton](../assets/misc/ashton.svg)
 
 
 ## ©️ License:
