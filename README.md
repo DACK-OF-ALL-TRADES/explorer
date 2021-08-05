@@ -15,7 +15,7 @@
                                                                                     
 </p>
 
- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://explorer-guide.herokuapp.com/)
+
  
  
 ## Table of Contents
@@ -34,27 +34,79 @@ Explorer is a _MERN stack single-page application_, which has been created to he
 ## 📓 Description and Working:
   ## Description
 The app has the following features 
-* A full stack user-focused MERN application that works with real-world data to solve a real-world challenge, with a focus on data and user demand.
-* The app includes user authentication, Routing and API's transfers and a database 
-* Built on the agile development methodologies that we have used throughout this course.
- * Instead of using the  HTML, __Reactjs__ is used for displaying the front end version of the app.
+* A full stack user-focused MERN application that works with real-world data to solve a real-world challenge, with a focus on data and user demand.
+* The app includes user authentication, Routing and API's transfers and a database 
+* Built on the agile development methodologies that we have used throughout this course.
+ * Instead of using the HTML, __Reactjs__ is used for displaying the front-end version of the app.
  * Used a framework that was both easy-to use, but also responsive and optimize for the user’s experience.
  * Used __Heroku web server__ to host our app.
- * The steps involved in designing mainy dealt with designing thefull stack code and using queries and mutations for retrieving, adding, updating, and deleting data.
+ * The steps involved in designing mainly dealt with designing the full stack code and using queries and mutations for retrieving, adding, updating, and deleting data.
+
  
    ## Working
- * You are greeted with a __Landing Page__ from where you can navigate to either the __login__ or the __signup__ page as per your requirement.
+  * You are greeted with a __Landing Page__ from where you can navigate to either the __login__ or the __signup__ page as per your requirement.
  * Once logged in, the user is presented with the __Home Page__ , where he can know more about the app, navigate to his _Profile Page_ or simply _logout_
- * On _top_ of the home page, the user will have the option of exploring the __top 10__ cities around the world that are famous as a travel destination or they can search as per the __continent__ of their choice and selet a place to visit directly.
- * As we scroll down you will reach a __set of questions__ which when __answered__ will provide a __list of cities__ from around the world for you that are most suited for your  perfect holiday.
- * Not only that, once you click on the city of your choice, you are provided with the __details__ about the city that includes its __location__ on the map, __video__ to guide the traveller a bit more about the place, list of __hotels__ that are avaiable in that area to name a few.
+ * On _top_ of the home page, the user will have the option of exploring the __top 10__ cities around the world that are famous as a travel destination or they can search as per the __continent__ of their choice and select a place to visit directly.
+ * As we scroll down you will reach a __set of questions__ which when __answered__ will provide a __list of cities__ from around the world for you that are most suited for your perfect holiday.
+ * Not only that, once you click on the city of your choice, you are provided with the __details__ about the city that includes its __location__ on the map, __video__ to guide the traveller a bit more about the place, list of __hotels__ that are available in that area to name a few.
  * Given the current scenario, the user can also view the total number of __active COVID cases__ in that area and then decide if they wish to travel to the city or not
  * On clicking the __Profile page__, the user can update his details and also view the cities that he would have saved while conducting the search
+ * You can save all the cities that you like as __favorites__ in your __Profile page__ which you can view and edit as required.
+
 
    
-
-
 ## 🧰 Dependencies and Tools:
+ In order to run the app, we installed the following dependencies:
+
+ _Client Side_
+ ````
+ "dependencies": {
+    "@apollo/client": "^3.3.5",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "graphql": "^15.4.0",
+    "jwt-decode": "^3.1.2",
+    "pexels": "^1.2.1",
+    "query-string": "^7.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
+  }
+ 
+````
+
+_Server Side_
+
+ ````
+ "dependencies": {
+    "apollo-server-express": "^2.12.0",
+    "bcrypt": "^5.0.0",
+    "express": "^4.17.1",
+    "graphql": "^15.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.9",
+    "query-string": "^7.0.1"
+  }
+  ````
+  
+  _Root Directory_
+  ````
+ "dependencies": {
+    "apollo-server-express": "^3.1.1",
+    "express": "^4.17.1",
+    "google-maps-react": "^2.0.6",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.3",
+    "yelp-fusion": "^3.0.0"
+  }
+  
+ ````
+ _An __.env__ file has also been created in order to store the sensitive API key values. 
+
+ 
 
 
 ## 🌄 Working Video :
@@ -65,6 +117,10 @@ The app has the following features
 
 
 ## 💻 Deployment:
+_The app has been deployed through the __Heroku__ web host and has the key value pairs configured for proper deployment and functioning of the app 
+The app can also be visited by visitng the app from here :_ 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://explorer-guide.herokuapp.com/)
+
 
 ## 📊 Credits:
 
