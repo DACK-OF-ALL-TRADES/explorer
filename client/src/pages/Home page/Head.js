@@ -10,11 +10,13 @@ import {
   Divider,
   Message,
   Accordion,
+  Popup,
 } from "semantic-ui-react";
 import adventure from "../../assets/misc/transparent-adventure.png";
 import plans from "../../assets/misc/transparent-plans.png";
 import explore from "../../assets/misc/explore.mp4";
 import map from "../../assets/misc/map.mp4";
+import { Link } from "react-router-dom";
 
 const panel1 = [
   {
@@ -47,6 +49,7 @@ const Head = ({ user }) => {
     console.log(randomnumber);
     window.location.assign(`/search/${randomnumber}`);
   };
+
   return (
     <div>
       <div className="jumbo">
@@ -54,6 +57,29 @@ const Head = ({ user }) => {
         <video autoPlay muted loop className="video2-bg">
           <source src={explore} type="video/mp4" />
         </video>
+      </div>
+      <div className="a-social-icons">
+        <Popup
+          trigger={
+            <Link to="/continents">
+              <Icon name="world" size="large" />
+            </Link>
+          }
+          content="Continents"
+          inverted
+          position="left center"
+        />
+
+        <Popup
+          trigger={
+            <Link to="/top10">
+              <Icon name="star outline" size="large" />
+            </Link>
+          }
+          content="Explorer Top 10"
+          inverted
+          position="left center"
+        />
       </div>
 
       <div className="home-user-header" data-aos="fade-left">
@@ -64,55 +90,72 @@ const Head = ({ user }) => {
       <div className="home-header" data-aos="fade-right">
         <h1>Where do you want to go {user.firstname}?</h1>
         <div className="home-2buttons">
-          <Message color="red">
-            <Button
-              onClick={randomCity}
-              color="red"
-              animated="fade"
-              style={{ margin: "1rem" }}
-            >
-              <Button.Content visible>Take me somewhere random</Button.Content>
-              <Button.Content hidden>
-                Discover
-                <Icon name="paper plane" />
-              </Button.Content>
-            </Button>
-            <Button
-              color="red"
-              href="#search"
-              style={{ margin: "1rem" }}
-              animated="fade"
-            >
-              <Button.Content visible>Pick an option for me</Button.Content>
-              <Button.Content hidden>
-                Complete the questions
-                <Icon name="pencil" />
-              </Button.Content>
-            </Button>
-          </Message>
+          <Button
+            onClick={randomCity}
+            color="red"
+            animated="fade"
+            style={{ margin: "1rem" }}
+          >
+            <Button.Content visible>Take me somewhere random</Button.Content>
+            <Button.Content hidden>
+              Discover
+              <Icon name="paper plane" />
+            </Button.Content>
+          </Button>
+          <Button
+            color="red"
+            href="/myfavorites"
+            style={{ margin: "1rem" }}
+            animated="fade"
+          >
+            <Button.Content visible>My Favorites</Button.Content>
+            <Button.Content hidden>
+              <Icon name="favorite" />
+            </Button.Content>
+          </Button>
         </div>
         <Step.Group stackable="tablet">
-          <Step>
-            <Icon name="info circle" />
-            <Step.Content>
-              <Step.Title>Information</Step.Title>
-              <Step.Description>Enter your trip details</Step.Description>
-            </Step.Content>
-          </Step>
-          <Step>
-            <Icon name="options" />
-            <Step.Content>
-              <Step.Title>Options</Step.Title>
-              <Step.Description>Select the suitable option</Step.Description>
-            </Step.Content>
-          </Step>
-          <Step>
-            <Icon name="plane" />
-            <Step.Content>
-              <Step.Title>Start the Adventure</Step.Title>
-              <Step.Description>Explore the world</Step.Description>
-            </Step.Content>
-          </Step>
+          <Popup
+            trigger={
+              <Step>
+                <Icon name="info circle" />
+                <Step.Content>
+                  <Step.Title>Information</Step.Title>
+                  <Step.Description>Enter your trip details</Step.Description>
+                </Step.Content>
+              </Step>
+            }
+            content="Enter your details below"
+            inverted
+          />
+          <Popup
+            trigger={
+              <Step>
+                <Icon name="options" />
+                <Step.Content>
+                  <Step.Title>Options</Step.Title>
+                  <Step.Description>
+                    Select the suitable option
+                  </Step.Description>
+                </Step.Content>
+              </Step>
+            }
+            content="Pick a city"
+            inverted
+          />
+          <Popup
+            trigger={
+              <Step>
+                <Icon name="plane" />
+                <Step.Content>
+                  <Step.Title>Start the Adventure</Step.Title>
+                  <Step.Description>Explore the world</Step.Description>
+                </Step.Content>
+              </Step>
+            }
+            content="Discover new places"
+            inverted
+          />
         </Step.Group>
       </div>
       <Container>
@@ -130,7 +173,7 @@ const Head = ({ user }) => {
                 <div className="center-items">
                   <Message
                     size="huge"
-                    info
+                    color="black"
                     className="home-message"
                     data-aos="flip-up"
                   >
@@ -152,7 +195,7 @@ const Head = ({ user }) => {
                 <div className="center-items">
                   <Message
                     size="huge"
-                    info
+                    color="black"
                     className="home-message"
                     data-aos="flip-up"
                   >

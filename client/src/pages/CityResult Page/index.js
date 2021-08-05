@@ -4,7 +4,16 @@ import Footer from "../../components/Footer";
 import cityData from "../../utils/cities";
 import { useBusinessSearch } from "../../utils/yelp-api/useBusinessSearch";
 import "./cityResult.css";
-import { Grid, Card, Image, Icon, Rating, Container } from "semantic-ui-react";
+import {
+  Grid,
+  Card,
+  Image,
+  Icon,
+  Rating,
+  Container,
+  Button,
+  Label,
+} from "semantic-ui-react";
 import Map from "../../components/Map/Map";
 
 const CityResult = () => {
@@ -55,18 +64,18 @@ const CityResult = () => {
           console.error(error);
         }
       );
-    const getCovidCity = (covid) => {
-      const cData = covid.data.regions;
-      if (covid !== undefined) {
-        for (const prop in cData) {
-          if (cData[prop].name === singleCity.country) {
-            setCityCovidData(cData[prop]);
-            console.log(cityCovidData);
-          }
+  }, []);
+  const getCovidCity = (covid) => {
+    const cData = covid.data.regions;
+    if (covid !== undefined) {
+      for (const prop in cData) {
+        if (cData[prop].name === singleCity.country) {
+          setCityCovidData(cData[prop]);
+          console.log(cityCovidData);
         }
       }
-    };
-  }, []);
+    }
+  };
   return (
     <div>
       <Nav />
@@ -80,6 +89,20 @@ const CityResult = () => {
                   alt="City"
                   className="citypage-cityimage"
                 />
+                <Button
+                  style={{ marginTop: "2rem" }}
+                  as="div"
+                  labelPosition="right"
+                  // onClick={}
+                >
+                  <Button color="red">
+                    <Icon name="favorite" />
+                    Add to favorites
+                  </Button>
+                  <Label as="a" basic color="red" pointing="left">
+                    0
+                  </Label>
+                </Button>
               </Grid.Column>
               <Grid.Column textAlign="center">
                 <h1>{singleCity.city}</h1>

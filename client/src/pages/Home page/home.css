@@ -52,6 +52,35 @@ body {
   line-height: 100% !important;
 }
 
+.a-social-icons {
+  position: fixed;
+  top: 50%;
+  right: 0px;
+  transform: translateX(-50%);
+}
+.a-social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  margin: 0px;
+  line-height: 0px;
+  background-color: #f6f5f5;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.2), 2px 2px #d62b2b69;
+  color: #d62b2b;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 4px;
+}
+.a-social-icons a:hover {
+  background-color: #303030;
+  color: #f6f5f5;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+  transition: all ease 0.5s;
+}
+
 .home-container {
   min-height: 70vh;
 }

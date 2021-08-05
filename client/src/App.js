@@ -22,6 +22,9 @@ import Europe from "./pages/Continents/Europe";
 import NorthAmerica from "./pages/Continents/NorthAmerica";
 import SouthAmerica from "./pages/Continents/SouthAmerica";
 import Oceania from "./pages/Continents/Oceania";
+import MyFavorites from "./pages/MyFavorites";
+import Continents from "./pages/Continents";
+import Top10 from "./pages/Top10";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -90,6 +93,15 @@ function App() {
           </Route>
           <Route exact path="/Oceania">
             <Oceania />
+          </Route>
+          <Route exact path="/myfavorites">
+            <MyFavorites />
+          </Route>
+          <Route exact path="/continents">
+            <Continents />
+          </Route>
+          <Route exact path="/top10">
+            <Top10 />
           </Route>
         </div>
       </Router>
