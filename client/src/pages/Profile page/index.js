@@ -13,11 +13,7 @@ const Profile = () => {
   return (
     <div>
       <Nav />
-      <div>
-        <div style={{ paddingBottom: "50rem" }}>
-          <Header user={user} />
-        </div>
-      </div>
+      <Header user={user} />
       <Footer />
     </div>
   );

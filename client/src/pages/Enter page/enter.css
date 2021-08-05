@@ -84,7 +84,7 @@ body > .grid {
   margin-top: 7px;
 }
 
-.column {
+.enter-container .column {
   width: 100%;
   min-width: 27vw;
   margin: 8rem 0;
@@ -101,7 +101,7 @@ body > .grid {
 .content h3 {
   font-size: 2rem !important;
 }
- .luggage-button{
+.luggage-button {
   margin: 0;
   position: absolute;
   top: 70%;
@@ -118,11 +118,8 @@ body > .grid {
   transform: translate(-50%, -50%);
 }   */
 
-
-.enter-profile{
+.enter-profile {
   margin: 0;
   position: absolute;
   left: 30%;
-  
-
-} 
+}

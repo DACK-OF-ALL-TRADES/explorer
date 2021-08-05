@@ -6,7 +6,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
 import Main from "./pages/Landing Page/main";
 import Login from "./pages/Enter page/Login";
@@ -25,6 +25,7 @@ import Oceania from "./pages/Continents/Oceania";
 import MyFavorites from "./pages/MyFavorites";
 import Continents from "./pages/Continents";
 import Top10 from "./pages/Top10";
+import NotFound from "./pages/NotFound";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -55,57 +56,62 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <Route exact path="/">
-            <Main />
-          </Route>
-          <Route exact path="/signup">
-            <Signup />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          <Route exact path="/CityCards">
-            <CityCard />
-          </Route>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route exact path="/profile">
-            <Profile />
-          </Route>
-          <Route exact path="/cities">
-            <Cities />
-          </Route>
-          <Route exact path="/search/:city">
-            <CityResult />
-          </Route>
-          <Route exact path="/Asia">
-            <Asia />
-          </Route>
-          <Route exact path="/Europe">
-            <Europe />
-          </Route>
-          <Route exact path="/NorthAmerica">
-            <NorthAmerica />
-          </Route>
-          <Route exact path="/SouthAmerica">
-            <SouthAmerica />
-          </Route>
-          <Route exact path="/Africa">
-            <Africa />
-          </Route>
-          <Route exact path="/Oceania">
-            <Oceania />
-          </Route>
-          <Route exact path="/myfavorites">
-            <MyFavorites />
-          </Route>
-          <Route exact path="/continents">
-            <Continents />
-          </Route>
-          <Route exact path="/top10">
-            <Top10 />
-          </Route>
+          <Switch>
+            <Route exact path="/">
+              <Main />
+            </Route>
+            <Route exact path="/signup">
+              <Signup />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/CityCards">
+              <CityCard />
+            </Route>
+            <Route exact path="/home">
+              <Home />
+            </Route>
+            <Route exact path="/profile">
+              <Profile />
+            </Route>
+            <Route exact path="/cities">
+              <Cities />
+            </Route>
+            <Route exact path="/search/:city">
+              <CityResult />
+            </Route>
+            <Route exact path="/Asia">
+              <Asia />
+            </Route>
+            <Route exact path="/Europe">
+              <Europe />
+            </Route>
+            <Route exact path="/NorthAmerica">
+              <NorthAmerica />
+            </Route>
+            <Route exact path="/SouthAmerica">
+              <SouthAmerica />
+            </Route>
+            <Route exact path="/Africa">
+              <Africa />
+            </Route>
+            <Route exact path="/Oceania">
+              <Oceania />
+            </Route>
+            <Route exact path="/myfavorites">
+              <MyFavorites />
+            </Route>
+            <Route exact path="/continents">
+              <Continents />
+            </Route>
+            <Route exact path="/top10">
+              <Top10 />
+            </Route>
+            <Route>
+              <NotFound />
+            </Route>
+          </Switch>
         </div>
       </Router>
     </ApolloProvider>

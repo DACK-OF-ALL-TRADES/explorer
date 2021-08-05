@@ -1,8 +1,7 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
-import { Button, Header, Image, Modal, Input, Icon } from "semantic-ui-react";
-import pp from "../../assets/misc/profile-pic.png";
+import { Button, Header, Modal, Input, Icon } from "semantic-ui-react";
 import {
   UPDATE_FIRSTNAME,
   UPDATE_LASTNAME,
@@ -11,7 +10,7 @@ import {
 } from "../../utils/mutations";
 import { QUERY_ME } from "../../utils/queries";
 
-function EditProfileModal() {
+function EditProfileModal({ user }) {
   const [open, setOpen] = React.useState(false);
   // const [openTravel, setOpenTravel] = React.useState(false);//for the saved places
   const [firstNameText, setfirstNameText] = useState("");
@@ -185,10 +184,10 @@ function EditProfileModal() {
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
       open={open}
-      trigger={<Button>Update your luggage</Button>}
+      trigger={<Button>Edit account</Button>}
     >
       <Modal.Header>
-        Traveller's Profile{" "}
+        {user.firstname}'s Profile{" "}
         <Button icon style={{ float: "right" }} onClick={() => setOpen(false)}>
           <Icon name="close" />
         </Button>
@@ -196,13 +195,12 @@ function EditProfileModal() {
 
       <Modal.Content image>
         <Modal.Description>
-          <Image src={pp} size="medium" className="enter-profile" wrapped />
           <Header> First Name</Header>
           {/* FIRSTNAME................................. */}
           <Input
             name="first-name"
             type="text"
-            placeholder="first name"
+            placeholder="Please enter your first name..."
             value={firstNameText}
             onChange={handleChange}
             action
@@ -210,7 +208,7 @@ function EditProfileModal() {
           >
             <input />
             <Button type="submit" color="blue" onClick={handleFirstNameSubmit}>
-              update
+              Update
             </Button>
           </Input>
           {/* LASTNAME................................. */}
@@ -218,7 +216,7 @@ function EditProfileModal() {
           <Input
             name="last-name"
             type="text"
-            placeholder="last name"
+            placeholder="Please enter your last name..."
             value={lastNameText}
             onChange={handleChange}
             action
@@ -226,15 +224,15 @@ function EditProfileModal() {
           >
             <input />
             <Button type="submit" color="blue" onClick={handleLastNameSubmit}>
-              update
+              Update
             </Button>
           </Input>
           {/* EMAIL................................. */}
-          <Header>Where can we contact you?</Header>
+          <Header>Email Address</Header>
           <Input
             name="email"
             type="text"
-            placeholder="email address"
+            placeholder="Please enter your email address..."
             value={emailText}
             onChange={handleChange}
             action
@@ -242,15 +240,15 @@ function EditProfileModal() {
           >
             <input />
             <Button type="submit" color="blue" onClick={handleEmailSubmit}>
-              update
+              Update
             </Button>
           </Input>
           {/* USERNAME................................. */}
-          <Header> Username</Header>
+          <Header>Username</Header>
           <Input
             name="username"
             type="text"
-            placeholder="username"
+            placeholder="Please enter your username..."
             value={usernameText}
             onChange={handleChange}
             action
@@ -258,7 +256,7 @@ function EditProfileModal() {
           >
             <input />
             <Button type="submit" color="blue" onClick={handleUsernameSubmit}>
-              update
+              Update
             </Button>
           </Input>
         </Modal.Description>

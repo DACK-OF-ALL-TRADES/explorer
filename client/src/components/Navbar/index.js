@@ -31,7 +31,7 @@ const Nav = () => {
         <div className="nav-links" data-aos="fade-left">
           {/* if on saved page, display search page else display saved page */}
           {window.location.pathname === "/home" ? (
-            <Link to="/profile">Profile</Link>
+            <Link to="/profile">Account</Link>
           ) : (
             <Link to="/home">Home</Link>
           )}
