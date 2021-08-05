@@ -145,7 +145,8 @@ We will try to implement the following functionalities in our app as an addition
 asdasdasdasdas
 
 ## Meet the Team 
-![Ashton](explorer/client/src/assets/misc/Ashton.svg)
+![Ashton](/assets/misc/Ashton.svg)
+
 
 
 ## ©️ License:
