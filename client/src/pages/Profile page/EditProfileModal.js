@@ -179,28 +179,13 @@ function EditProfileModal() {
       setUsernameText(value);
     }
   };
-  
-
-
 
   return (
     <Modal
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
       open={open}
-      trigger={<Button className="luggage-button">Update your luggage</Button>}
-      
-
-      // onCloseTravel={() => setOpenTravel(false)}
-      // onOpenTravel={() => setOpenTravel(true)}
-      // openTravel={openTravel}
-      // trigger={<Button className="travel-button">Your travel Bucket List</Button>}
-      
-      // size="medium"
-      // style={{ minWidth: "305px"
-      //           }}
-      
-
+      trigger={<Button>Update your luggage</Button>}
     >
       <Modal.Header>
         Traveller's Profile{" "}
@@ -210,8 +195,8 @@ function EditProfileModal() {
       </Modal.Header>
 
       <Modal.Content image>
-        <Modal.Description className>
-          <Image src={pp} size='medium' className= "enter-profile" wrapped />
+        <Modal.Description>
+          <Image src={pp} size="medium" className="enter-profile" wrapped />
           <Header> First Name</Header>
           {/* FIRSTNAME................................. */}
           <Input
@@ -276,8 +261,6 @@ function EditProfileModal() {
               update
             </Button>
           </Input>
-
-         
         </Modal.Description>
       </Modal.Content>
     </Modal>

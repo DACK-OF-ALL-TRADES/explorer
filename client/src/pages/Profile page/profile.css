@@ -29,35 +29,3 @@
 }
 
 /* Profile............................................. */
-.profile-container {
-  min-height: 70vh;
-}
-
-.profile-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
-
-.profile-header h1 {
-  font-family: var(--craft-font);
-  font-size: 4rem;
-  color: var(--explorer-red);
-  text-shadow: 3px 3px 0 var(--explorer-dark);
-}
-.profile-container{
-  width: 100%;
-  
-  padding-left: 20px;
-  margin: 8rem; 
-  background-color: var(--explorer-red) !important;
-  border-radius: 20px;
-  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.255);
-}
-
-
-
-
-
