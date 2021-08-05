@@ -27,6 +27,7 @@
 * [Future Additions](#future)
 * [Credits](#credits)
 * [issues](#issues)
+* [Meet the Team](#meet)
 
  
 ## 🌲 About:
@@ -142,6 +143,10 @@ We will try to implement the following functionalities in our app as an addition
 
 ## 📮 Issues:
 asdasdasdasdas
+
+## Meet the Team 
+![Ashton](../assets/misc/ashton.svg =50x50)
+
 
 ## ©️ License:
 Copyright © DACK. All rights reserved.
