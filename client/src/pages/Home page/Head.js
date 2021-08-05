@@ -92,7 +92,7 @@ const Head = ({ user }) => {
         <div className="home-2buttons">
           <Button
             onClick={randomCity}
-            color="red"
+            color="black"
             animated="fade"
             style={{ margin: "1rem" }}
           >
@@ -102,17 +102,14 @@ const Head = ({ user }) => {
               <Icon name="paper plane" />
             </Button.Content>
           </Button>
-          <Button
-            color="red"
-            href="/myfavorites"
-            style={{ margin: "1rem" }}
-            animated="fade"
-          >
-            <Button.Content visible>My Favorites</Button.Content>
-            <Button.Content hidden>
-              <Icon name="favorite" />
-            </Button.Content>
-          </Button>
+          <Link to="/myfavorites">
+            <Button color="black" style={{ margin: "1rem" }} animated="fade">
+              <Button.Content visible>My Favorites</Button.Content>
+              <Button.Content hidden>
+                <Icon name="heart" />
+              </Button.Content>
+            </Button>
+          </Link>
         </div>
         <Step.Group stackable="tablet">
           <Popup
