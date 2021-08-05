@@ -59,29 +59,32 @@ The app has the following features
    
 | MERN App      | Client  Side  |    Server Side
 | ------------- | ------------- | ------------- |
-| Content Cell  | @apollo/client": "^3.3.5"  | Content Cell  |
-| Content Cell  | @testing-library/jest-dom": "^5.11.4"  | Content Cell  |
-| Content Cell  | @testing-library/react": "^11.1.0"  | Content Cell  |
-| Content Cell  | graphql": "^15.4.0"  | Content Cell  |
+|apollo-server-express  | @apollo/client  | nodemon  |
+| express  | @testing-library/jest-dom  | |
+| google-maps-react  | @testing-library/react |   |
+| semantic-ui-css  | graphql |   |
+| semantic-ui-react  | jwt-decode |  |
+| yelp-fusion  | query-string |   |
+|   | react |  |
+|  | react-dom | |
+|  | react-router-dom |  |
+|   | react-scripts |  |
+|   | web-vitals |  |
+|   | graphql |   |
 
 
 
 
-   MERN App                    |  Client  Side              |  Client  Side
-:-------------------------:   |:-------------------------: |:-------------------------:
-![](/assets/ss1.png)      |  "@apollo/client": "^3.3.5",|
-                   | "@testing-library/jest-dom": "^5.11.4", |
-    "@testing-library/react": "^11.1.0", 
-    "@testing-library/user-event": "^12.1.10",
-    "graphql": "^15.4.0",
-    "jwt-decode": "^3.1.2",
-    "pexels": "^1.2.1",
-    "query-string": "^7.0.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"           |![](/assets/ss2.png)
+
+
+
+
+
+
+
+
+    
+  
 
  
   
