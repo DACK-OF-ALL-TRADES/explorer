@@ -145,7 +145,7 @@ We will try to implement the following functionalities in our app as an addition
 asdasdasdasdas
 
 ## Meet the Team 
-![Ashton](/assets/misc/Ashton.svg)
+![Ashton](/misc/Ashton.svg)
 
 
 
