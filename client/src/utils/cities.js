@@ -1154,7 +1154,7 @@ const cityList = [
   {
     id: 94,
     city: "Reykjavik",
-    Country: "Iceland",
+    country: "Iceland",
     continent: "Europe",
     climate: "Polar",
     pop: "Less popular places – less crowded",
@@ -1167,7 +1167,7 @@ const cityList = [
   {
     id: 95,
     city: "Nepal",
-    Country: "Federal Democratic Republic of Nepal",
+    country: "Federal Democratic Republic of Nepal",
     continent: "Asia",
     climate: "Polar",
     pop: "Less popular places – less crowded",
@@ -1180,7 +1180,7 @@ const cityList = [
   {
     id: 96,
     city: "Havana",
-    Country: "Cuba",
+    country: "Cuba",
     continent: "South America",
     climate: "Tropical",
     pop: "Less popular places – less crowded",
