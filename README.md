@@ -9,28 +9,43 @@
   <img src="https://img.shields.io/github/last-commit/DACK-OF-ALL-TRADES/explorer?color=orange&label=Last%20Commit&logo=git&logoColor=orange">
   <img src="https://img.shields.io/github/contributors/DACK-OF-ALL-TRADES/explorer?color=yellow&label=Contributors&logo=git&logoColor=yellow">
   <img src="https://img.shields.io/github/languages/count/DACK-OF-ALL-TRADES/explorer?color=green&label=Languages&logo=github&logoColor=green">
-  <img src="https://img.shields.io/github/languages/top/DACK-OF-ALL-TRADES/explorer?color=red&label=HTML&logo=HTML5&logoColor=5">
   <img src="https://img.shields.io/github/languages/top/DACK-OF-ALL-TRADES/explorer?color=blue&label=ReactJS&logo=react&logoColor=white">
   <img src="https://img.shields.io/github/repo-size/DACK-OF-ALL-TRADES/explorer?color=purple&label=Repo%20Size&logo=github&logoColor=purple">
+  
+                                                                                    
 </p>
 
  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://explorer-guide.herokuapp.com/)
+ 
+ 
+## Table of Contents
+* [Introduction](#introduction)
+* [Description](#des)
+* [Dependencies and Tools](#api)
+* [Working Video](#details)
+* [Deployment](#installations)
+* [Credits](#credits)
+* [issues](#issues)
+ 
 
 ## 🌲 About:
 
-## 📓 Usage:
+## 📓 Description:
 
 
-## 🧰 Tools & Dependencies:
+## 🧰 Dependencies and Tools:
 
-## 🌄 Images:
+
+## 🌄 Working Video :
 
 📃 Page1                    | 📃 Page2
 :-------------------------:   |:-------------------------:
 ![](/assets/ss1.png)      |![](/assets/ss2.png)
 
 
-## 📊 Notes:
+## 💻 Deployment:
+
+## 📊 Credits:
 
 > lorem ipsum....
 
