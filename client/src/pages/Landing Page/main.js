@@ -1,29 +1,27 @@
-import React from "react";
-import {
-  //   Container,
-  //   Icon,
-  //   Step,
-  //   Label,
-  //   Grid,
-
-  Button,
-  //   Divider,
-  //   Message,
-  //   Accordion,
-} from "semantic-ui-react";
-// import adventure from "../../assets/misc/transparent-adventure.png";
-// import plans from "../../assets/misc/transparent-plans.png";
+import React, { useEffect } from "react";
+import { Button, Icon } from "semantic-ui-react";
 import explore from "../../assets/misc/main.mp4";
-// import map from "../../assets/misc/map.mp4";
 import "./main.css";
 import { Link } from "react-router-dom";
+import Auth from "../../utils/auth";
 
 const Main = () => {
+  useEffect(() => {
+    if (Auth.loggedIn()) {
+      window.location.assign("/home");
+    }
+  }, []);
   return (
     <div>
       <div className="jumbo-main">
-        <h1 data-aos="zoom-out-up ">Explorer</h1>
-        <h3 data-aos="zoom-out-up">Rediscover your journey!!</h3>
+        <h1 data-aos="zoom-down-right ">Explorer</h1>
+        <h3 data-aos="zoom-down-left">
+          Travellers guide
+          <br />
+          <br />
+          <br />
+          Rediscover your journey.
+        </h3>
         <video autoPlay muted loop className="video2-main">
           <source src={explore} type="video/mp4" />
         </video>
@@ -33,13 +31,19 @@ const Main = () => {
           <Link to="/login" data-aos="fade-up-left">
             <Button animated fluid color="red">
               <Button.Content visible>Login</Button.Content>
+              <Button.Content hidden>
+                <Icon name="sign in" />
+              </Button.Content>
             </Button>
           </Link>
-          <Button.Or />
+          <Button.Or data-aos="fade-down" />
 
           <Link to="/signup" data-aos="fade-up-right">
-            <Button animated fluid color="green">
+            <Button animated fluid color="yellow">
               <Button.Content visible>Signup</Button.Content>
+              <Button.Content hidden>
+                <Icon name="add user" />
+              </Button.Content>
             </Button>
           </Link>
         </Button.Group>

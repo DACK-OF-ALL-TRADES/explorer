@@ -1,35 +1,64 @@
-/* .jumbo-main {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    justify-content: center;
-    align-items: center;
-  
-    /* margin-bottom: 4.9rem; 
-} */
-.jumbo-main {
-  /* position: relative;
-  height: 100%;
-  width: 100%;
-  
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center; */
+/* APP */
+/* STYLE CSS */
 
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Literata&family=Pacifico&family=Roboto&display=swap");
+
+/* root................................................. */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--explorer-red) var(--explorer-white);
+}
+
+:root {
+  --explorer-red: #d62b2b;
+  --explorer-white: #ebebeb;
+  --explorer-dark: #0c0c0c;
+  --explorer-pacifico: "Pacifico", cursive;
+  --explorer-caveat: "Capriola", sans-serif;
+  --craft-font3: "Literata", serif;
+  --roboto: "Roboto", sans-serif;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--explorer-white);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--explorer-red);
+}
+/* Landing page.......................................... */
+
+.jumbo-main {
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
 }
+
 .video2-main {
   position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
 }
 
 .jumbo-main h1 {
@@ -46,19 +75,20 @@
   font-family: var(--explorer-pacifico);
   animation: colorChange 4s infinite;
 }
+
 .jumbo-main h3 {
   position: absolute;
   text-align: center;
   padding-left: 20px;
-  top: 30%;
+  top: 20%;
   left: 0;
   right: 0;
   transform: translateY(-50%);
   z-index: 1;
-  font-size: 7rem;
-  color: var(--explorer-red);
-  font-family: var(--explorer-pacifico);
-  animation: colorChange 4s infinite;
+  font-size: 3rem;
+  color: #fac564;
+  font-family: var(--explorer-caveat);
+  text-shadow: 2px 2px 0 var(--explorer-dark), 3px 3px 0 var(--explorer-red);
 }
 
 .main-buttons {
@@ -76,10 +106,16 @@
   .jumbo-main h1 {
     font-size: 4rem;
   }
+  .jumbo-main h3 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 475px) {
   .jumbo-main h1 {
     font-size: 3rem;
+  }
+  .jumbo-main h3 {
+    font-size: 1.5rem;
   }
 }
