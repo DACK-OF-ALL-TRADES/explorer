@@ -102,6 +102,15 @@ const Head = ({ user }) => {
               <Icon name="paper plane" />
             </Button.Content>
           </Button>
+          <Button
+            href="#search"
+            color="black"
+            animated="fade"
+            style={{ margin: "1rem" }}
+          >
+            <Button.Content visible>Pick an option for me</Button.Content>
+            <Button.Content hidden>Complete the questions</Button.Content>
+          </Button>
           <Link to="/myfavorites">
             <Button color="black" style={{ margin: "1rem" }} animated="fade">
               <Button.Content visible>My Favorites</Button.Content>
@@ -111,49 +120,54 @@ const Head = ({ user }) => {
             </Button>
           </Link>
         </div>
-        <Step.Group stackable="tablet">
-          <Popup
-            trigger={
-              <Step>
-                <Icon name="info circle" />
-                <Step.Content>
-                  <Step.Title>Information</Step.Title>
-                  <Step.Description>Enter your trip details</Step.Description>
-                </Step.Content>
-              </Step>
-            }
-            content="Enter your details below"
-            inverted
-          />
-          <Popup
-            trigger={
-              <Step>
-                <Icon name="options" />
-                <Step.Content>
-                  <Step.Title>Options</Step.Title>
-                  <Step.Description>
-                    Select the suitable option
-                  </Step.Description>
-                </Step.Content>
-              </Step>
-            }
-            content="Pick a city"
-            inverted
-          />
-          <Popup
-            trigger={
-              <Step>
-                <Icon name="plane" />
-                <Step.Content>
-                  <Step.Title>Start the Adventure</Step.Title>
-                  <Step.Description>Explore the world</Step.Description>
-                </Step.Content>
-              </Step>
-            }
-            content="Discover new places"
-            inverted
-          />
-        </Step.Group>
+        <div className="home-steps">
+          <Step.Group stackable="tablet">
+            <Popup
+              trigger={
+                <Step>
+                  <Icon name="info circle" />
+                  <Step.Content>
+                    <Step.Title>Information</Step.Title>
+                    <Step.Description>Enter your trip details</Step.Description>
+                  </Step.Content>
+                </Step>
+              }
+              content="Enter your details below"
+              inverted
+              position="bottom center"
+            />
+            <Popup
+              trigger={
+                <Step>
+                  <Icon name="options" />
+                  <Step.Content>
+                    <Step.Title>Options</Step.Title>
+                    <Step.Description>
+                      Select the suitable option
+                    </Step.Description>
+                  </Step.Content>
+                </Step>
+              }
+              content="Pick a city"
+              inverted
+              position="bottom center"
+            />
+            <Popup
+              trigger={
+                <Step>
+                  <Icon name="plane" />
+                  <Step.Content>
+                    <Step.Title>Start the Adventure</Step.Title>
+                    <Step.Description>Explore the world</Step.Description>
+                  </Step.Content>
+                </Step>
+              }
+              content="Discover new places"
+              inverted
+              position="bottom center"
+            />
+          </Step.Group>
+        </div>
       </div>
       <Container>
         <div className="home-img-container">

@@ -10,6 +10,7 @@ const typeDefs = gql`
     lastname: String
     city: String
     country: String
+    favorites: [SavedCities]
   }
 
   type Auth {
@@ -19,6 +20,10 @@ const typeDefs = gql`
 
   type Query {
     me: User
+  }
+
+  type SavedCities {
+    cityID: Int
   }
 
   type Mutation {
@@ -36,6 +41,7 @@ const typeDefs = gql`
     updateLastName(lastName: String!): Auth
     updateEmail(email: String!): Auth
     updateUsername(username: String!): Auth
+    saveCity(cityID: Int!): User
   }
 `;
 

@@ -55,14 +55,12 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-        <Route exact path="/">
+          <Route exact path="/">
             <Main />
           </Route>
-
           <Route exact path="/signup">
             <Signup />
           </Route>
-         
           <Route exact path="/login">
             <Login />
           </Route>

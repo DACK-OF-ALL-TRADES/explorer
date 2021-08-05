@@ -19,6 +19,25 @@ const resolvers = {
   },
 
   Mutation: {
+    saveCity: async (parent, { cityID }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findByIdAndUpdate(
+          {
+            _id: context.user._id,
+          },
+          {
+            $push: { savedCities: cityID },
+          },
+          {
+            new: true,
+          }
+        );
+        console.log(updatedUser);
+        return updatedUser;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+
     addUser: async (
       parent,
       { username, email, password, firstname, lastname, city, country }

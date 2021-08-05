@@ -113,6 +113,10 @@ body {
   width: 100vw !important;
 }
 
+.home-steps *:hover {
+  cursor: default;
+}
+
 .home-header {
   display: flex;
   justify-content: center;

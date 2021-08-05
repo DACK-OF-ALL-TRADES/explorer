@@ -1,3 +1,4 @@
 const User = require("./User");
+const SavedCities = require("./SavedCities");
 
-module.exports = { User };
+module.exports = { User, SavedCities };

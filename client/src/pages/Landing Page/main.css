@@ -1,4 +1,4 @@
- /* .jumbo-main {
+/* .jumbo-main {
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -9,7 +9,7 @@
     /* margin-bottom: 4.9rem; 
 } */
 .jumbo-main {
-    /* position: relative;
+  /* position: relative;
   height: 100%;
   width: 100%;
   
@@ -19,22 +19,21 @@
   justify-content: center; */
 
   width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-.video2-main{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
+.video2-main {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
-  
-.jumbo-main h1{
-    position: absolute;
+.jumbo-main h1 {
+  position: absolute;
   text-align: center;
   padding-left: 20px;
   top: 5%;
@@ -42,13 +41,13 @@
   right: 0;
   transform: translateY(-50%);
   z-index: 1;
-    font-size: 7rem;
-    color: var(--explorer-red);
-    font-family: var(--explorer-pacifico);
-    animation: colorChange 4s infinite;
+  font-size: 7rem;
+  color: var(--explorer-red);
+  font-family: var(--explorer-pacifico);
+  animation: colorChange 4s infinite;
 }
-.jumbo-main  h3{
- position: absolute;
+.jumbo-main h3 {
+  position: absolute;
   text-align: center;
   padding-left: 20px;
   top: 30%;
@@ -56,14 +55,14 @@
   right: 0;
   transform: translateY(-50%);
   z-index: 1;
-    font-size: 7rem;
-    color: var(--explorer-red);
-    font-family: var(--explorer-pacifico);
-    animation: colorChange 4s infinite;
+  font-size: 7rem;
+  color: var(--explorer-red);
+  font-family: var(--explorer-pacifico);
+  animation: colorChange 4s infinite;
 }
 
-.main-buttons{
- position: absolute;
+.main-buttons {
+  position: absolute;
   text-align: center;
   padding-left: 20px;
   top: 70%;
@@ -71,22 +70,16 @@
   right: 0;
   transform: translateY(-50%);
   z-index: 1;
-  
 }
 
-
 @media (max-width: 700px) {
-    
-    .jumbo-main h1 {
-      font-size: 4rem;
-    }
-   
+  .jumbo-main h1 {
+    font-size: 4rem;
   }
-  
-  @media (max-width: 475px) {
-  
-    .jumbo-main h1 {
-      font-size: 3rem;
-    }
+}
+
+@media (max-width: 475px) {
+  .jumbo-main h1 {
+    font-size: 3rem;
   }
-  
+}

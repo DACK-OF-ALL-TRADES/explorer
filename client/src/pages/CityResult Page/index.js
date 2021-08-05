@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Nav from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import cityData from "../../utils/cities";
+import { useMutation } from "@apollo/client";
 import { useBusinessSearch } from "../../utils/yelp-api/useBusinessSearch";
 import "./cityResult.css";
 import {
@@ -15,6 +16,7 @@ import {
   Label,
 } from "semantic-ui-react";
 import Map from "../../components/Map/Map";
+import { ADD_FAVORITE_CITY } from "../../utils/mutations";
 
 const CityResult = () => {
   let singleCity;
@@ -76,6 +78,23 @@ const CityResult = () => {
       }
     }
   };
+  const [favorite, setFavorite] = useState("");
+  const [saveCity] = useMutation(ADD_FAVORITE_CITY);
+  const addFavorite = async () => {
+    try {
+      console.log(cityID);
+      const { data } = await saveCity({
+        variables: { cityID: cityID },
+      });
+      console.log(data);
+      setFavorite([...favorite, cityID]);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  console.log(favorite);
+
   return (
     <div>
       <Nav />
@@ -93,7 +112,7 @@ const CityResult = () => {
                   style={{ marginTop: "2rem" }}
                   as="div"
                   labelPosition="right"
-                  // onClick={}
+                  onClick={addFavorite}
                 >
                   <Button color="red">
                     <Icon name="favorite" />

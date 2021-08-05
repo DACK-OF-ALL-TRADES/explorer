@@ -83,3 +83,11 @@ export const UPDATE_USERNAME = gql`
     }
   }
 `;
+
+export const ADD_FAVORITE_CITY = gql`
+  mutation saveCity($cityID: Int!) {
+    saveCity(savedCities: $cityID) {
+      _id
+    }
+  }
+`;

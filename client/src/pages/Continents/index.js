@@ -48,14 +48,14 @@ const Continents = () => {
           />
           <Card
             image={southamerica}
-            header="SouthAmerica"
+            header="South America"
             className="city-card"
             href="/SouthAmerica"
             color="red"
           />
           <Card
             image={northamerica}
-            header="NorthAmerica"
+            header="North America"
             className="city-card"
             href="/NorthAmerica"
             color="red"
