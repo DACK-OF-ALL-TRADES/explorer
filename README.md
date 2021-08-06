@@ -46,7 +46,7 @@ The app has the following features
 
  
    ## Working
-  * You are greeted with a __Landing Page__ from where you can navigate to either the __login__ or the __signup__ page as per your requirement.
+ * You are greeted with a __Landing Page__ from where you can navigate to either the __login__ or the __signup__ page as per your requirement.
  * Once logged in, the user is presented with the __Home Page__ , where he can know more about the app, navigate to his _Profile Page_ or simply _logout_
  * On _top_ of the home page, the user will have the option of exploring the __top 10__ cities around the world that are famous as a travel destination or they can search as per the __continent__ of their choice and select a place to visit directly.
  * As we scroll down you will reach a __set of questions__ which when __answered__ will provide a __list of cities__ from around the world for you that are most suited for your perfect holiday.
