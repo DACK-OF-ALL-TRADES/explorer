@@ -146,19 +146,22 @@ The project is the final project assigned by the Carleton University Coding Boot
 asdasdasdasdas
 
 ## Meet the Team 
- ![image3 | 512x397,20%](client/public/avatars/Kemal.png)
+
+  <p align="left">
+     <img src="client/public/avatars/Kemal.png" width="150" title="hover text">  
+ </p>
  [Kemal Demirgil](https://github.com/kemaldemirgil)
  
- ![image3 |512x397,20%](client/public/avatars/Dipti.png)
+ ![image3|512x397,20%](client/public/avatars/Dipti.png)
  [Dipti Razdan](https://github.com/Dipti2021)
  
- ![image3 |512x397,20%](client/public/avatars/Ashton.png)
+ ![image3|512x397,20%](client/public/avatars/Ashton.png)
  [Ashton Headley](https://github.com/ashiemotto)
  
- ![image3 |512x397,20%](client/public/avatars/Todd.png)
+ ![image3|512x397,20%](client/public/avatars/Todd.png)
  [Todd Kelly](https://github.com/ToddKelly)
  
- ![image3 |512x397,20%](client/public/avatars/Colleen.png)
+ ![image3|512x397,20%](client/public/avatars/Colleen.png)
  [Colleen Collins](https://github.com/ColleenCollins8)
 
 
