@@ -994,6 +994,7 @@ const cityList = [
     image:
       "http://www.luxxu.net/blog/wp-content/uploads/2018/02/6-Of-The-Most-Iconic-Places-To-Visit-in-Frankfurt-06.jpg",
     youtube: "UQgcBiAztjs",
+    position: { lat: 50.1109, lng: 8.6821 },
   },
   {
     id: 81,
