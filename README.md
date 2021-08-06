@@ -22,7 +22,7 @@
 * [About](#introduction)
 * [Description and Working](#des)
 * [Dependencies and Tools](#api)
-* [Working Video](#details)
+* [Snapshot of the App](#details)
 * [Deployment](#installations)
 * [Future Additions](#future)
 * [Credits](#credits)
@@ -109,16 +109,31 @@ _Server Side_
   }
   
  ````
- _An __.env__ file has also been created in order to store the sensitive API key values. 
+ A __.env__ file has also been created in order to store the sensitive API key values. 
 
- 
+  
+  
+
+## 🌄Snapshot of the App 
+
+Landing Page                   |
+:-------------------------:   |
+![](/client/public/landing/landing.png)      |
 
 
-## 🌄 Working Video :
-
-📃 Page1                    | 📃 Page2
+ Login                    |Signup
 :-------------------------:   |:-------------------------:
-![](/assets/ss1.png)      |![](/assets/ss2.png)
+![](/client/public/landing/login.png)      |![](client/public/landing/signup.png)
+
+Home Page                 |   Profile Page
+:-------------------------:   |:-------------------------:
+![](/client/public/landing/home.png)      |![](client/public/landing/profile .png)
+
+Home Page                 |   Profile Page
+:-------------------------:   |:-------------------------:
+![](/client/public/landing/result.png)      |![](client/public/landing/detail.png)
+
+
 
 
 ## 💻 Deployment:
