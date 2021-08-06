@@ -7,8 +7,10 @@ import {
   UPDATE_LASTNAME,
   UPDATE_EMAIL,
   UPDATE_USERNAME,
+  DELETE_USER,
 } from "../../utils/mutations";
 import { QUERY_ME } from "../../utils/queries";
+import Auth from "../../utils/auth";
 
 function EditProfileModal({ user }) {
   const [open, setOpen] = React.useState(false);
@@ -175,19 +177,26 @@ function EditProfileModal({ user }) {
     }
   };
 
+  const [deleteUser] = useMutation(DELETE_USER);
+
   const deleteUserSubmit = async () => {
-    alert(`Are you sure you want to delete this account ${user.firstname}?`);
-    try {
-      // await updateUsername({
-      //   variables: {
-      //     username: usernameText,
-      //   },
-      // });
-    } catch (err) {
-      console.log(err);
+    var check = window.confirm(
+      `Are you sure you want to delete this account ${user.firstname}?`
+    );
+    if (check === true) {
+      try {
+        await deleteUser({
+          variables: {
+            userID: user._id,
+          },
+        });
+        Auth.logout();
+        window.location.assign("/");
+      } catch (err) {
+        console.log(err);
+      }
     }
   };
-  //
 
   const handleChange = (event) => {
     const { name, value } = event.target;

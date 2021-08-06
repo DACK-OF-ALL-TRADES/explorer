@@ -92,7 +92,13 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-
+    deleteUser: async (parent, { userID }, context) => {
+      console.log(userID);
+      if (context.user) {
+        return await User.findOneAndDelete({ _id: context.user._id });
+      }
+      throw new AuthenticationError("Please Login...");
+    },
     ///////////////////////////////////////////////////////////////////////
 
     login: async (parent, { email, password }) => {

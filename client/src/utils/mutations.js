@@ -75,3 +75,11 @@ export const ADD_FAVORITE_CITY = gql`
     }
   }
 `;
+
+export const DELETE_USER = gql`
+  mutation deleteUser($userID: ID!) {
+    deleteUser(userID: $userID) {
+      _id
+    }
+  }
+`;

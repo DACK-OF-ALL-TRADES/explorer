@@ -33,6 +33,7 @@ const typeDefs = gql`
     updateLastName(lastname: String!): User
     updateEmail(email: String!): User
     updateUsername(username: String!): User
+    deleteUser(userID: ID!): User
     saveCity(cityID: String!): User
   }
 `;
