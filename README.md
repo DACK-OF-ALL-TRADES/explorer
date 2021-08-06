@@ -150,18 +150,28 @@ asdasdasdasdas
   <p align="left">
      <img src="client/public/avatars/Kemal.png" width="150" title="hover text">  
  </p>
+ 
  [Kemal Demirgil](https://github.com/kemaldemirgil)
  
- ![image3|512x397,20%](client/public/avatars/Dipti.png)
+ 
+  <p align="left">
+     <img src="client/public/avatars/Dipti.png" width="150" title="hover text">  
+ </p>
  [Dipti Razdan](https://github.com/Dipti2021)
  
- ![image3|512x397,20%](client/public/avatars/Ashton.png)
+<p align="left">
+     <img src="client/public/avatars/Ashton.png" width="150" title="hover text">  
+ </p>
  [Ashton Headley](https://github.com/ashiemotto)
  
- ![image3|512x397,20%](client/public/avatars/Todd.png)
+<p align="left">
+     <img src="client/public/avatars/Todd.png" width="150" title="hover text">  
+ </p>
  [Todd Kelly](https://github.com/ToddKelly)
  
- ![image3|512x397,20%](client/public/avatars/Colleen.png)
+<p align="left">
+     <img src="client/public/avatars/Colleen.png" width="150" title="hover text">  
+</p>
  [Colleen Collins](https://github.com/ColleenCollins8)
 
 
