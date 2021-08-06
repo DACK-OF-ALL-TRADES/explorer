@@ -53,10 +53,10 @@ const resolvers = {
       if (context.user) {
         context.user.firstname = firstname;
         console.log(context.user);
-        return User.findOneAndUpdate({
-          _id: context.user._id,
-          firstname: firstname,
-        });
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          { firstname: firstname }
+        );
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -64,10 +64,10 @@ const resolvers = {
       if (context.user) {
         context.user.lastname = lastname;
         console.log(context.user);
-        return User.findOneAndUpdate({
-          _id: context.user._id,
-          lastname: lastname,
-        });
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          { lastname: lastname }
+        );
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -75,20 +75,20 @@ const resolvers = {
       if (context.user) {
         context.user.email = email;
         console.log(context.user);
-        return User.findOneAndUpdate({
-          _id: context.user._id,
-          email: email,
-        });
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          { email: email }
+        );
       }
       throw new AuthenticationError("You need to be logged in!");
     },
     updateUsername: async (parent, { username }, context) => {
       if (context.user) {
         console.log(context.user);
-        return User.findOneAndUpdate({
-          _id: context.user._id,
-          username: username,
-        });
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          { username: username }
+        );
       }
       throw new AuthenticationError("You need to be logged in!");
     },
