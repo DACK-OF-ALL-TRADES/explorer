@@ -10,6 +10,7 @@
   <img src="https://img.shields.io/github/contributors/DACK-OF-ALL-TRADES/explorer?color=yellow&label=Contributors&logo=git&logoColor=yellow">
   <img src="https://img.shields.io/github/languages/count/DACK-OF-ALL-TRADES/explorer?color=green&label=Languages&logo=github&logoColor=green">
   <img src="https://img.shields.io/github/languages/top/DACK-OF-ALL-TRADES/explorer?color=blue&label=ReactJS&logo=react&logoColor=white">
+ <img src="https://img.shields.io/github/languages/bottom/DACK-OF-ALL-TRADES/explorer?color=brown&label=HTML5&logo=HTML5&logoColor=white">
   <img src="https://img.shields.io/github/repo-size/DACK-OF-ALL-TRADES/explorer?color=purple&label=Repo%20Size&logo=github&logoColor=purple">
   
                                                                                     
