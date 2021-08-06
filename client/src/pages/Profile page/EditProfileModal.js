@@ -187,6 +187,7 @@ function EditProfileModal({ user }) {
       console.log(err);
     }
   };
+  //
 
   const handleChange = (event) => {
     const { name, value } = event.target;
