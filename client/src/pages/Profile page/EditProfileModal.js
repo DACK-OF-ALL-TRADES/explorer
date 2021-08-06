@@ -7,24 +7,26 @@ import {
   UPDATE_LASTNAME,
   UPDATE_EMAIL,
   UPDATE_USERNAME,
+  DELETE_USER,
 } from "../../utils/mutations";
 import { QUERY_ME } from "../../utils/queries";
+import Auth from "../../utils/auth";
 
 function EditProfileModal({ user }) {
   const [open, setOpen] = React.useState(false);
-  // const [openTravel, setOpenTravel] = React.useState(false);//for the saved places
   const [firstNameText, setfirstNameText] = useState("");
   const [lastNameText, setlastNameText] = useState("");
   const [emailText, setEmailText] = useState("");
   const [usernameText, setUsernameText] = useState("");
 
-  const [addFirstName] = useMutation(UPDATE_FIRSTNAME, {
-    update(cache, { data: { addFirstName } }) {
+  // firstname.............................................................
+  const [updateFirstName] = useMutation(UPDATE_FIRSTNAME, {
+    update(cache, { data: { updateFirstName } }) {
       try {
         const { me } = cache.readQuery({ query: QUERY_ME });
         cache.writeQuery({
           query: QUERY_ME,
-          data: { me: { addFirstName, ...me } },
+          data: { me: { updateFirstName, ...me } },
         });
       } catch (e) {
         console.error(e);
@@ -34,11 +36,29 @@ function EditProfileModal({ user }) {
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
-        data: { me: { ...me.firstName, me } },
+        data: { me: { ...me.firstname } },
       });
     },
   });
 
+  const handleFirstNameSubmit = async () => {
+    try {
+      if (firstNameText.length === 0 || /\d/.test(firstNameText)) {
+        alert("First name cannot be empty or a number...");
+      } else {
+        await updateFirstName({
+          variables: {
+            firstname: firstNameText,
+          },
+        });
+        setfirstNameText("");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  // lastname.............................................................
   const [updateLastName] = useMutation(UPDATE_LASTNAME, {
     update(cache, { data: { updateLastName } }) {
       try {
@@ -55,11 +75,30 @@ function EditProfileModal({ user }) {
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
-        data: { me: { ...me.lastName, me } },
+        data: { me: { ...me.lastname, me } },
       });
     },
   });
 
+  const handleLastNameSubmit = async () => {
+    try {
+      if (lastNameText.length === 0 || /\d/.test(lastNameText)) {
+        alert("Last name cannot be empty or a number...");
+      } else {
+        await updateLastName({
+          variables: {
+            lastname: lastNameText,
+          },
+        });
+
+        setlastNameText("");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  // email..................................................................
   const [updateEmail] = useMutation(UPDATE_EMAIL, {
     update(cache, { data: { updateEmail } }) {
       try {
@@ -80,6 +119,24 @@ function EditProfileModal({ user }) {
       });
     },
   });
+
+  const handleEmailSubmit = async () => {
+    try {
+      if (emailText.length === 0 || /\S+@\S+\.\S+/.test(emailText) === false) {
+        alert("Email cannot be empty and must be in an email format...");
+      } else {
+        await updateEmail({
+          variables: {
+            email: emailText,
+          },
+        });
+
+        setEmailText("");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const [updateUsername] = useMutation(UPDATE_USERNAME, {
     update(cache, { data: { updateUsername } }) {
@@ -102,63 +159,42 @@ function EditProfileModal({ user }) {
     },
   });
 
-  const handleFirstNameSubmit = async () => {
-    try {
-      console.log("handle submit input ->" + firstNameText);
-      await addFirstName({
-        variables: {
-          firstName: firstNameText,
-        },
-      });
-
-      setfirstNameText("");
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const handleLastNameSubmit = async () => {
-    try {
-      console.log("handle submit input ->" + lastNameText);
-      await updateLastName({
-        variables: {
-          lastName: lastNameText,
-        },
-      });
-
-      setlastNameText("");
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const handleEmailSubmit = async () => {
-    try {
-      console.log("handle submit input ->" + emailText);
-      await updateEmail({
-        variables: {
-          email: emailText,
-        },
-      });
-
-      setEmailText("");
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
   const handleUsernameSubmit = async () => {
     try {
-      console.log("handle submit input ->" + usernameText);
-      await updateUsername({
-        variables: {
-          username: usernameText,
-        },
-      });
+      if (usernameText.length === 0 || /\d/.test(usernameText)) {
+        alert("Username cannot be empty or a number...");
+      } else {
+        await updateUsername({
+          variables: {
+            username: usernameText,
+          },
+        });
 
-      setUsernameText("");
+        setUsernameText("");
+      }
     } catch (err) {
       console.log(err);
+    }
+  };
+
+  const [deleteUser] = useMutation(DELETE_USER);
+
+  const deleteUserSubmit = async () => {
+    var check = window.confirm(
+      `Are you sure you want to delete this account ${user.firstname}?`
+    );
+    if (check === true) {
+      try {
+        await deleteUser({
+          variables: {
+            userID: user._id,
+          },
+        });
+        Auth.logout();
+        window.location.assign("/");
+      } catch (err) {
+        console.log(err);
+      }
     }
   };
 
@@ -259,6 +295,11 @@ function EditProfileModal({ user }) {
               Update
             </Button>
           </Input>
+          <div style={{ margin: "4rem 0 0 0", float: "right" }}>
+            <Button type="submit" color="red" onClick={deleteUserSubmit}>
+              Delete Account
+            </Button>
+          </div>
         </Modal.Description>
       </Modal.Content>
     </Modal>

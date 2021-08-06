@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-const savedCities = require("./SavedCities");
 const bcrypt = require("bcrypt");
 
 const userSchema = new Schema({
@@ -27,15 +26,7 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  city: {
-    type: String,
-    required: false,
-  },
-  country: {
-    type: String,
-    required: false,
-  },
-  favorites: [savedCities],
+  favorites: [String],
 });
 
 userSchema.pre("save", async function (next) {

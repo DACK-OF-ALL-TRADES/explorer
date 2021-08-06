@@ -8,9 +8,7 @@ const typeDefs = gql`
     password: String
     firstname: String
     lastname: String
-    city: String
-    country: String
-    favorites: [SavedCities]
+    favorites: [String]
   }
 
   type Auth {
@@ -22,10 +20,6 @@ const typeDefs = gql`
     me: User
   }
 
-  type SavedCities {
-    cityID: Int
-  }
-
   type Mutation {
     addUser(
       username: String!
@@ -33,15 +27,14 @@ const typeDefs = gql`
       password: String!
       firstname: String!
       lastname: String!
-      city: String
-      country: String
     ): Auth
     login(email: String!, password: String!): Auth
-    addFirstName(firstName: String!): Auth
-    updateLastName(lastName: String!): Auth
-    updateEmail(email: String!): Auth
-    updateUsername(username: String!): Auth
-    saveCity(cityID: Int!): User
+    updateFirstName(firstname: String!): User
+    updateLastName(lastname: String!): User
+    updateEmail(email: String!): User
+    updateUsername(username: String!): User
+    deleteUser(userID: ID!): User
+    saveCity(cityID: String!): User
   }
 `;
 

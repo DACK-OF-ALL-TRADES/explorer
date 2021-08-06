@@ -35,6 +35,7 @@ const Cities = () => {
               <img
                 src="https://media.giphy.com/media/ads2QSp4JDdeg/giphy.gif"
                 alt="not found"
+                style={{ width: "80%", height: "auto", maxWidth: "400px" }}
               />
             </div>
           </div>

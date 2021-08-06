@@ -1,19 +1,28 @@
 import React from "react";
 import Nav from "../../components/Navbar";
 import Footer from "../../components/Footer";
-// import { Card } from "semantic-ui-react";
-import "../../utils/cities";
+import { Card } from "semantic-ui-react";
+import { QUERY_ME } from "../../utils/queries";
+import { useQuery } from "@apollo/client";
+import cityList from "../../utils/cities";
 
 const MyFavorites = () => {
-  // const cityData = localStorage.getItem("myfavorites");
-  // const favoriteCityData = JSON.parse(cityData);
-  // console.log("myfavorites: ", favoriteCityData);
+  const { data } = useQuery(QUERY_ME);
+  const user = data?.me || [];
+  const favCities = [];
+  cityList.forEach((city) => {
+    user.favorites.forEach((data) => {
+      if (parseInt(data) === city.id) {
+        favCities.push(city);
+      }
+    });
+  });
+  // console.log(favCities);
   return (
     <div>
       <Nav />
       <div style={{ paddingBottom: "30rem" }}>
-        <h1>My Favorites</h1>
-        {/* {!favoriteCityData === null || favoriteCityData.length === 0 ? (
+        {favCities.length === 0 ? (
           <div>
             <div
               style={{
@@ -46,7 +55,7 @@ const MyFavorites = () => {
             </div>
             <div className="search-city-display">
               <Card.Group centered>
-                {favoriteCityData.map((cityInfo) => {
+                {favCities.map((cityInfo) => {
                   if (cityInfo.image === "") {
                     return (
                       <Card
@@ -78,7 +87,7 @@ const MyFavorites = () => {
               </Card.Group>
             </div>
           </div>
-        )} */}
+        )}
       </div>
       <Footer />
     </div>

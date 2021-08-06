@@ -4,6 +4,7 @@ import EditProfileModal from "./EditProfileModal";
 
 const Header = ({ user }) => {
   const cityData = localStorage.getItem("cities");
+
   const cities = JSON.parse(cityData);
   return (
     <div>
@@ -24,7 +25,7 @@ const Header = ({ user }) => {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        {cities.length === 0 ? (
+        {!cities || cities.length === 0 ? (
           <div>
             <div
               style={{
@@ -47,6 +48,7 @@ const Header = ({ user }) => {
               <img
                 src="https://media.giphy.com/media/ads2QSp4JDdeg/giphy.gif"
                 alt="not found"
+                style={{ width: "80%", height: "auto", maxWidth: "400px" }}
               />
             </div>
           </div>

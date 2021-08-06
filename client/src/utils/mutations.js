@@ -19,8 +19,6 @@ export const ADD_USER = gql`
     $password: String!
     $firstname: String!
     $lastname: String!
-    $city: String
-    $country: String
   ) {
     addUser(
       username: $username
@@ -28,8 +26,6 @@ export const ADD_USER = gql`
       password: $password
       firstname: $firstname
       lastname: $lastname
-      city: $city
-      country: $country
     ) {
       token
       user {
@@ -39,25 +35,19 @@ export const ADD_USER = gql`
     }
   }
 `;
-//Added the mutations for the profile
+// //Added the mutations for the profile
 export const UPDATE_FIRSTNAME = gql`
-  mutation addFirstName($firstName: String!) {
-    addFirstName(firstname: $firstName) {
-      token
-      user {
-        _id
-      }
+  mutation updateFirstName($firstname: String!) {
+    updateFirstName(firstname: $firstname) {
+      firstname
     }
   }
 `;
 
 export const UPDATE_LASTNAME = gql`
-  mutation updateLastName($lastName: String!) {
-    updateLastName(lastname: $lastName) {
-      token
-      user {
-        _id
-      }
+  mutation updateLastName($lastname: String!) {
+    updateLastName(lastname: $lastname) {
+      lastname
     }
   }
 `;
@@ -65,10 +55,7 @@ export const UPDATE_LASTNAME = gql`
 export const UPDATE_EMAIL = gql`
   mutation updateEmail($email: String!) {
     updateEmail(email: $email) {
-      token
-      user {
-        _id
-      }
+      email
     }
   }
 `;
@@ -76,17 +63,22 @@ export const UPDATE_EMAIL = gql`
 export const UPDATE_USERNAME = gql`
   mutation updateUsername($username: String!) {
     updateUsername(username: $username) {
-      token
-      user {
-        _id
-      }
+      username
     }
   }
 `;
 
 export const ADD_FAVORITE_CITY = gql`
-  mutation saveCity($cityID: Int!) {
-    saveCity(savedCities: $cityID) {
+  mutation saveCity($cityID: String!) {
+    saveCity(cityID: $cityID) {
+      favorites
+    }
+  }
+`;
+
+export const DELETE_USER = gql`
+  mutation deleteUser($userID: ID!) {
+    deleteUser(userID: $userID) {
       _id
     }
   }

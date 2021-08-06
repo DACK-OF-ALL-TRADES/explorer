@@ -16,7 +16,7 @@ const Home = () => {
     if (data !== undefined) {
       userData = data.me;
     }
-    // console.log(userData);
+    console.log(userData);
   }
 
   return (
