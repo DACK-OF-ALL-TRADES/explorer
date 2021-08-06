@@ -18,13 +18,13 @@ function EditProfileModal({ user }) {
   const [emailText, setEmailText] = useState("");
   const [usernameText, setUsernameText] = useState("");
 
-  const [addFirstName] = useMutation(UPDATE_FIRSTNAME, {
-    update(cache, { data: { addFirstName } }) {
+  const [updateFirstName] = useMutation(UPDATE_FIRSTNAME, {
+    update(cache, { data: { updateFirstName } }) {
       try {
         const { me } = cache.readQuery({ query: QUERY_ME });
         cache.writeQuery({
           query: QUERY_ME,
-          data: { me: { addFirstName, ...me } },
+          data: { me: { updateFirstName, ...me } },
         });
       } catch (e) {
         console.error(e);
@@ -34,7 +34,7 @@ function EditProfileModal({ user }) {
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
-        data: { me: { ...me.firstName, me } },
+        data: { me: { ...me.firstname } },
       });
     },
   });
@@ -55,7 +55,7 @@ function EditProfileModal({ user }) {
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
-        data: { me: { ...me.lastName, me } },
+        data: { me: { ...me.lastname, me } },
       });
     },
   });
@@ -105,12 +105,13 @@ function EditProfileModal({ user }) {
   const handleFirstNameSubmit = async () => {
     try {
       console.log("handle submit input ->" + firstNameText);
-      await addFirstName({
+      const { data } = await updateFirstName({
         variables: {
-          firstName: firstNameText,
+          firstNameValue: firstNameText,
         },
       });
 
+      console.log(data);
       setfirstNameText("");
     } catch (err) {
       console.log(err);

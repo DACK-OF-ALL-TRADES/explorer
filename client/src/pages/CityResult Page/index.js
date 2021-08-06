@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Nav from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import cityData from "../../utils/cities";
-import { useMutation } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 import { useBusinessSearch } from "../../utils/yelp-api/useBusinessSearch";
 import "./cityResult.css";
 import {
@@ -14,14 +14,18 @@ import {
   Container,
   Button,
   Label,
+  Modal,
+  Header,
 } from "semantic-ui-react";
 import Map from "../../components/Map/Map";
 import { ADD_FAVORITE_CITY } from "../../utils/mutations";
+import { QUERY_ME } from "../../utils/queries";
 
 const CityResult = () => {
+  const [open, setOpen] = React.useState(false);
   let singleCity;
   let cityName = "";
-  const cityID = window.location.pathname.split("/").pop();
+  let cityID = window.location.pathname.split("/").pop();
   cityData.forEach((data) => {
     if (data.id === parseInt(cityID)) {
       singleCity = data;
@@ -32,7 +36,7 @@ const CityResult = () => {
   const term = "Events";
   const locationParam = cityName;
   const [businesses] = useBusinessSearch(term, locationParam);
-  console.log(businesses);
+  // console.log(businesses);
 
   // API FETCH........................................................
   const [cityWeatherData, setcityWeatherData] = useState();
@@ -46,7 +50,7 @@ const CityResult = () => {
         .then(
           (result) => {
             setcityWeatherData(result);
-            console.log(cityWeatherData);
+            // console.log(cityWeatherData);
           },
           (error) => {
             console.error(error);
@@ -73,27 +77,53 @@ const CityResult = () => {
       for (const prop in cData) {
         if (cData[prop].name === singleCity.country) {
           setCityCovidData(cData[prop]);
-          console.log(cityCovidData);
+          // console.log(cityCovidData);
         }
       }
     }
   };
-  const [favorite, setFavorite] = useState("");
-  const [saveCity] = useMutation(ADD_FAVORITE_CITY);
-  const addFavorite = async () => {
-    try {
-      console.log(cityID);
-      const { data } = await saveCity({
-        variables: { cityID: cityID },
+
+  const { data } = useQuery(QUERY_ME);
+  const user = data?.me || [];
+  //
+  // const [favorite, setFavorite] = useState([]);
+  //
+  const [saveCity] = useMutation(ADD_FAVORITE_CITY, {
+    update(cache, { data: { favorites } }) {
+      try {
+        const { me } = cache.readQuery({ query: QUERY_ME });
+        cache.writeQuery({
+          query: QUERY_ME,
+          data: { me: { favorites, ...me } },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+
+      // update me object's cache
+      const { me } = cache.readQuery({ query: QUERY_ME });
+      cache.writeQuery({
+        query: QUERY_ME,
+        data: { me: { ...me.favorites } },
       });
-      console.log(data);
-      setFavorite([...favorite, cityID]);
-    } catch (e) {
-      console.log(e);
+    },
+  });
+  //
+  const addFavorite = async () => {
+    // console.log(user.favorites);
+    if (user.favorites.includes(cityID)) {
+      setOpen(true);
+    } else {
+      try {
+        await saveCity({
+          variables: { cityID: cityID },
+        });
+        alert(`Added ${cityName} to my favorites!`);
+      } catch (e) {
+        console.log(e);
+      }
     }
   };
-
-  console.log(favorite);
 
   return (
     <div>
@@ -114,12 +144,13 @@ const CityResult = () => {
                   labelPosition="right"
                   onClick={addFavorite}
                 >
+                  {/* HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */}
                   <Button color="red">
                     <Icon name="favorite" />
                     Add to favorites
                   </Button>
                   <Label as="a" basic color="red" pointing="left">
-                    0
+                    {user.favorites ? user.favorites.length : ""}
                   </Label>
                 </Button>
               </Grid.Column>
@@ -273,6 +304,23 @@ const CityResult = () => {
                 ))}
           </Card.Group>
         </div>
+        <Modal
+          basic
+          onClose={() => setOpen(false)}
+          onOpen={() => setOpen(true)}
+          open={open}
+          size="small"
+        >
+          <Header icon>
+            <Icon name="warning" />
+            Already have that city in My Favorites
+          </Header>
+          <Modal.Actions>
+            <Button color="green" inverted onClick={() => setOpen(false)}>
+              <Icon name="checkmark" /> OK
+            </Button>
+          </Modal.Actions>
+        </Modal>
       </div>
       <Footer />
     </div>

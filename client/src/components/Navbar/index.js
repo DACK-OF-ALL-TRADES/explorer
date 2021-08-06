@@ -35,7 +35,11 @@ const Nav = () => {
           ) : (
             <Link to="/home">Home</Link>
           )}
-          <Link to="/" className="nav-logout" onClick={() => Auth.logout()}>
+          <Link
+            to="/login"
+            className="nav-logout"
+            onClick={() => Auth.logout()}
+          >
             Logout
           </Link>
         </div>

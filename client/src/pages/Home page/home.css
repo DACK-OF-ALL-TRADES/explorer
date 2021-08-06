@@ -57,6 +57,7 @@ body {
   top: 50%;
   right: 0px;
   transform: translateX(-50%);
+  z-index: 10;
 }
 .a-social-icons a {
   display: flex;
@@ -73,6 +74,7 @@ body {
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin-top: 4px;
+  z-index: 10;
 }
 .a-social-icons a:hover {
   background-color: #303030;

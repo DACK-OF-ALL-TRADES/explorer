@@ -24,9 +24,7 @@ export const QUERY_ME = gql`
       password
       firstname
       lastname
-      city
-      country
+      favorites
     }
   }
 `;
-

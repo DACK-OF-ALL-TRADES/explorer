@@ -4,12 +4,6 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    // users: async () => {
-    //   return User.find().populate('thoughts');
-    // },
-    // user: async (parent, { username }) => {
-    //   return User.findOne({ username }).populate('thoughts');
-    // },
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id });
@@ -20,27 +14,27 @@ const resolvers = {
 
   Mutation: {
     saveCity: async (parent, { cityID }, context) => {
+      console.log(cityID);
+
       if (context.user) {
-        const updatedUser = await User.findByIdAndUpdate(
+        return await User.findByIdAndUpdate(
           {
             _id: context.user._id,
           },
           {
-            $push: { savedCities: cityID },
+            $push: { favorites: cityID },
           },
           {
             new: true,
           }
         );
-        console.log(updatedUser);
-        return updatedUser;
       }
       throw new AuthenticationError("You need to be logged in!");
     },
 
     addUser: async (
       parent,
-      { username, email, password, firstname, lastname, city, country }
+      { username, email, password, firstname, lastname }
     ) => {
       const user = await User.create({
         username,
@@ -48,22 +42,22 @@ const resolvers = {
         password,
         firstname,
         lastname,
-        city,
-        country,
       });
       const token = signToken(user);
       return { token, user };
     },
 
     // adding the profile updates
-    addFirstName: async (parent, { firstName }, context) => {
+
+    updateFirstName: async (parent, { firstNameValue }, context) => {
       if (context.user) {
-        context.user.firstName = firstName;
         console.log(context.user);
-        return User.findOneAndUpdate({
-          _id: context.user._id,
-          firstname: firstName,
-        });
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          {
+            firstname: firstNameValue,
+          }
+        );
       }
       throw new AuthenticationError("You need to be logged in!");
     },
