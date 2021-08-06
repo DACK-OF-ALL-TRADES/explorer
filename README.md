@@ -24,8 +24,10 @@
 * [Dependencies and Tools](#api)
 * [Working Video](#details)
 * [Deployment](#installations)
+* [Future Additions](#future)
 * [Credits](#credits)
 * [issues](#issues)
+* [Meet the Team](#meet)
 
  
 ## 🌲 About:
@@ -35,12 +37,13 @@ Explorer is a _MERN stack single-page application_, which has been created to he
   ## Description
 The app has the following features 
 * A full stack user-focused MERN application that works with real-world data to solve a real-world challenge, with a focus on data and user demand.
-* The app includes user authentication, Routing and API's transfers and a database 
-* Built on the agile development methodologies that we have used throughout this course.
- * Instead of using the HTML, __Reactjs__ is used for displaying the front-end version of the app.
- * Used a framework that was both easy-to use, but also responsive and optimize for the user’s experience.
- * Used __Heroku web server__ to host our app.
- * The steps involved in designing mainly dealt with designing the full stack code and using queries and mutations for retrieving, adding, updating, and deleting data.
+* We have used  __MongoDB__ and the __Mongoose ODM__ for the database,__Reactjs__ is used for displaying the front-end version of the app, __GraphQL__ is used with a __Node.js__ and __Express.js__ server
+* The app is built on the agile development methodologies that we have used throughout this course.
+* Used a framework that was both easy-to use, but also responsive and optimize for the user’s experience.
+* The app has mainly been styled by using __Semantic UI react__ component library.
+* Used __Heroku web server__ to host our app.
+* The steps involved in designing mainly dealt with designing the full stack code and using queries and mutations for retrieving, adding, updating, and deleting data.
+ 
 
  
    ## Working
@@ -56,7 +59,7 @@ The app has the following features
 
    
 ## 🧰 Dependencies and Tools:
- In order to run the app, we installed the following dependencies:
+ In order to run the app, we installed the following dependencies and the given scripts are used to run the app from the root directory:
 
  _Client Side_
  ````
@@ -65,6 +68,7 @@ The app has the following features
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "google-maps-react": "^2.0.6",
     "graphql": "^15.4.0",
     "jwt-decode": "^3.1.2",
     "pexels": "^1.2.1",
@@ -73,6 +77,8 @@ The app has the following features
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.3",
     "web-vitals": "^0.2.4"
   }
  
@@ -94,13 +100,12 @@ _Server Side_
   
   _Root Directory_
   ````
- "dependencies": {
-    "apollo-server-express": "^3.1.1",
-    "express": "^4.17.1",
-    "google-maps-react": "^2.0.6",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.3",
-    "yelp-fusion": "^3.0.0"
+ "scripts": {
+    "start": "node server/server.js",
+    "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
   }
   
  ````
@@ -121,14 +126,58 @@ _The app has been deployed through the __Heroku__ web host and has the key value
 The app can also be visited by visitng the app from here :_ 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://explorer-guide.herokuapp.com/)
 
+## Future Additions
+We will try to implement the following functionalities in our app as an addition:
+
+* Use a web manifest
+* Uses a service worker for offline functionality so that the app works as a PWA
+* Add forgot password/reset password as a feature.
+* __ANY OTHER RECOMENDATION FROM YOUR SIDE WILL BE HIGHLY APPRECIATED__
+
+
 
 ## 📊 Credits:
 
-> lorem ipsum....
+The project is the final project assigned by the Carleton University Coding Bootcamp, our instructor and the TA's
+
 
 
 ## 📮 Issues:
 asdasdasdasdas
+
+## Meet the Team 
+
+  <p align="left">
+     <img src="client/public/avatars/Kemal.png" width="150" title="hover text">  
+ </p>
+ 
+ [Kemal Demirgil](https://github.com/kemaldemirgil)
+ 
+ 
+  <p align="left">
+     <img src="client/public/avatars/Dipti.png" width="150" title="hover text">  
+ </p>
+ 
+ [Dipti Razdan](https://github.com/Dipti2021)
+ 
+<p align="left">
+     <img src="client/public/avatars/Ashton.png" width="150" title="hover text">  
+ </p>
+ 
+ [Ashton Headley](https://github.com/ashiemotto)
+ 
+<p align="left">
+     <img src="client/public/avatars/Todd.png" width="150" title="hover text">  
+ </p>
+ 
+ [Todd Kelly](https://github.com/ToddKelly)
+ 
+<p align="left">
+     <img src="client/public/avatars/Colleen.png" width="150" title="hover text">  
+</p>
+
+ [Colleen Collins](https://github.com/ColleenCollins8)
+
 
 ## ©️ License:
 Copyright © DACK. All rights reserved.
