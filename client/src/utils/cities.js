@@ -687,6 +687,7 @@ const cityList = [
     image:
       "https://www.andbeyond.com/wp-content/uploads/sites/5/Johannesburg-Skyline.jpg",
     youtube: "2qTsWpB939Y",
+    position: { lat: 26.2041, lng: 28.0473 },
   },
   {
     id: 56,
