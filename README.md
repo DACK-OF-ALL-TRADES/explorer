@@ -26,7 +26,6 @@
 * [Deployment](#installations)
 * [Future Additions](#future)
 * [Credits](#credits)
-* [issues](#issues)
 * [Meet the Team](#meet)
 
  
@@ -155,10 +154,6 @@ We will try to implement the following functionalities in our app as an addition
 
 The project is the final project assigned by the Carleton University Coding Bootcamp, our instructor and the TA's
 
-
-
-## 📮 Issues:
-asdasdasdasdas
 
 ## Meet the Team 
 
