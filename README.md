@@ -127,9 +127,9 @@ Landing Page                   |
 
 Home Page                 |   Profile Page
 :-------------------------:   |:-------------------------:
-![](/client/public/landing/home.png)      |![](client/public/landing/profile .png)
+![](/client/public/landing/home.png)      |![](client/public/landing/profile.png)
 
-Home Page                 |   Profile Page
+My Search Results                |   Selected City
 :-------------------------:   |:-------------------------:
 ![](/client/public/landing/result.png)      |![](client/public/landing/detail.png)
 
