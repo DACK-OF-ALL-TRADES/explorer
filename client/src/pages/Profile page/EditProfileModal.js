@@ -41,15 +41,16 @@ function EditProfileModal({ user }) {
 
   const handleFirstNameSubmit = async () => {
     try {
-      console.log("handle submit input ->" + firstNameText);
-      const { data } = await updateFirstName({
-        variables: {
-          firstname: firstNameText,
-        },
-      });
-
-      console.log(data);
-      setfirstNameText("");
+      if (firstNameText.length === 0 || /\d/.test(firstNameText)) {
+        alert("First name cannot be empty or a number...");
+      } else {
+        await updateFirstName({
+          variables: {
+            firstname: firstNameText,
+          },
+        });
+        setfirstNameText("");
+      }
     } catch (err) {
       console.log(err);
     }
@@ -79,14 +80,17 @@ function EditProfileModal({ user }) {
 
   const handleLastNameSubmit = async () => {
     try {
-      console.log("handle submit input ->" + lastNameText);
-      await updateLastName({
-        variables: {
-          lastname: lastNameText,
-        },
-      });
+      if (lastNameText.length === 0 || /\d/.test(lastNameText)) {
+        alert("Last name cannot be empty or a number...");
+      } else {
+        await updateLastName({
+          variables: {
+            lastname: lastNameText,
+          },
+        });
 
-      setlastNameText("");
+        setlastNameText("");
+      }
     } catch (err) {
       console.log(err);
     }
@@ -116,14 +120,17 @@ function EditProfileModal({ user }) {
 
   const handleEmailSubmit = async () => {
     try {
-      console.log("handle submit input ->" + emailText);
-      await updateEmail({
-        variables: {
-          email: emailText,
-        },
-      });
+      if (emailText.length === 0 || /\S+@\S+\.\S+/.test(emailText) === false) {
+        alert("Email cannot be empty and must be in an email format...");
+      } else {
+        await updateEmail({
+          variables: {
+            email: emailText,
+          },
+        });
 
-      setEmailText("");
+        setEmailText("");
+      }
     } catch (err) {
       console.log(err);
     }
@@ -152,14 +159,30 @@ function EditProfileModal({ user }) {
 
   const handleUsernameSubmit = async () => {
     try {
-      console.log("handle submit input ->" + usernameText);
-      await updateUsername({
-        variables: {
-          username: usernameText,
-        },
-      });
+      if (usernameText.length === 0 || /\d/.test(usernameText)) {
+        alert("Username cannot be empty or a number...");
+      } else {
+        await updateUsername({
+          variables: {
+            username: usernameText,
+          },
+        });
 
-      setUsernameText("");
+        setUsernameText("");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const deleteUserSubmit = async () => {
+    alert(`Are you sure you want to delete this account ${user.firstname}?`);
+    try {
+      // await updateUsername({
+      //   variables: {
+      //     username: usernameText,
+      //   },
+      // });
     } catch (err) {
       console.log(err);
     }
@@ -262,6 +285,11 @@ function EditProfileModal({ user }) {
               Update
             </Button>
           </Input>
+          <div style={{ margin: "4rem 0 0 0", float: "right" }}>
+            <Button type="submit" color="red" onClick={deleteUserSubmit}>
+              Delete Account
+            </Button>
+          </div>
         </Modal.Description>
       </Modal.Content>
     </Modal>
