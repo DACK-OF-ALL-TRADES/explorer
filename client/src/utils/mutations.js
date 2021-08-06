@@ -37,23 +37,17 @@ export const ADD_USER = gql`
 `;
 // //Added the mutations for the profile
 export const UPDATE_FIRSTNAME = gql`
-  mutation updateFirstName($firstNameValue: String!) {
-    updateFirstName(firstname: $firstNameValue) {
-      token
-      user {
-        _id
-      }
+  mutation updateFirstName($firstname: String!) {
+    updateFirstName(firstname: $firstname) {
+      firstname
     }
   }
 `;
 
 export const UPDATE_LASTNAME = gql`
-  mutation updateLastName($lastName: String!) {
-    updateLastName(lastname: $lastName) {
-      token
-      user {
-        _id
-      }
+  mutation updateLastName($lastname: String!) {
+    updateLastName(lastname: $lastname) {
+      lastname
     }
   }
 `;
@@ -61,10 +55,7 @@ export const UPDATE_LASTNAME = gql`
 export const UPDATE_EMAIL = gql`
   mutation updateEmail($email: String!) {
     updateEmail(email: $email) {
-      token
-      user {
-        _id
-      }
+      email
     }
   }
 `;
@@ -72,10 +63,7 @@ export const UPDATE_EMAIL = gql`
 export const UPDATE_USERNAME = gql`
   mutation updateUsername($username: String!) {
     updateUsername(username: $username) {
-      token
-      user {
-        _id
-      }
+      username
     }
   }
 `;

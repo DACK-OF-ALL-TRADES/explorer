@@ -29,10 +29,10 @@ const typeDefs = gql`
       lastname: String!
     ): Auth
     login(email: String!, password: String!): Auth
-    updateFirstName(updateFirstName: String!): Auth
-    updateLastName(lastName: String!): Auth
-    updateEmail(email: String!): Auth
-    updateUsername(username: String!): Auth
+    updateFirstName(firstname: String!): User
+    updateLastName(lastname: String!): User
+    updateEmail(email: String!): User
+    updateUsername(username: String!): User
     saveCity(cityID: String!): User
   }
 `;

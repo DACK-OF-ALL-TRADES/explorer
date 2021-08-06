@@ -12,12 +12,12 @@ import { QUERY_ME } from "../../utils/queries";
 
 function EditProfileModal({ user }) {
   const [open, setOpen] = React.useState(false);
-  // const [openTravel, setOpenTravel] = React.useState(false);//for the saved places
   const [firstNameText, setfirstNameText] = useState("");
   const [lastNameText, setlastNameText] = useState("");
   const [emailText, setEmailText] = useState("");
   const [usernameText, setUsernameText] = useState("");
 
+  // firstname.............................................................
   const [updateFirstName] = useMutation(UPDATE_FIRSTNAME, {
     update(cache, { data: { updateFirstName } }) {
       try {
@@ -39,6 +39,23 @@ function EditProfileModal({ user }) {
     },
   });
 
+  const handleFirstNameSubmit = async () => {
+    try {
+      console.log("handle submit input ->" + firstNameText);
+      const { data } = await updateFirstName({
+        variables: {
+          firstname: firstNameText,
+        },
+      });
+
+      console.log(data);
+      setfirstNameText("");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  // lastname.............................................................
   const [updateLastName] = useMutation(UPDATE_LASTNAME, {
     update(cache, { data: { updateLastName } }) {
       try {
@@ -60,6 +77,22 @@ function EditProfileModal({ user }) {
     },
   });
 
+  const handleLastNameSubmit = async () => {
+    try {
+      console.log("handle submit input ->" + lastNameText);
+      await updateLastName({
+        variables: {
+          lastname: lastNameText,
+        },
+      });
+
+      setlastNameText("");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  // email..................................................................
   const [updateEmail] = useMutation(UPDATE_EMAIL, {
     update(cache, { data: { updateEmail } }) {
       try {
@@ -81,6 +114,21 @@ function EditProfileModal({ user }) {
     },
   });
 
+  const handleEmailSubmit = async () => {
+    try {
+      console.log("handle submit input ->" + emailText);
+      await updateEmail({
+        variables: {
+          email: emailText,
+        },
+      });
+
+      setEmailText("");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   const [updateUsername] = useMutation(UPDATE_USERNAME, {
     update(cache, { data: { updateUsername } }) {
       try {
@@ -101,52 +149,6 @@ function EditProfileModal({ user }) {
       });
     },
   });
-
-  const handleFirstNameSubmit = async () => {
-    try {
-      console.log("handle submit input ->" + firstNameText);
-      const { data } = await updateFirstName({
-        variables: {
-          firstNameValue: firstNameText,
-        },
-      });
-
-      console.log(data);
-      setfirstNameText("");
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const handleLastNameSubmit = async () => {
-    try {
-      console.log("handle submit input ->" + lastNameText);
-      await updateLastName({
-        variables: {
-          lastName: lastNameText,
-        },
-      });
-
-      setlastNameText("");
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const handleEmailSubmit = async () => {
-    try {
-      console.log("handle submit input ->" + emailText);
-      await updateEmail({
-        variables: {
-          email: emailText,
-        },
-      });
-
-      setEmailText("");
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   const handleUsernameSubmit = async () => {
     try {

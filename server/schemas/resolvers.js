@@ -49,24 +49,24 @@ const resolvers = {
 
     // adding the profile updates
 
-    updateFirstName: async (parent, { firstNameValue }, context) => {
+    updateFirstName: async (parent, { firstname }, context) => {
       if (context.user) {
-        console.log(context.user);
-        return User.findOneAndUpdate(
-          { _id: context.user._id },
-          {
-            firstname: firstNameValue,
-          }
-        );
-      }
-      throw new AuthenticationError("You need to be logged in!");
-    },
-    updateLastName: async (parent, { lastName }, context) => {
-      if (context.user) {
+        context.user.firstname = firstname;
         console.log(context.user);
         return User.findOneAndUpdate({
           _id: context.user._id,
-          lastname: lastName,
+          firstname: firstname,
+        });
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+    updateLastName: async (parent, { lastname }, context) => {
+      if (context.user) {
+        context.user.lastname = lastname;
+        console.log(context.user);
+        return User.findOneAndUpdate({
+          _id: context.user._id,
+          lastname: lastname,
         });
       }
       throw new AuthenticationError("You need to be logged in!");
