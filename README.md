@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/github/languages/top/DACK-OF-ALL-TRADES/explorer?color=blue&label=ReactJS&logo=react&logoColor=white">
   <img src="https://img.shields.io/github/repo-size/DACK-OF-ALL-TRADES/explorer?color=purple&label=Repo%20Size&logo=github&logoColor=purple">
   
-                                                                                    
+                                                                              
 </p>
 
 
@@ -61,7 +61,7 @@ The app has the following features
  In order to run the app, we installed the following dependencies and the given scripts are used to run the app from the root directory:
 
  _Client Side_
- ````
+ ```json
  "dependencies": {
     "@apollo/client": "^3.3.5",
     "@testing-library/jest-dom": "^5.11.4",
@@ -81,11 +81,11 @@ The app has the following features
     "web-vitals": "^0.2.4"
   }
  
-````
+```
 
 _Server Side_
 
- ````
+ ```json
  "dependencies": {
     "apollo-server-express": "^2.12.0",
     "bcrypt": "^5.0.0",
@@ -95,10 +95,10 @@ _Server Side_
     "mongoose": "^5.9.9",
     "query-string": "^7.0.1"
   }
-  ````
+  ```
   
   _Root Directory_
-  ````
+  ```json
  "scripts": {
     "start": "node server/server.js",
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
@@ -107,7 +107,7 @@ _Server Side_
     "build": "cd client && npm run build"
   }
   
- ````
+ ```
  A __.env__ file has also been created in order to store the sensitive API key values. 
 
   
