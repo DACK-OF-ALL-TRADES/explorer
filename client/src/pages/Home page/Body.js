@@ -1,3 +1,4 @@
+// imports.....................................................
 import React, { useState, useEffect } from "react";
 import {
   Container,
@@ -9,8 +10,6 @@ import {
   Message,
   Label,
 } from "semantic-ui-react";
-// import { Link } from "react-router-dom";
-// import CityResults from "./CityResults";
 import cityList from "../../utils/cities";
 import { ToastsContainer, ToastsStore } from "react-toasts";
 
@@ -26,6 +25,7 @@ const styles = {
     marginTop: "10px",
   },
 };
+
 let continent = [];
 let continent_climate = [];
 let continent_climate_pop = [];
@@ -52,9 +52,7 @@ const Body = ({ user }) => {
           console.error(error);
         }
       );
-    // console.log(cityList);
   }, []);
-  // console.log(ipData);
   const cityDataResults = {
     question_1: answer1,
     question_2: answer2,
@@ -70,8 +68,6 @@ const Body = ({ user }) => {
   const citySearch = () => {
     if (cityListResult.includes(null)) {
       ToastsStore.error(`Please fill all the questions...`);
-      // setOpen(true);
-      // alert("Please fill in all the questions...");
     } else {
       pickCities();
     }
@@ -111,14 +107,12 @@ const Body = ({ user }) => {
       });
     }
     //...................................................
-    // console.log("final reuslt");
-    // console.log(continent_climate_pop);
     localStorage.setItem("cities", JSON.stringify(continent_climate_pop));
     window.location.assign("/cities");
     //...................................................
   };
 
-  // 1, 2, 9
+  // 1, 2, 5 || 0 1 6
 
   // Question1..............................................................
   // RESULT

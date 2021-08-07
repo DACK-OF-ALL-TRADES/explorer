@@ -1,3 +1,4 @@
+// import.....................................................
 import React from "react";
 import {
   ApolloClient,
@@ -118,4 +119,5 @@ function App() {
   );
 }
 
+// export.....................................................
 export default App;

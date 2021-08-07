@@ -1,3 +1,4 @@
+// imports.....................................................
 import React, { useState, useEffect } from "react";
 import Nav from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -30,14 +31,12 @@ const CityResult = () => {
       cityName = data.city;
     }
   });
-  // // Yelp Fetch API
+  // Yelp Fetch API
   const term = "Attractions";
   const locationParam = cityName;
   const [businesses] = useBusinessSearch(term, locationParam);
 
-  // console.log(businesses);
-
-  // API FETCH........................................................
+  // OPEN WEATHER API FETCH........................................................
   const [cityWeatherData, setcityWeatherData] = useState();
   const [cityCovidData, setCityCovidData] = useState();
   useEffect(() => {
@@ -49,7 +48,6 @@ const CityResult = () => {
         .then(
           (result) => {
             setcityWeatherData(result);
-            // console.log(cityWeatherData);
           },
           (error) => {
             console.error(error);
@@ -78,7 +76,6 @@ const CityResult = () => {
       for (const prop in cData) {
         if (cData[prop].name === singleCity.country) {
           setCityCovidData(cData[prop]);
-          // console.log(cityCovidData);
         }
       }
     }
@@ -86,9 +83,6 @@ const CityResult = () => {
 
   const { data } = useQuery(QUERY_ME);
   const user = data?.me || [];
-  //
-  // const [favorite, setFavorite] = useState([]);
-  //
   const [saveCity] = useMutation(ADD_FAVORITE_CITY, {
     update(cache, { data: { favorites } }) {
       try {
@@ -109,9 +103,8 @@ const CityResult = () => {
       });
     },
   });
-  //
+
   const addFavorite = async () => {
-    // console.log(user.favorites);
     if (user.favorites.includes(cityID)) {
       ToastsStore.warning(`Already have that city in My Favorites`);
     } else {

@@ -1,7 +1,9 @@
+// imports.....................................................
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import React from "react";
 import cityData from "../../utils/cities";
 
+// generate_google_map.....................................................
 export class Maps extends React.Component {
   render() {
     const cityID = window.location.pathname.split("/").pop();

@@ -1,3 +1,4 @@
+// imports.....................................................
 import React from "react";
 import { Grid, Icon, Card } from "semantic-ui-react";
 import EditProfileModal from "./EditProfileModal";

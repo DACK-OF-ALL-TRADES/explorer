@@ -1,4 +1,4 @@
-import bg from "../../../src/assets/misc/sky.mp4";
+import bg from "../../../src/assets/sky.mp4";
 
 const Background = () => {
   return (

@@ -1,16 +1,20 @@
+// imports.....................................................
 import decode from "jwt-decode";
 
 class AuthService {
+  // check_token.....................................................
   getProfile() {
     return decode(this.getToken());
   }
 
+  // check_logged.....................................................
   loggedIn() {
     const token = this.getToken();
     // If there is a token and it's not expired, return `true`
     return token && !this.isTokenExpired(token) ? true : false;
   }
 
+  // check_expired_token.....................................................
   isTokenExpired(token) {
     // Decode the token to get its expiration time that was set by the server
     const decoded = decode(token);
@@ -23,19 +27,21 @@ class AuthService {
     return false;
   }
 
+  // get_token.....................................................
   getToken() {
     return localStorage.getItem("id_token");
   }
-
+  // login.....................................................
   login(idToken) {
     localStorage.setItem("id_token", idToken);
     window.location.assign("/home");
   }
-
+  // logout.....................................................
   logout() {
     localStorage.removeItem("id_token");
     window.location.reload();
   }
 }
 
+// exports.....................................................
 export default new AuthService();

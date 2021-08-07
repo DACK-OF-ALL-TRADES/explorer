@@ -48,7 +48,7 @@ html {
 }
 
 body {
-  background-image: url(../../assets/misc/foggy_birds.png);
+  background-image: url(../../assets/foggy_birds.png);
   line-height: 100% !important;
 }
 
@@ -159,7 +159,7 @@ body {
 }
 
 .home-container * .column {
-  background-image: url(../../assets/misc/foggy_birds.png) !important;
+  background-image: url(../../assets/foggy_birds.png) !important;
   box-shadow: none !important;
 }
 
@@ -212,7 +212,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url(../../assets/misc/food.png);
+  background-image: url(../../assets/food.png);
 }
 .home-search-container h2 {
   font-size: 3rem;
@@ -224,7 +224,7 @@ body {
   font-family: var(--explorer-caveat);
 }
 .home-search {
-  background-image: url(../../assets/misc/food.png);
+  background-image: url(../../assets/food.png);
   border-top: 3px solid black;
 }
 

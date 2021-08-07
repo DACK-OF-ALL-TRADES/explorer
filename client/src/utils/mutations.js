@@ -1,5 +1,7 @@
+// imports.....................................................
 import { gql } from "@apollo/client";
 
+// login.....................................................
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
@@ -12,6 +14,7 @@ export const LOGIN_USER = gql`
   }
 `;
 
+// create_user.....................................................
 export const ADD_USER = gql`
   mutation addUser(
     $username: String!
@@ -35,7 +38,8 @@ export const ADD_USER = gql`
     }
   }
 `;
-// //Added the mutations for the profile
+
+// update_firstname.....................................................
 export const UPDATE_FIRSTNAME = gql`
   mutation updateFirstName($firstname: String!) {
     updateFirstName(firstname: $firstname) {
@@ -44,6 +48,7 @@ export const UPDATE_FIRSTNAME = gql`
   }
 `;
 
+// update_lastname.....................................................
 export const UPDATE_LASTNAME = gql`
   mutation updateLastName($lastname: String!) {
     updateLastName(lastname: $lastname) {
@@ -52,6 +57,7 @@ export const UPDATE_LASTNAME = gql`
   }
 `;
 
+// update_email.....................................................
 export const UPDATE_EMAIL = gql`
   mutation updateEmail($email: String!) {
     updateEmail(email: $email) {
@@ -60,6 +66,7 @@ export const UPDATE_EMAIL = gql`
   }
 `;
 
+// update_username.....................................................
 export const UPDATE_USERNAME = gql`
   mutation updateUsername($username: String!) {
     updateUsername(username: $username) {
@@ -68,6 +75,7 @@ export const UPDATE_USERNAME = gql`
   }
 `;
 
+// add_favorite_city.....................................................
 export const ADD_FAVORITE_CITY = gql`
   mutation saveCity($cityID: String!) {
     saveCity(cityID: $cityID) {
@@ -76,6 +84,7 @@ export const ADD_FAVORITE_CITY = gql`
   }
 `;
 
+// delete_user.....................................................
 export const DELETE_USER = gql`
   mutation deleteUser($userID: ID!) {
     deleteUser(userID: $userID) {
@@ -84,6 +93,7 @@ export const DELETE_USER = gql`
   }
 `;
 
+// remove_favorite_city.....................................................
 export const REMOVE_FAVORITE_CITY = gql`
   mutation removeCity($cityValue: String!) {
     removeCity(cityValue: $cityValue) {

@@ -1,13 +1,14 @@
+// imports.....................................................
 import React from "react";
 import Nav from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { Card } from "semantic-ui-react";
-import euro from "../../assets/misc/euro.PNG";
-import asia from "../../assets/misc/asia.PNG";
-import australia from "../../assets/misc/australia.PNG";
-import africa from "../../assets/misc/africa.PNG";
-import southamerica from "../../assets/misc/southamerica.PNG";
-import northamerica from "../../assets/misc/northamerica.PNG";
+import euro from "../../assets/euro.PNG";
+import asia from "../../assets/asia.PNG";
+import australia from "../../assets/australia.PNG";
+import africa from "../../assets/africa.PNG";
+import southamerica from "../../assets/southamerica.PNG";
+import northamerica from "../../assets/northamerica.PNG";
 
 const Continents = () => {
   return (

@@ -1,6 +1,8 @@
+// import.....................................................
 import { useState, useEffect } from "react";
 import * as api from "./api";
 
+// get_location_and_search_term.....................................................
 export function useBusinessSearch(term, location) {
   const [businesses, setBusinesses] = useState([]);
   const [amountResults, setAmountResults] = useState();

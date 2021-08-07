@@ -1,9 +1,11 @@
+// import.....................................................
 const { AuthenticationError } = require("apollo-server-express");
 const { User } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
+    // get_me.....................................................
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id });
@@ -13,9 +15,8 @@ const resolvers = {
   },
 
   Mutation: {
+    // save_city.....................................................
     saveCity: async (parent, { cityID }, context) => {
-      // console.log(cityID);
-
       if (context.user) {
         return await User.findByIdAndUpdate(
           {
@@ -31,6 +32,7 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
+    // delete_city.....................................................
     removeCity: async (parent, { cityValue }, context) => {
       console.log(cityValue);
 
@@ -49,7 +51,7 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-
+    // create user.....................................................
     addUser: async (
       parent,
       { username, email, password, firstname, lastname }
@@ -65,8 +67,7 @@ const resolvers = {
       return { token, user };
     },
 
-    // adding the profile updates
-
+    // update_firstname.....................................................
     updateFirstName: async (parent, { firstname }, context) => {
       if (context.user) {
         context.user.firstname = firstname;
@@ -78,6 +79,7 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
+    // update_lastname.....................................................
     updateLastName: async (parent, { lastname }, context) => {
       if (context.user) {
         context.user.lastname = lastname;
@@ -89,6 +91,7 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
+    // update_email.....................................................
     updateEmail: async (parent, { email }, context) => {
       if (context.user) {
         context.user.email = email;
@@ -100,6 +103,7 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
+    // update_username.....................................................
     updateUsername: async (parent, { username }, context) => {
       if (context.user) {
         // console.log(context.user);
@@ -110,6 +114,7 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
+    // delete_me.....................................................
     deleteUser: async (parent, { userID }, context) => {
       // console.log(userID);
       if (context.user) {
@@ -117,8 +122,7 @@ const resolvers = {
       }
       throw new AuthenticationError("Please Login...");
     },
-    ///////////////////////////////////////////////////////////////////////
-
+    // login.....................................................
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
       if (!user) {
@@ -134,4 +138,5 @@ const resolvers = {
   },
 };
 
+// export.....................................................
 module.exports = resolvers;

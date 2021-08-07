@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-no-duplicate-props */
+// imports.....................................................
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { Button, Header, Modal, Input, Icon } from "semantic-ui-react";

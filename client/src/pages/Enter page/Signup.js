@@ -1,3 +1,4 @@
+// imports.....................................................
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button, Popup, Icon } from "semantic-ui-react";
@@ -37,8 +38,6 @@ const Signup = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    // console.log(formState);
-
     try {
       const { data } = await addUser({
         variables: { ...formState },

@@ -1,3 +1,6 @@
+// city_data.....................................................
+// created with love and peace.....................................................
+// created by DACK
 const cityList = [
   {
     id: 1,
@@ -1193,4 +1196,6 @@ const cityList = [
     position: { lat: 23.113593, lng: -82.366596 },
   },
 ];
+
+// export_data.....................................................
 export default cityList;

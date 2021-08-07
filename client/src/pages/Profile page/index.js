@@ -1,6 +1,6 @@
+// imports.....................................................
 import React from "react";
 import Header from "./Header";
-//import Head from "./Head";
 import { useQuery } from "@apollo/client";
 import Nav from "../../components/Navbar";
 import Footer from "../../components/Footer";

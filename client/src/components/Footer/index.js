@@ -1,3 +1,4 @@
+// imports.....................................................
 import "./footer.css";
 import { Link } from "react-router-dom";
 import { Icon } from "semantic-ui-react";

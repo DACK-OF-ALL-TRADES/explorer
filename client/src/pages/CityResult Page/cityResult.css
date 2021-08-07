@@ -87,7 +87,6 @@
 
 .citypage-intro * .column {
   background-color: #f1f7fb !important;
-  /* background-image: url(../../assets/misc/foggy_birds.png) !important; */
   box-shadow: none !important;
 }
 
@@ -144,13 +143,8 @@
 .video-responsive iframe {
   width: 100%;
 }
-/* 
-.video-responsive {
-  margin: 5rem 0;
-} */
 
 .city-video-container .column {
   background-color: #f1f7fb !important;
-  /* background-image: url(../../assets/misc/foggy_birds.png) !important; */
   box-shadow: none !important;
 }

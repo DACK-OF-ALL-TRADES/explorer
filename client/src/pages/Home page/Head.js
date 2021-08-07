@@ -1,3 +1,4 @@
+// imports.....................................................
 import React from "react";
 import {
   Container,
@@ -12,10 +13,10 @@ import {
   Accordion,
   Popup,
 } from "semantic-ui-react";
-import adventure from "../../assets/misc/transparent-adventure.png";
-import plans from "../../assets/misc/transparent-plans.png";
-import explore from "../../assets/misc/explore.mp4";
-import map from "../../assets/misc/map.mp4";
+import adventure from "../../assets/transparent-adventure.png";
+import plans from "../../assets/transparent-plans.png";
+import explore from "../../assets/explore.mp4";
+import map from "../../assets/map.mp4";
 import { Link } from "react-router-dom";
 
 const panel1 = [
@@ -30,6 +31,7 @@ const panel1 = [
     ],
   },
 ];
+
 const panel2 = [
   {
     key: "explorer-option2",

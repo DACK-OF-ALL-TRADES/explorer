@@ -1,3 +1,4 @@
+// imports.....................................................
 import React, { useEffect, useState } from "react";
 import Nav from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -11,7 +12,6 @@ import { ToastsContainer, ToastsStore } from "react-toasts";
 const MyFavorites = () => {
   const [cityValue, setCityValue] = useState(null);
   const cityChange = (e, { value }) => {
-    // console.log(value);
     setCityValue(value);
   };
   const { data } = useQuery(QUERY_ME);
@@ -49,8 +49,6 @@ const MyFavorites = () => {
   });
   const handleDeleteCity = async () => {
     try {
-      // console.log(cityValue);
-      // console.log(typeof cityValue);
       await removeCity({
         variables: { cityValue: cityValue },
       });
@@ -65,7 +63,6 @@ const MyFavorites = () => {
       ToastsStore.warning(`Head over to a city and add it to your favorites!`);
     }
   }, []);
-  // console.log(favCities);
   const cityOptions = [];
   for (let i = 0; i < favCities.length; i++) {
     cityOptions.push({

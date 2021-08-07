@@ -1,10 +1,10 @@
+// imports.....................................................
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 import { Button, Popup, Icon } from "semantic-ui-react";
 import { ToastsContainer, ToastsStore } from "react-toasts";
-
 import Auth from "../../utils/auth";
 import Background from "./Background";
 

@@ -1,6 +1,7 @@
+// imports.....................................................
 import React, { useEffect } from "react";
 import { Button, Icon } from "semantic-ui-react";
-import explore from "../../assets/misc/main.mp4";
+import explore from "../../assets/main.mp4";
 import "./main.css";
 import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";

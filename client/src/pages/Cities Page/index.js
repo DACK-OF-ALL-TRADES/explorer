@@ -1,3 +1,4 @@
+// imports.............................................................
 import React from "react";
 import Nav from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -7,7 +8,6 @@ import "./cities.css";
 const Cities = () => {
   const cityData = localStorage.getItem("cities");
   const cities = JSON.parse(cityData);
-  // console.log("cities: ", cities);
   return (
     <div>
       <div>
