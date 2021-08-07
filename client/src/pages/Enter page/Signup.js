@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button, Popup, Icon } from "semantic-ui-react";
 import "./enter.css";
+import { ToastsContainer, ToastsStore } from "react-toasts";
 
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
@@ -46,6 +47,7 @@ const Signup = () => {
       Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
+      ToastsStore.error(`${e}`);
     }
   };
 
@@ -53,6 +55,7 @@ const Signup = () => {
     <div>
       <div className="enter-container">
         <Background />
+        <ToastsContainer store={ToastsStore} />
         <h1
           className="enter-logo"
           data-aos="fade-down"

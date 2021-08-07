@@ -66,6 +66,9 @@ const Footer = () => {
             <h2 className="nav__title">Find your ideal travel spot</h2>
             <ul className="nav__ul nav__ul--extra">
               <li>
+                <Link to="/top10">Explorer Top 10</Link>
+              </li>
+              <li>
                 <Link to="/Europe">Europe</Link>
               </li>
               <li>

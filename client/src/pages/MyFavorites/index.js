@@ -1,26 +1,83 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import { Card } from "semantic-ui-react";
+import { Card, Dropdown, Button } from "semantic-ui-react";
 import { QUERY_ME } from "../../utils/queries";
-import { useQuery } from "@apollo/client";
+import { REMOVE_FAVORITE_CITY } from "../../utils/mutations";
+import { useQuery, useMutation } from "@apollo/client";
 import cityList from "../../utils/cities";
+import { ToastsContainer, ToastsStore } from "react-toasts";
 
 const MyFavorites = () => {
+  const [cityValue, setCityValue] = useState(null);
+  const cityChange = (e, { value }) => {
+    // console.log(value);
+    setCityValue(value);
+  };
   const { data } = useQuery(QUERY_ME);
   const user = data?.me || [];
   const favCities = [];
-  cityList.forEach((city) => {
-    user.favorites.forEach((data) => {
-      if (parseInt(data) === city.id) {
-        favCities.push(city);
-      }
+  if (cityList && user.favorites) {
+    cityList.forEach((city) => {
+      user.favorites.forEach((data) => {
+        if (parseInt(data) === city.id) {
+          favCities.push(city);
+        }
+      });
     });
+  }
+  const [removeCity] = useMutation(REMOVE_FAVORITE_CITY, {
+    update(cache, { data: { removeCity } }) {
+      try {
+        const { me } = cache.readQuery({ query: QUERY_ME });
+        cache.writeQuery({
+          query: QUERY_ME,
+          data: { me: { removeCity, ...me } },
+        });
+      } catch (e) {
+        ToastsStore.error(`${e}`);
+        console.error(e);
+      }
+
+      // update me object's cache
+      const { me } = cache.readQuery({ query: QUERY_ME });
+      cache.writeQuery({
+        query: QUERY_ME,
+        data: { me: { ...me.favorites } },
+      });
+    },
   });
+  const handleDeleteCity = async () => {
+    try {
+      // console.log(cityValue);
+      // console.log(typeof cityValue);
+      await removeCity({
+        variables: { cityValue: cityValue },
+      });
+      ToastsStore.success(`Removed city from favorites`);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+    if (favCities.length === 0) {
+      ToastsStore.warning(`Head over to a city and add it to your favorites!`);
+    }
+  }, []);
   // console.log(favCities);
+  const cityOptions = [];
+  for (let i = 0; i < favCities.length; i++) {
+    cityOptions.push({
+      key: `${i + 1}`,
+      text: `${favCities[i].city}`,
+      value: `${favCities[i].id}`,
+    });
+  }
   return (
     <div>
       <Nav />
+      <ToastsContainer store={ToastsStore} />
       <div style={{ paddingBottom: "30rem" }}>
         {favCities.length === 0 ? (
           <div>
@@ -50,6 +107,30 @@ const MyFavorites = () => {
           </div>
         ) : (
           <div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+            >
+              <h1 style={{ marginTop: "5rem" }}>Remove a city</h1>
+              <Dropdown
+                onChange={cityChange}
+                options={cityOptions}
+                placeholder="Select a destination..."
+                selection
+                name="destination"
+              />
+              <Button
+                style={{ marginTop: "1rem" }}
+                color="red"
+                onClick={() => handleDeleteCity()}
+              >
+                Remove
+              </Button>
+            </div>
             <div className="city-result-title">
               <h1>My Favorites</h1>
             </div>

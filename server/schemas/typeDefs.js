@@ -35,6 +35,7 @@ const typeDefs = gql`
     updateUsername(username: String!): User
     deleteUser(userID: ID!): User
     saveCity(cityID: String!): User
+    removeCity(cityValue: String!): User
   }
 `;
 

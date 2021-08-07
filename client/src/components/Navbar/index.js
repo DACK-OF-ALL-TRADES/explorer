@@ -2,13 +2,14 @@ import React, { useEffect } from "react";
 import "./navbar.css";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import { ToastsContainer, ToastsStore } from "react-toasts";
 
 const Nav = () => {
   // Check if user logged in, navigate to "/" Signup page if not
   useEffect(() => {
     if (!Auth.loggedIn()) {
-      alert("Please login to view this page.");
       window.location.assign("/login");
+      ToastsStore.error(`Please login to view this page...`);
     }
   }, []);
   return (
@@ -44,6 +45,7 @@ const Nav = () => {
           </Link>
         </div>
       </div>
+      <ToastsContainer store={ToastsStore} />
     </div>
   );
 };

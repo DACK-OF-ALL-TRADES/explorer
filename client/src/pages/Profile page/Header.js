@@ -12,15 +12,15 @@ const Header = ({ user }) => {
         <Grid divided="vertically">
           <Grid.Row columns={2}>
             <Grid.Column textAlign="right">
-              <div>
+              <div data-aos="fade-right">
                 <Icon name="user" size="massive" />
               </div>
             </Grid.Column>
             <Grid.Column>
-              <h1>
+              <h1 data-aos="fade-left">
                 {user.firstname} {user.lastname}
               </h1>
-              <h3>{user.username}</h3>
+              <h3 data-aos="fade-right">{user.username}</h3>
               <EditProfileModal user={user} />
             </Grid.Column>
           </Grid.Row>
@@ -35,7 +35,9 @@ const Header = ({ user }) => {
                 margin: "3rem 0",
               }}
             >
-              <h2>You currently don't have any searched cities.</h2>
+              <h2 data-aos="zoom-in-left">
+                You currently don't have any searched cities.
+              </h2>
             </div>
             <div
               style={{
@@ -46,6 +48,7 @@ const Header = ({ user }) => {
               }}
             >
               <img
+                data-aos="zoom-in-right"
                 src="https://media.giphy.com/media/ads2QSp4JDdeg/giphy.gif"
                 alt="not found"
                 style={{ width: "80%", height: "auto", maxWidth: "400px" }}
@@ -55,7 +58,7 @@ const Header = ({ user }) => {
         ) : (
           <div>
             <div className="city-result-title">
-              <h1>My Previous Search</h1>
+              <h1 data-aos="zoom-in">My Previous Search</h1>
             </div>
             <div className="search-city-display">
               <Card.Group centered>
@@ -72,6 +75,7 @@ const Header = ({ user }) => {
                         key={cityInfo.city}
                         href={"/search/" + cityInfo.id}
                         color="red"
+                        data-aos="zoom-in-right"
                       />
                     );
                   } else {
@@ -84,6 +88,7 @@ const Header = ({ user }) => {
                         key={cityInfo.city}
                         href={"/search/" + cityInfo.id}
                         color="red"
+                        data-aos="zoom-in-right"
                       />
                     );
                   }

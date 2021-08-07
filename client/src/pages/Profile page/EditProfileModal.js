@@ -11,6 +11,7 @@ import {
 } from "../../utils/mutations";
 import { QUERY_ME } from "../../utils/queries";
 import Auth from "../../utils/auth";
+import { ToastsContainer, ToastsStore } from "react-toasts";
 
 function EditProfileModal({ user }) {
   const [open, setOpen] = React.useState(false);
@@ -29,6 +30,7 @@ function EditProfileModal({ user }) {
           data: { me: { updateFirstName, ...me } },
         });
       } catch (e) {
+        ToastsStore.error(`${e}`);
         console.error(e);
       }
 
@@ -44,7 +46,7 @@ function EditProfileModal({ user }) {
   const handleFirstNameSubmit = async () => {
     try {
       if (firstNameText.length === 0 || /\d/.test(firstNameText)) {
-        alert("First name cannot be empty or a number...");
+        ToastsStore.warning(`First name cannot be empty or a number...`);
       } else {
         await updateFirstName({
           variables: {
@@ -52,8 +54,10 @@ function EditProfileModal({ user }) {
           },
         });
         setfirstNameText("");
+        ToastsStore.success(`Success! Changed first name to ${firstNameText}`);
       }
     } catch (err) {
+      ToastsStore.error(`${err}`);
       console.log(err);
     }
   };
@@ -68,6 +72,7 @@ function EditProfileModal({ user }) {
           data: { me: { updateLastName, ...me } },
         });
       } catch (e) {
+        ToastsStore.error(`${e}`);
         console.error(e);
       }
 
@@ -83,7 +88,7 @@ function EditProfileModal({ user }) {
   const handleLastNameSubmit = async () => {
     try {
       if (lastNameText.length === 0 || /\d/.test(lastNameText)) {
-        alert("Last name cannot be empty or a number...");
+        ToastsStore.warning(`Last name cannot be empty or a number...`);
       } else {
         await updateLastName({
           variables: {
@@ -92,8 +97,10 @@ function EditProfileModal({ user }) {
         });
 
         setlastNameText("");
+        ToastsStore.success(`Success! Changed last name to ${lastNameText}`);
       }
     } catch (err) {
+      ToastsStore.error(`${err}`);
       console.log(err);
     }
   };
@@ -108,6 +115,7 @@ function EditProfileModal({ user }) {
           data: { me: { updateEmail, ...me } },
         });
       } catch (e) {
+        ToastsStore.error(`${e}`);
         console.error(e);
       }
 
@@ -123,7 +131,9 @@ function EditProfileModal({ user }) {
   const handleEmailSubmit = async () => {
     try {
       if (emailText.length === 0 || /\S+@\S+\.\S+/.test(emailText) === false) {
-        alert("Email cannot be empty and must be in an email format...");
+        ToastsStore.warning(
+          `Email cannot be empty and must be in an email format...`
+        );
       } else {
         await updateEmail({
           variables: {
@@ -132,8 +142,10 @@ function EditProfileModal({ user }) {
         });
 
         setEmailText("");
+        ToastsStore.success(`Success! Changed e-mail to ${emailText}`);
       }
     } catch (err) {
+      ToastsStore.error(`${err}`);
       console.log(err);
     }
   };
@@ -147,6 +159,7 @@ function EditProfileModal({ user }) {
           data: { me: { updateUsername, ...me } },
         });
       } catch (e) {
+        ToastsStore.error(`${e}`);
         console.error(e);
       }
 
@@ -162,7 +175,7 @@ function EditProfileModal({ user }) {
   const handleUsernameSubmit = async () => {
     try {
       if (usernameText.length === 0 || /\d/.test(usernameText)) {
-        alert("Username cannot be empty or a number...");
+        ToastsStore.warning(`Username cannot be empty or a number...`);
       } else {
         await updateUsername({
           variables: {
@@ -171,8 +184,10 @@ function EditProfileModal({ user }) {
         });
 
         setUsernameText("");
+        ToastsStore.success(`Success! Changed username to ${usernameText}`);
       }
     } catch (err) {
+      ToastsStore.error(`${err}`);
       console.log(err);
     }
   };
@@ -190,9 +205,11 @@ function EditProfileModal({ user }) {
             userID: user._id,
           },
         });
+        ToastsStore.success(`Deleted user ${user.username}`);
         Auth.logout();
         window.location.assign("/");
       } catch (err) {
+        ToastsStore.error(`${err}`);
         console.log(err);
       }
     }
@@ -220,8 +237,9 @@ function EditProfileModal({ user }) {
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
       open={open}
-      trigger={<Button>Edit account</Button>}
+      trigger={<Button data-aos="zoom-in-left">Edit account</Button>}
     >
+      <ToastsContainer store={ToastsStore} />
       <Modal.Header>
         {user.firstname}'s Profile{" "}
         <Button icon style={{ float: "right" }} onClick={() => setOpen(false)}>

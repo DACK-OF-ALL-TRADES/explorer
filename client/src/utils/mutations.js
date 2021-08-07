@@ -83,3 +83,11 @@ export const DELETE_USER = gql`
     }
   }
 `;
+
+export const REMOVE_FAVORITE_CITY = gql`
+  mutation removeCity($cityValue: String!) {
+    removeCity(cityValue: $cityValue) {
+      favorites
+    }
+  }
+`;

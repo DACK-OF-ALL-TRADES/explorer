@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
-import { Button, Popup, Icon, Modal, Header } from "semantic-ui-react";
+import { Button, Popup, Icon } from "semantic-ui-react";
+import { ToastsContainer, ToastsStore } from "react-toasts";
 
 import Auth from "../../utils/auth";
 import Background from "./Background";
 
 const Login = (props) => {
-  const [open, setOpen] = React.useState(false);
   // Check if user logged in, navigate to "/home" if not
   useEffect(() => {
     if (Auth.loggedIn()) {
@@ -40,7 +40,7 @@ const Login = (props) => {
       Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
-      setOpen(true);
+      ToastsStore.error(`User deosn't exists...`);
     }
     if (data) {
       // console.log(data);
@@ -60,6 +60,7 @@ const Login = (props) => {
       <div>
         <div className="enter-container">
           <Background />
+          <ToastsContainer store={ToastsStore} />
           <h1
             className="enter-logo"
             data-aos="fade-down"
@@ -159,28 +160,6 @@ const Login = (props) => {
           </div>
         </div>
       </div>
-      <Modal
-        basic
-        onClose={() => setOpen(false)}
-        onOpen={() => setOpen(true)}
-        open={open}
-        size="small"
-      >
-        <Header icon>
-          <Icon name="alarm" />
-          User Doesn't Exist.
-        </Header>
-        <Modal.Content>
-          <p>
-            Something went wrong, please make sure you have an account created.
-          </p>
-        </Modal.Content>
-        <Modal.Actions>
-          <Button color="green" inverted onClick={() => setOpen(false)}>
-            <Icon name="checkmark" /> OK
-          </Button>
-        </Modal.Actions>
-      </Modal>
     </div>
   );
 };

@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { ToastsContainer, ToastsStore } from "react-toasts";
 
 const NotFound = () => {
+  useEffect(() => {
+    ToastsStore.warning(`Looks like you looked for a wrong page!`);
+  });
   return (
     <div>
       <Nav />
+      <ToastsContainer store={ToastsStore} />
       <div>
         <div
           style={{

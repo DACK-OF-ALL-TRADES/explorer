@@ -31,6 +31,24 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
+    removeCity: async (parent, { cityValue }, context) => {
+      console.log(cityValue);
+
+      if (context.user) {
+        return await User.findByIdAndUpdate(
+          {
+            _id: context.user._id,
+          },
+          {
+            $pull: { favorites: cityValue },
+          },
+          {
+            new: true,
+          }
+        );
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
 
     addUser: async (
       parent,

@@ -14,15 +14,13 @@ import {
   Container,
   Button,
   Label,
-  Modal,
-  Header,
 } from "semantic-ui-react";
 import Map from "../../components/Map/Map";
 import { ADD_FAVORITE_CITY } from "../../utils/mutations";
 import { QUERY_ME } from "../../utils/queries";
+import { ToastsContainer, ToastsStore } from "react-toasts";
 
 const CityResult = () => {
-  const [open, setOpen] = React.useState(false);
   let singleCity;
   let cityName = "";
   let cityID = window.location.pathname.split("/").pop();
@@ -33,9 +31,10 @@ const CityResult = () => {
     }
   });
   // // Yelp Fetch API
-  const term = "Events";
+  const term = "Attractions";
   const locationParam = cityName;
   const [businesses] = useBusinessSearch(term, locationParam);
+
   // console.log(businesses);
 
   // API FETCH........................................................
@@ -55,6 +54,7 @@ const CityResult = () => {
           (error) => {
             console.error(error);
             if (error.code === "LOCATION_NOT_FOUND") {
+              ToastsStore.warning(`Location Not Found`);
               return null;
             }
           }
@@ -67,6 +67,7 @@ const CityResult = () => {
           getCovidCity(result);
         },
         (error) => {
+          ToastsStore.warning(`${error}`);
           console.error(error);
         }
       );
@@ -112,39 +113,53 @@ const CityResult = () => {
   const addFavorite = async () => {
     // console.log(user.favorites);
     if (user.favorites.includes(cityID)) {
-      setOpen(true);
+      ToastsStore.warning(`Already have that city in My Favorites`);
     } else {
       try {
         await saveCity({
           variables: { cityID: cityID },
         });
-        alert(`Added ${cityName} to my favorites!`);
+        ToastsStore.success(`Added ${cityName} to my favorites!`);
       } catch (e) {
         console.log(e);
+        ToastsStore.warning(`${e}`);
       }
     }
+  };
+  useEffect(() => {
+    if (businesses === undefined) {
+      ToastsStore.warning(`Couldn't get hotels for this city...`);
+    }
+  }, []);
+
+  const randomCity = () => {
+    var randomnumber = Math.floor(Math.random() * (95 - 1 + 1)) + 1;
+    console.log(randomnumber);
+    window.location.assign(`/search/${randomnumber}`);
   };
 
   return (
     <div>
       <Nav />
+      <ToastsContainer store={ToastsStore} />
       <div className="citypage">
         <div className="citypage-intro">
           <Grid stackable divided="vertically">
             <Grid.Row columns={2}>
               <Grid.Column>
                 <img
+                  data-aos="zoom-out-down"
                   src={singleCity.image}
                   alt="City"
                   className="citypage-cityimage"
                 />
                 <Button
+                  data-aos="zoom-out-left"
                   style={{ marginTop: "2rem" }}
                   as="div"
                   labelPosition="right"
                   onClick={addFavorite}
                 >
-                  {/* HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */}
                   <Button color="red">
                     <Icon name="favorite" />
                     Add to favorites
@@ -153,10 +168,25 @@ const CityResult = () => {
                     {user.favorites ? user.favorites.length : ""}
                   </Label>
                 </Button>
+                <Button
+                  data-aos="zoom-out-right"
+                  onClick={randomCity}
+                  color="teal"
+                  animated="fade"
+                  style={{ margin: "1rem" }}
+                >
+                  <Button.Content visible>
+                    Take me somewhere random
+                  </Button.Content>
+                  <Button.Content hidden>
+                    Discover
+                    <Icon name="paper plane" />
+                  </Button.Content>
+                </Button>
               </Grid.Column>
               <Grid.Column textAlign="center">
-                <h1>{singleCity.city}</h1>
-                <h3>
+                <h1 data-aos="zoom-in">{singleCity.city}</h1>
+                <h3 data-aos="zoom-out">
                   <Icon name="map marker alternate" />
                   {singleCity.country}
                 </h3>
@@ -164,7 +194,7 @@ const CityResult = () => {
                 cityWeatherData.main === undefined ? (
                   ""
                 ) : (
-                  <div className="city-weather">
+                  <div data-aos="zoom-out-up" className="city-weather">
                     <Card color="teal">
                       <Card.Content>
                         <Card.Header className="weather-title">
@@ -199,7 +229,7 @@ const CityResult = () => {
                   </div>
                 )}
                 {cityCovidData !== undefined && (
-                  <Card color="teal" centered>
+                  <Card data-aos="zoom-out-down" color="teal" centered>
                     <Card.Content>
                       <Card.Header>Covid Cases</Card.Header>
                       <Card.Meta>{singleCity.country}</Card.Meta>
@@ -225,12 +255,12 @@ const CityResult = () => {
           <Grid stackable divided="vertically" className="city-video-container">
             <Grid.Row columns={2}>
               <Grid.Column>
-                <div>
+                <div data-aos="zoom-out-up">
                   <Map />
                 </div>
               </Grid.Column>
               <Grid.Column>
-                <div className="video-responsive">
+                <div data-aos="zoom-out-down" className="video-responsive">
                   <iframe
                     width="853"
                     height="480"
@@ -246,13 +276,25 @@ const CityResult = () => {
           </Grid>
         </Container>
         <div className="title-hotel">
-          <h1>Hotels</h1>
+          <h1 data-aos="zoom-out-up">Hotels &amp; Popular Attractions</h1>
+          {businesses !== undefined && (
+            <a
+              data-aos="zoom-out-down"
+              target="_blank"
+              rel="noreferrer"
+              href={`https://www.yelp.com/search?find_desc=hotels&find_loc=${singleCity.city}`}
+            >
+              <h4>Click here for more</h4>
+            </a>
+          )}
         </div>
         <div className="city-hotel-cards">
           <Card.Group centered>
             {businesses === undefined && (
               <div>
-                <h3>Couldn't get any information about this city</h3>
+                <h3 data-aos="zoom-out-up">
+                  Couldn't get any information about this city
+                </h3>
                 <div
                   style={{
                     display: "flex",
@@ -261,6 +303,7 @@ const CityResult = () => {
                   }}
                 >
                   <img
+                    data-aos="zoom-out-down"
                     alt="city not found..."
                     width="100%"
                     height="auto"
@@ -271,9 +314,14 @@ const CityResult = () => {
             )}
             {businesses !== undefined &&
               businesses
-                .filter((item, index) => index < 10)
+                .filter((item, index) => index < 20)
                 .map((business) => (
-                  <Card color="blue" key={business.name} href={business.url}>
+                  <Card
+                    data-aos="zoom-out-left"
+                    color="blue"
+                    key={business.name}
+                    href={business.url}
+                  >
                     {business.image_url === "" ? (
                       <Image
                         className="hotel-img"
@@ -304,23 +352,6 @@ const CityResult = () => {
                 ))}
           </Card.Group>
         </div>
-        <Modal
-          basic
-          onClose={() => setOpen(false)}
-          onOpen={() => setOpen(true)}
-          open={open}
-          size="small"
-        >
-          <Header icon>
-            <Icon name="warning" />
-            Already have that city in My Favorites
-          </Header>
-          <Modal.Actions>
-            <Button color="green" inverted onClick={() => setOpen(false)}>
-              <Icon name="checkmark" /> OK
-            </Button>
-          </Modal.Actions>
-        </Modal>
       </div>
       <Footer />
     </div>
