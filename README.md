@@ -18,6 +18,9 @@
 </p>
 
 ## 🎯 Deployed App
+
+### [explorer-guide.herokuapp.com](https://explorer-guide.herokuapp.com/) 
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://explorer-guide.herokuapp.com/)
  
 ## ☀️ About:
