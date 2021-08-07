@@ -1,5 +1,8 @@
-<h1 align = "center">Explorer</h1>
- <h3 align = "center">Travellers Guide</h3>
+<h1 align = "center"> 
+
+![explorer](https://user-images.githubusercontent.com/75903418/128611666-eb9bbbd6-5564-4441-8146-81cb28f21553.gif)
+</h1>
+ <h2 align = "center">Travellers Guide</h2>
 
 <p align = "center">
   <img src="https://img.shields.io/npm/v/npm?color=red&logo=npm"/>
@@ -11,54 +14,60 @@
   <img src="https://img.shields.io/github/languages/count/DACK-OF-ALL-TRADES/explorer?color=green&label=Languages&logo=github&logoColor=green">
   <img src="https://img.shields.io/github/languages/top/DACK-OF-ALL-TRADES/explorer?color=blue&label=ReactJS&logo=react&logoColor=white">
   <img src="https://img.shields.io/github/repo-size/DACK-OF-ALL-TRADES/explorer?color=purple&label=Repo%20Size&logo=github&logoColor=purple">
-  
                                                                               
 </p>
 
+## 🎯 Deployed App
 
- 
- 
-## Table of Contents
-* [About](#introduction)
-* [Description and Working](#des)
-* [Dependencies and Tools](#api)
-* [Snapshot of the App](#details)
-* [Deployment](#installations)
-* [Future Additions](#future)
-* [Credits](#credits)
-* [Meet the Team](#meet)
+### [explorer-guide.herokuapp.com](https://explorer-guide.herokuapp.com/) 
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://explorer-guide.herokuapp.com/)
  
-## 🌲 About:
-Explorer is a _MERN stack single-page application_, which has been created to help the user in finalizing a holiday destination. Finding your dream location has never been so easy. You merely need to login or sign up, create your profile, answer a few questions, and then you are good to go. It happens that at times you like more than one place, to tackle such a situation you also have the option of saving cities of your choice and finalizing a place later from your saved list. If this sounds exhausting, then you can also get a randomly generated city where you can plan for a holiday with your near and dear ones.
+## ☀️ About:
+Explorer has been created to help finalize your next travel destination. Finding your dream location has never been so easy... \
+You merely need to log in or sign up, create your profile, answer a few questions, and then you are good to go. It happens that at times you like more than one place, to tackle such a situation you also have the option of saving cities of your choice and finalizing a place later from your saved list. \
+If this sounds exhausting, then you can also get a randomly generated city where you can plan for a holiday with your near and dear ones.
  
-## 📓 Description and Working:
-  ## Description
-The app has the following features 
-* A full stack user-focused MERN application that works with real-world data to solve a real-world challenge, with a focus on data and user demand.
-* We have used  __MongoDB__ and the __Mongoose ODM__ for the database,__Reactjs__ is used for displaying the front-end version of the app, __GraphQL__ is used with a __Node.js__ and __Express.js__ server
-* The app is built on the agile development methodologies that we have used throughout this course.
+## 📓 Description:
+
+* A full stack user-focused `MERN` application that works with real-world data to solve a real-world challenge, with a focus on data and user demand.
 * Used a framework that was both easy-to use, but also responsive and optimize for the user’s experience.
-* The app has mainly been styled by using __Semantic UI react__ component library.
-* Used __Heroku web server__ to host our app.
-* The steps involved in designing mainly dealt with designing the full stack code and using queries and mutations for retrieving, adding, updating, and deleting data.
+* The app has mainly been styled by using `React Semantic UI` CSS framework and was hosted using `Heroku`.
+* The steps were mostly focused on creating a good UI/UX and with the logic of interactions around the page.
+* Using `Apollo Client` with GraphQL was also some of our main focused areas.
  
+## 🔧 Usage:
+ * Everything is starting from the `Landing Page`, where you can navigate to either the `login` or the `signup` page.
+ * Once logged in, the user is presented with the `Home Page`, where they can discover some functionality around the app & navigate to their `Account Page` or simply `Logout`
+ * The `Explorer Top 10` cities & selecting a continent could also be navigated through the static side selector.
+ * Selecting the `pick an option for me` button will navigate you to the __set of questions__ that will provide suitable results to the user.
+ * Selecting a city card would navigate you to a page where you are provided with the __details__ about the city that includes its __location__,  a __video__ quick tour about the area and at the bottom a list of __hotels__ & most **popular attractions** that are available will be present.
+ * The user can also view the total number of __daily active COVID-19 cases__ in that country.
+ * You can add a city yo your __Favorites__ and view it later.
+ * On clicking the `Account page`, the user can update their details and also view the city history of their account.
 
- 
-   ## Working
- * You are greeted with a __Landing Page__ from where you can navigate to either the __login__ or the __signup__ page as per your requirement.
- * Once logged in, the user is presented with the __Home Page__ , where he can know more about the app, navigate to his _Profile Page_ or simply _logout_
- * On _top_ of the home page, the user will have the option of exploring the __top 10__ cities around the world that are famous as a travel destination or they can search as per the __continent__ of their choice and select a place to visit directly.
- * As we scroll down you will reach a __set of questions__ which when __answered__ will provide a __list of cities__ from around the world for you that are most suited for your perfect holiday.
- * Not only that, once you click on the city of your choice, you are provided with the __details__ about the city that includes its __location__ on the map, __video__ to guide the traveller a bit more about the place, list of __hotels__ that are available in that area to name a few.
- * Given the current scenario, the user can also view the total number of __active COVID cases__ in that area and then decide if they wish to travel to the city or not
- * On clicking the __Profile page__, the user can update his details and also view the cities that he would have saved while conducting the search
- * You can save all the cities that you like as __favorites__ in your __Profile page__ which you can view and edit as required.
+## 🔩 Installation:
+`Explorer` could also be running in your local computer, however, I wouldn't recommend it since you would be needing an `API KEY` from all the API's there were present. Althought, if attempting to do so, please enter your `API KEY` in a `.env` file and store it under `/client/src` then follow the following.
+```env
+REACT_APP_API_KEY = <YOUR_API_KEY_HERE>
+REACT_APP_API_KEY_YELP = <YOUR_API_KEY_HERE>
+REACT_APP_API_KEY_MAP = <YOUR_API_KEY_HERE>
+```
+After those steps, simply pull this repository and run;
+```bash
+npm install
+```
+on the root of the directory.
+> This will install the packages for both the client and the server.
+> Also make sure your mongoDB connection is valid since the local program uses data which is stored locally.
+> Check with simply `mongod` or `mongo`. 
+After installing the dependencies, run;
+```bash
+npm run dev
+```
+to start the application on `http://localhost:3000`.
 
-
-   
 ## 🧰 Dependencies and Tools:
- In order to run the app, we installed the following dependencies and the given scripts are used to run the app from the root directory:
 
  _Client Side_
  ```json
@@ -76,10 +85,11 @@ The app has the following features
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-toasts": "^3.0.6",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.3",
     "web-vitals": "^0.2.4"
-  }
+  },
  
 ```
 
@@ -94,26 +104,32 @@ _Server Side_
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.9",
     "query-string": "^7.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
   ```
-  
-  _Root Directory_
-  ```json
- "scripts": {
-    "start": "node server/server.js",
-    "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
-  }
-  
- ```
- A __.env__ file has also been created in order to store the sensitive API key values. 
+
+ _Root Directory Scripts_
+ ```json
+"scripts": {
+   "start": "node server/server.js",
+   "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+   "install": "cd server && npm i && cd ../client && npm i",
+   "seed": "cd server && npm run seed",
+   "build": "cd client && npm run build"
+ }
+
+```
+ 
+ **API KEYS**
+ 
+REACT_APP_API_KEY = [Open Weather Map API](https://openweathermap.org/) \
+REACT_APP_API_KEY_YELP = [YELP API](https://www.yelp.ca/developers/documentation/v3/get_started) \
+REACT_APP_API_KEY_MAP = [Google Maps API](https://developers.google.com/maps) 
 
   
-  
-
-## 🌄Snapshot of the App 
+## 🌄Snapshots 
 
 Landing Page                   |
 :-------------------------:   |
@@ -133,60 +149,59 @@ My Search Results                |   Selected City
 ![](/client/public/landing/result.png)      |![](client/public/landing/detail.png)
 
 
+## 🧭 Future Goals
+
+1. Use a web manifest
+2. Uses a service worker for offline functionality so that the app works as a PWA
+3. Add forgot password/reset password as a feature
+
+## 📮 Issues:
+If any issues or bugs are present, please submit a ticket to the `Issues` tab or contact us via explorer.guide.me@gmail.com, and we will get back to it as soon as possible.
+
+![issue](https://user-images.githubusercontent.com/75903418/128612550-784c573a-ce8b-4478-8bbf-47a69378cfd9.gif)
 
 
-## 💻 Deployment:
-_The app has been deployed through the __Heroku__ web host and has the key value pairs configured for proper deployment and functioning of the app 
-The app can also be visited by visitng the app from here :_ 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://explorer-guide.herokuapp.com/)
+## 📊 Notes & Improvements:
 
-## Future Additions
-We will try to implement the following functionalities in our app as an addition:
+> Creating Explorer was very enjoyable and fun since the mood of the application is based on vacation and travelling, we all acted very cool and stress-free. Although, creating this app was a last minute change in the middle of the **2-week** duration **Final Project Assignment**, we were able to work collaboratively and well organized together as a team.
 
-* Use a web manifest
-* Uses a service worker for offline functionality so that the app works as a PWA
-* Add forgot password/reset password as a feature.
-* __ANY OTHER RECOMENDATION FROM YOUR SIDE WILL BE HIGHLY APPRECIATED__
+> Explorer would an awesome place to start and grow this idea of a `traveller's search place` over the time, however, certain functionality could've been added between users between each other to make this idea much more enjoyable through UX.
 
 
-
-## 📊 Credits:
-
-The project is the final project assigned by the Carleton University Coding Bootcamp, our instructor and the TA's
+> We are looking to eventually add more into it however, if you've got unique ideas please let us know, we would love to hear them.
 
 
 ## Meet the Team 
 
-  <p align="left">
-     <img src="client/public/avatars/Kemal.png" width="150" title="hover text">  
- </p>
+
+
  
- [Kemal Demirgil](https://github.com/kemaldemirgil)
- 
- 
-  <p align="left">
-     <img src="client/public/avatars/Dipti.png" width="150" title="hover text">  
- </p>
- 
- [Dipti Razdan](https://github.com/Dipti2021)
- 
-<p align="left">
-     <img src="client/public/avatars/Ashton.png" width="150" title="hover text">  
- </p>
- 
- [Ashton Headley](https://github.com/ashiemotto)
- 
+[Todd Kelly](https://github.com/ToddKelly)
 <p align="left">
      <img src="client/public/avatars/Todd.png" width="150" title="hover text">  
  </p>
  
- [Todd Kelly](https://github.com/ToddKelly)
- 
+[Colleen Collins](https://github.com/ColleenCollins8)
 <p align="left">
      <img src="client/public/avatars/Colleen.png" width="150" title="hover text">  
 </p>
 
- [Colleen Collins](https://github.com/ColleenCollins8)
+ [Dipti Razdan](https://github.com/Dipti2021)
+  <p align="left">
+     <img src="client/public/avatars/Dipti.png" width="150" title="hover text">  
+ </p>
+  
+[Ashton Headley](https://github.com/ashiemotto)
+<p align="left">
+     <img src="client/public/avatars/Ashton.png" width="150" title="hover text">  
+ </p>
+
+ [Kemal Demirgil](https://github.com/kemaldemirgil)
+  <p align="left">
+     <img src="client/public/avatars/Kemal.png" width="150" title="hover text">  
+ </p>
+
+
 
 
 ## ©️ License:
