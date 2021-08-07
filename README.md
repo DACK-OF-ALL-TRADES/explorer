@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/github/languages/top/DACK-OF-ALL-TRADES/explorer?color=blue&label=ReactJS&logo=react&logoColor=white">
   <img src="https://img.shields.io/github/repo-size/DACK-OF-ALL-TRADES/explorer?color=purple&label=Repo%20Size&logo=github&logoColor=purple">
   
-                                                                                    
+                                                                              
 </p>
 
 
@@ -22,11 +22,10 @@
 * [About](#introduction)
 * [Description and Working](#des)
 * [Dependencies and Tools](#api)
-* [Working Video](#details)
+* [Snapshot of the App](#details)
 * [Deployment](#installations)
 * [Future Additions](#future)
 * [Credits](#credits)
-* [issues](#issues)
 * [Meet the Team](#meet)
 
  
@@ -47,7 +46,7 @@ The app has the following features
 
  
    ## Working
-  * You are greeted with a __Landing Page__ from where you can navigate to either the __login__ or the __signup__ page as per your requirement.
+ * You are greeted with a __Landing Page__ from where you can navigate to either the __login__ or the __signup__ page as per your requirement.
  * Once logged in, the user is presented with the __Home Page__ , where he can know more about the app, navigate to his _Profile Page_ or simply _logout_
  * On _top_ of the home page, the user will have the option of exploring the __top 10__ cities around the world that are famous as a travel destination or they can search as per the __continent__ of their choice and select a place to visit directly.
  * As we scroll down you will reach a __set of questions__ which when __answered__ will provide a __list of cities__ from around the world for you that are most suited for your perfect holiday.
@@ -62,7 +61,7 @@ The app has the following features
  In order to run the app, we installed the following dependencies and the given scripts are used to run the app from the root directory:
 
  _Client Side_
- ````
+ ```json
  "dependencies": {
     "@apollo/client": "^3.3.5",
     "@testing-library/jest-dom": "^5.11.4",
@@ -82,11 +81,11 @@ The app has the following features
     "web-vitals": "^0.2.4"
   }
  
-````
+```
 
 _Server Side_
 
- ````
+ ```json
  "dependencies": {
     "apollo-server-express": "^2.12.0",
     "bcrypt": "^5.0.0",
@@ -96,10 +95,10 @@ _Server Side_
     "mongoose": "^5.9.9",
     "query-string": "^7.0.1"
   }
-  ````
+  ```
   
   _Root Directory_
-  ````
+  ```json
  "scripts": {
     "start": "node server/server.js",
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
@@ -108,17 +107,32 @@ _Server Side_
     "build": "cd client && npm run build"
   }
   
- ````
- _An __.env__ file has also been created in order to store the sensitive API key values. 
+ ```
+ A __.env__ file has also been created in order to store the sensitive API key values. 
 
- 
+  
+  
+
+## 🌄Snapshot of the App 
+
+Landing Page                   |
+:-------------------------:   |
+![](/client/public/landing/landing.png)      |
 
 
-## 🌄 Working Video :
-
-📃 Page1                    | 📃 Page2
+ Login                    |Signup
 :-------------------------:   |:-------------------------:
-![](/assets/ss1.png)      |![](/assets/ss2.png)
+![](/client/public/landing/login.png)      |![](client/public/landing/signup.png)
+
+Home Page                 |   Profile Page
+:-------------------------:   |:-------------------------:
+![](/client/public/landing/home.png)      |![](client/public/landing/profile.png)
+
+My Search Results                |   Selected City
+:-------------------------:   |:-------------------------:
+![](/client/public/landing/result.png)      |![](client/public/landing/detail.png)
+
+
 
 
 ## 💻 Deployment:
@@ -140,10 +154,6 @@ We will try to implement the following functionalities in our app as an addition
 
 The project is the final project assigned by the Carleton University Coding Bootcamp, our instructor and the TA's
 
-
-
-## 📮 Issues:
-asdasdasdasdas
 
 ## Meet the Team 
 
