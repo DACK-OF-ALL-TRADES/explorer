@@ -22,7 +22,7 @@ export class Maps extends React.Component {
     return (
       <div
         style={{
-          height: 350,
+          height: 480,
           width: "100%",
           display: "flex",
           flexFlow: "row nowrap",
@@ -32,7 +32,7 @@ export class Maps extends React.Component {
       >
         <Map
           google={this.props.google}
-          zoom={8}
+          zoom={4}
           style={mapStyles}
           initialCenter={{
             lat: lat,

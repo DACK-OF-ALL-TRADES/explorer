@@ -53,6 +53,7 @@
   clear: both;
   width: 100%;
   font-family: var(--roboto);
+  margin-bottom: -2rem;
 }
 
 .footer * {

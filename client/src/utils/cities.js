@@ -1195,6 +1195,53 @@ const cityList = [
     youtube: "N4ZMYokojGw",
     position: { lat: 23.113593, lng: -82.366596 },
   },
+  {
+    id: 97,
+    city: "Deception Island",
+    country: "Antarctica",
+    continent: "Antarctica",
+    climate: "Polar and Tundra",
+    pop: "Less popular places – less crowded",
+    image: "https://abload.de/img/twinotter01pyrdy.png",
+    youtube: "jxZ8ByI5cds",
+    position: { lat: -62.9409, lng: -60.5554 },
+  },
+  {
+    id: 98,
+    city: "Yakutsk",
+    country: "Oymyakon, Russia",
+    continent: "Antarctica",
+    climate: "Polar and Tundra",
+    pop: "Less popular places – less crowded",
+    image:
+      "https://www.globaltimes.cn/Portals/0//attachment/2018/2018-12-04/c6ef64b1-acae-4baf-becf-edd0c18fed46.jpeg",
+    youtube: "7-cpPNrD2IQ",
+    position: { lat: 62.0397, lng: 129.7422 },
+  },
+  {
+    id: 99,
+    city: "Brisbane",
+    country: "Australia",
+    continent: "Oceania",
+    climate: "Tropical",
+    pop: "Between most popular and least popular",
+    image:
+      "https://stillmed.olympics.com/media/Images/News/2021/07/21/2021-07-21-brisbane-featured.jpg",
+    youtube: "0Mv48ZM7gu4",
+    position: { lat: -27.4705, lng: 153.026 },
+  },
+  {
+    id: 100,
+    city: "Port Louis",
+    country: "Mauritius",
+    continent: "Africa",
+    climate: "Tropical",
+    pop: "Less popular places – less crowded",
+    image:
+      "https://hwmiia.fra1.digitaloceanspaces.com/wp-content/uploads/2021/05/24171932/ocean-800x534-1.jpg",
+    youtube: "IUgG4-ts2lU",
+    position: { lat: -20.3484, lng: 57.5522 },
+  },
 ];
 
 // export_data.....................................................
