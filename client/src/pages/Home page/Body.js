@@ -107,8 +107,13 @@ const Body = ({ user }) => {
       });
     }
     //...................................................
-    localStorage.setItem("cities", JSON.stringify(continent_climate_pop));
-    window.location.assign("/cities");
+    if (continent_climate_pop.length === 0) {
+      ToastsStore.error(`No results for that criteria...`);
+    } else {
+      localStorage.removeItem("cities");
+      localStorage.setItem("cities", JSON.stringify(continent_climate_pop));
+      window.location.assign("/cities");
+    }
     //...................................................
   };
 
@@ -613,7 +618,7 @@ const Body = ({ user }) => {
                 <Message.Header>
                   <Message color="red">
                     <Icon name="question circle" size="big" />
-                    <span>Do you want to visit?</span>
+                    <span>Do you want to visit...</span>
                     <div style={{ textAlign: "right" }}>
                       <small style={styles.form_answer}>{answer7}</small>
                     </div>
@@ -761,29 +766,6 @@ const Body = ({ user }) => {
             </Button>
           </div>
           <ToastsContainer store={ToastsStore} />
-          {/* <Modal
-            basic
-            onClose={() => setOpen(false)}
-            onOpen={() => setOpen(true)}
-            open={open}
-            size="small"
-          >
-            <Header icon>
-              <Icon name="alarm" />
-              Please Fill All Questions
-            </Header>
-            <Modal.Content>
-              <p>
-                You've got an empty question, please fill in your options and
-                try again.
-              </p>
-            </Modal.Content>
-            <Modal.Actions>
-              <Button color="green" inverted onClick={() => setOpen(false)}>
-                <Icon name="checkmark" /> OK
-              </Button>
-            </Modal.Actions>
-          </Modal> */}
         </div>
       </Container>
     </div>

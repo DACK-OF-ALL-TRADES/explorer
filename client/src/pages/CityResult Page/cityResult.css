@@ -62,6 +62,7 @@
 .citypage-cityimage {
   height: auto;
   max-width: 80%;
+  min-width: 400px;
   border-radius: 10px;
   box-shadow: 1px 1px 3px rgb(84, 84, 84);
 }
@@ -211,5 +212,8 @@
   .title-hotel h1 {
     font-size: 1.75rem;
     padding: 0 10px;
+  }
+  .citypage-cityimage {
+    min-width: 275px;
   }
 }

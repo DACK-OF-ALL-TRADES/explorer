@@ -17,7 +17,6 @@ const Home = () => {
     if (data !== undefined) {
       userData = data.me;
     }
-    console.log(userData);
   }
 
   return (
