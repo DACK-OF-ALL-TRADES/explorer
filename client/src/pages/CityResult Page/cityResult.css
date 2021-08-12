@@ -149,3 +149,44 @@
   background-color: #f1f7fb !important;
   box-shadow: none !important;
 }
+
+.loader-container {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c0c0c75;
+}
+
+.loader-text {
+  animation: color-blink 2s infinite;
+}
+
+.loader-text::before {
+  content: "";
+  animation: load 6s linear;
+}
+
+@keyframes load {
+  33% {
+    content: "Searching for popular travel locations...";
+  }
+  66% {
+    content: "Packing up suitcase...";
+  }
+  100% {
+    content: "Starting the journey...";
+  }
+}
+
+@keyframes color-blink {
+  0% {
+    color: #0c0c0c;
+  }
+  50% {
+    color: #76767600;
+  }
+  100% {
+    color: #0c0c0c;
+  }
+}
