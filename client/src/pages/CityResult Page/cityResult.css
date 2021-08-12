@@ -60,8 +60,8 @@
 }
 
 .citypage-cityimage {
-  height: 400px;
-  width: 550px;
+  height: auto;
+  max-width: 80%;
   border-radius: 10px;
   box-shadow: 1px 1px 3px rgb(84, 84, 84);
 }
@@ -160,6 +160,8 @@
 
 .loader-text {
   animation: color-blink 2s infinite;
+  font-family: var(--explorer-pacifico);
+  font-size: 2rem;
 }
 
 .loader-text::before {
@@ -188,5 +190,26 @@
   }
   100% {
     color: #0c0c0c;
+  }
+}
+
+@media (max-width: 975px) {
+  .city-header h1 {
+    font-size: 4rem;
+  }
+  .city-header h3 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 700px) {
+  .city-header h1 {
+    font-size: 4rem;
+  }
+  .city-header h3 {
+    font-size: 2rem;
+  }
+  .title-hotel h1 {
+    font-size: 1.75rem;
+    padding: 0 10px;
   }
 }

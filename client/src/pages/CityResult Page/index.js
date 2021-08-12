@@ -185,7 +185,7 @@ const CityResult = () => {
                       </Button.Content>
                     </Button>
                   </Grid.Column>
-                  <Grid.Column textAlign="center">
+                  <Grid.Column textAlign="center" className="city-header">
                     <h1 data-aos="zoom-in">{singleCity.city}</h1>
                     <h3 data-aos="zoom-out">
                       <Icon name="map marker alternate" />
@@ -372,7 +372,7 @@ const CityResult = () => {
       ) : (
         <>
           <div className="loader-container">
-            <h3 className="loader-text"> </h3>
+            <p className="loader-text"> </p>
           </div>
         </>
       )}
