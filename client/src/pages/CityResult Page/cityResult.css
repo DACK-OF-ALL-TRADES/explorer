@@ -170,6 +170,10 @@
   animation: load 6s linear;
 }
 
+.review-message {
+  margin: 5px !important;
+}
+
 @keyframes load {
   33% {
     content: "Searching for popular travel locations...";

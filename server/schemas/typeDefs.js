@@ -13,6 +13,15 @@ const typeDefs = gql`
     favorites: [String]
   }
 
+  type Reviews {
+    _id: ID
+    city: String
+    country: String
+    review: String
+    username: String
+    rating: Int
+  }
+
   type Auth {
     token: ID!
     user: User
@@ -20,6 +29,7 @@ const typeDefs = gql`
 
   type Query {
     me: User
+    reviews: [Reviews]
   }
 
   type Mutation {
@@ -38,6 +48,13 @@ const typeDefs = gql`
     deleteUser(userID: ID!): User
     saveCity(cityID: String!): User
     removeCity(cityValue: String!): User
+    addReview(
+      city: String!
+      country: String!
+      review: String!
+      username: String!
+      rating: Int!
+    ): Reviews
   }
 `;
 

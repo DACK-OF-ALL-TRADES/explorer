@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Nav from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import cityData from "../../utils/cities";
+import AddReviewModal from "./AddReviewModal";
 import { useMutation, useQuery } from "@apollo/client";
 import { useBusinessSearch } from "../../utils/yelp-api/useBusinessSearch";
 import "./cityResult.css";
@@ -11,14 +12,16 @@ import {
   Card,
   Image,
   Icon,
+  Item,
   Rating,
   Container,
   Button,
   Label,
+  Message,
 } from "semantic-ui-react";
 import Map from "../../components/Map/Map";
 import { ADD_FAVORITE_CITY } from "../../utils/mutations";
-import { QUERY_ME } from "../../utils/queries";
+import { QUERY_ME, QUERY_REVIEWS } from "../../utils/queries";
 import { ToastsContainer, ToastsStore } from "react-toasts";
 
 const CityResult = () => {
@@ -137,6 +140,8 @@ const CityResult = () => {
     window.location.assign(`/search/${randomnumber}`);
   };
 
+  const { data: cityReviewData } = useQuery(QUERY_REVIEWS);
+  const reviewData = cityReviewData?.reviews || [];
   return (
     <div>
       <Nav />
@@ -184,6 +189,11 @@ const CityResult = () => {
                         <Icon name="paper plane" />
                       </Button.Content>
                     </Button>
+                    <AddReviewModal
+                      city={singleCity.city}
+                      country={singleCity.country}
+                      username={user.username}
+                    />
                   </Grid.Column>
                   <Grid.Column textAlign="center" className="city-header">
                     <h1 data-aos="zoom-in">{singleCity.city}</h1>
@@ -286,6 +296,41 @@ const CityResult = () => {
                   </Grid.Column>
                 </Grid.Row>
               </Grid>
+              <h2>User Reviews</h2>
+              <Item.Group style={{ display: "flex" }}>
+                {reviewData &&
+                  reviewData.map((review) => {
+                    if (review.city === cityName) {
+                      return (
+                        <Message className="review-message">
+                          <Item>
+                            <Item.Content>
+                              <Item.Header>
+                                <Icon name="user" />
+                                {review.username}
+                              </Item.Header>
+                              <Item.Description>
+                                <br />
+                                {review.review}
+                              </Item.Description>
+                              <Item.Extra>
+                                <br />
+                                <Rating
+                                  maxRating={5}
+                                  defaultRating={review.rating}
+                                  icon="star"
+                                  disabled
+                                />
+                              </Item.Extra>
+                            </Item.Content>
+                          </Item>
+                        </Message>
+                      );
+                    } else {
+                      return null;
+                    }
+                  })}
+              </Item.Group>
             </Container>
             <div className="title-hotel">
               <h1 data-aos="zoom-out-up">Hotels &amp; Popular Attractions</h1>

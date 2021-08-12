@@ -101,3 +101,28 @@ export const REMOVE_FAVORITE_CITY = gql`
     }
   }
 `;
+
+// add_review.....................................................
+export const ADD_REVIEW = gql`
+  mutation addReview(
+    $city: String!
+    $country: String!
+    $review: String!
+    $username: String!
+    $rating: Int!
+  ) {
+    addReview(
+      city: $city
+      country: $country
+      review: $review
+      username: $username
+      rating: $rating
+    ) {
+      city
+      country
+      review
+      username
+      rating
+    }
+  }
+`;

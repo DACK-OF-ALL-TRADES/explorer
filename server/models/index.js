@@ -1,5 +1,6 @@
 // import.....................................................
 const User = require("./User");
+const Reviews = require("./Reviews");
 
 // export.....................................................
-module.exports = { User };
+module.exports = { User, Reviews };

@@ -15,3 +15,17 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+// get_reviews.....................................................
+export const QUERY_REVIEWS = gql`
+  {
+    reviews {
+      _id
+      city
+      country
+      review
+      username
+      rating
+    }
+  }
+`;
