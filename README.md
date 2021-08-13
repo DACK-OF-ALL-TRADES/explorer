@@ -171,10 +171,15 @@ If any issues or bugs are present, please submit a ticket to the `Issues` tab or
 > We are looking to eventually add more into it however, if you've got unique ideas please let us know, we would love to hear them.
 
 
+
+Lighthouse Audit                  |
+:-------------------------:   |
+![](/client/src/assets/lighthouse.PNG)      |
+
+> The cost of using many videos and images...
+
+
 ## Meet the Team 
-
-
-
  
 [Todd Kelly](https://github.com/ToddKelly)
 <p align="left">
