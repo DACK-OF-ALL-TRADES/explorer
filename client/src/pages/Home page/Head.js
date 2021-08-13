@@ -12,6 +12,8 @@ import {
   Message,
   Accordion,
   Popup,
+  Header,
+  Modal,
 } from "semantic-ui-react";
 import adventure from "../../assets/transparent-adventure.png";
 import plans from "../../assets/transparent-plans.png";
@@ -46,14 +48,75 @@ const panel2 = [
 ];
 
 const Head = ({ user }) => {
+  const [open, setOpen] = React.useState(false);
+
   const randomCity = () => {
     var randomnumber = Math.floor(Math.random() * (95 - 1 + 1)) + 1;
     console.log(randomnumber);
     window.location.assign(`/search/${randomnumber}`);
   };
 
+  const userFirstTime = localStorage.getItem("first-entry");
+  if (userFirstTime === "true") {
+    setOpen(true);
+    localStorage.setItem("first-entry", "false");
+  }
+
+  const modalStyle = {
+    fontSize: "120%",
+  };
+
   return (
     <div>
+      <Modal
+        basic
+        onClose={() => setOpen(false)}
+        onOpen={() => setOpen(true)}
+        open={open}
+        size="small"
+      >
+        <Header icon>
+          <Icon name="user plus" />
+          Hello There!
+        </Header>
+        <Modal.Content style={modalStyle}>
+          <p>
+            Welcome to Explorer, we are happy to see you here. <br />
+            <br />
+            Before you start exploring the world, we would like to point out
+            some parts that will make your life easier. <br />
+          </p>
+          <ul>
+            <li>
+              Explorer is a travel guide / vacation planner for all kinds of
+              users.
+            </li>
+            <li>
+              While we share some locations with you, we would like to mention
+              that <b>we don't cover all the possible options out there</b>{" "}
+              instead, we cover the ones that will make your next vacation a
+              good experience.
+            </li>
+            <li>
+              Some locations unfortunately do not have data available but, we
+              still wanted to share these locations with you.
+            </li>
+          </ul>
+          <br />
+          <p>Feel free to explore the possibilities...</p>
+          <small>
+            If you got any issues or bugs, please contact us at{" "}
+            <a href="mailto:explorer.guide.me@gmail.com">
+              explorer.guide.me@gmail.com
+            </a>{" "}
+          </small>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button color="green" inverted onClick={() => setOpen(false)}>
+            <Icon name="paper plane" /> Discover the world
+          </Button>
+        </Modal.Actions>
+      </Modal>
       <div className="jumbo">
         <h1 data-aos="zoom-out-up">Discover the world</h1>
         <video autoPlay muted loop className="video2-bg">

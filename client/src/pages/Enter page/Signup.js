@@ -44,6 +44,7 @@ const Signup = () => {
       });
 
       Auth.login(data.addUser.token);
+      localStorage.setItem("first-entry", "true");
     } catch (e) {
       console.error(e);
       ToastsStore.error(`${e}`);
