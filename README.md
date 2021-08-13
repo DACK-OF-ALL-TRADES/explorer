@@ -148,6 +148,7 @@ My Search Results                |   Selected City
 :-------------------------:   |:-------------------------:
 ![](/client/public/landing/result.png)      |![](client/public/landing/detail.png)
 
+### [Presentation Slides](https://github.com/DACK-OF-ALL-TRADES/explorer/tree/main/client/src/assets/presentationSlides)
 
 ## 🧭 Future Goals
 
