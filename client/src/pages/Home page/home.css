@@ -259,7 +259,7 @@ body {
   animation: bounce 2s infinite;
 }
 
-/*  */
+/* @keyframes................................... */
 @keyframes bounce {
   0%,
   20%,
@@ -294,6 +294,7 @@ body {
   }
 }
 
+/* @media.................................... */
 @media (max-width: 845px) {
   .jumbo h1 {
     font-size: 5rem;
