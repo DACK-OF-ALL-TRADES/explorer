@@ -74,7 +74,6 @@ const CityResult = () => {
           getCovidCity(result);
         },
         (error) => {
-          ToastsStore.warning(`${error}`);
           console.error(error);
         }
       );
