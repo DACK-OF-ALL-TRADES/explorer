@@ -131,6 +131,10 @@ REACT_APP_API_KEY_MAP = [Google Maps API](https://developers.google.com/maps)
   
 ## 🌄Snapshots 
 
+Responsive Design                   |
+:-------------------------:   |
+![](/client/src/assets/ss.png)      |
+
 Landing Page                   |
 :-------------------------:   |
 ![](/client/public/landing/landing.png)      |
