@@ -47,7 +47,7 @@ const CityResult = () => {
 
   // OPEN WEATHER API FETCH........................................................
   const [cityWeatherData, setcityWeatherData] = useState();
-  const [cityCovidData, setCityCovidData] = useState();
+  // const [cityCovidData, setCityCovidData] = useState();
   useEffect(() => {
     if (process.env.REACT_APP_API_KEY) {
       fetch(
@@ -67,27 +67,27 @@ const CityResult = () => {
           }
         );
     }
-    fetch(`https://api.quarantine.country/api/v1/summary/latest`)
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          getCovidCity(result);
-        },
-        (error) => {
-          console.error(error);
-        }
-      );
-  }, []);
-  const getCovidCity = (covid) => {
-    const cData = covid.data.regions;
-    if (covid !== undefined) {
-      for (const prop in cData) {
-        if (cData[prop].name === singleCity.country) {
-          setCityCovidData(cData[prop]);
-        }
-      }
-    }
-  };
+    // fetch(`https://api.quarantine.country/api/v1/summary/latest`)
+    //   .then((res) => res.json())
+    //   .then(
+    //     (result) => {
+    //       getCovidCity(result);
+    //     },
+    //     (error) => {
+    //       console.error(error);
+    //     }
+    //   );
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  // const getCovidCity = (covid) => {
+  //   const cData = covid.data.regions;
+  //   if (covid !== undefined) {
+  //     for (const prop in cData) {
+  //       if (cData[prop].name === singleCity.country) {
+  //         setCityCovidData(cData[prop]);
+  //       }
+  //     }
+  //   }
+  // };
 
   const { data } = useQuery(QUERY_ME);
   const user = data?.me || [];
@@ -131,7 +131,7 @@ const CityResult = () => {
     if (businesses === undefined) {
       ToastsStore.warning(`Couldn't get hotels for this city...`);
     }
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const randomCity = () => {
     var randomnumber = Math.floor(Math.random() * (95 - 1 + 1)) + 1;
@@ -245,7 +245,7 @@ const CityResult = () => {
                         </Card>
                       </div>
                     )}
-                    {cityCovidData !== undefined && (
+                    {/* {cityCovidData !== undefined && (
                       <Card data-aos="zoom-out-down" color="teal" centered>
                         <Card.Content>
                           <Card.Header>Covid Cases</Card.Header>
@@ -263,7 +263,7 @@ const CityResult = () => {
                           </Card.Description>
                         </Card.Content>
                       </Card>
-                    )}
+                    )} */}
                   </Grid.Column>
                 </Grid.Row>
               </Grid>

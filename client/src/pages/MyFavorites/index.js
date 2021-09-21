@@ -62,7 +62,8 @@ const MyFavorites = () => {
     if (favCities.length === 0) {
       ToastsStore.warning(`Head over to a city and add it to your favorites!`);
     }
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   const cityOptions = [];
   for (let i = 0; i < favCities.length; i++) {
     cityOptions.push({

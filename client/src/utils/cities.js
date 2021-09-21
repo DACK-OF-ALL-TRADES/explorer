@@ -259,7 +259,7 @@ const cityList = [
     climate: "Tropical",
     pop: "Most popular places – more crowded",
     image:
-      "https://www.rosewoodhotels.com/conversations/conversations/wp-content/uploads/2019/09/Guangzhou-Skyline-GettyImages_small.jpg",
+      "https://cdn.britannica.com/30/100330-050-4DC5A9E6/Guangzhou-Central-business-district-Guangdong-China.jpg",
     youtube: "7rhnGhnfH1M",
     position: { lat: 23.12911, lng: 113.264385 },
   },
