@@ -47,7 +47,6 @@ const CityResult = () => {
 
   // OPEN WEATHER API FETCH........................................................
   const [cityWeatherData, setcityWeatherData] = useState();
-  // const [cityCovidData, setCityCovidData] = useState();
   useEffect(() => {
     if (process.env.REACT_APP_API_KEY) {
       fetch(
@@ -67,27 +66,7 @@ const CityResult = () => {
           }
         );
     }
-    // fetch(`https://api.quarantine.country/api/v1/summary/latest`)
-    //   .then((res) => res.json())
-    //   .then(
-    //     (result) => {
-    //       getCovidCity(result);
-    //     },
-    //     (error) => {
-    //       console.error(error);
-    //     }
-    //   );
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-  // const getCovidCity = (covid) => {
-  //   const cData = covid.data.regions;
-  //   if (covid !== undefined) {
-  //     for (const prop in cData) {
-  //       if (cData[prop].name === singleCity.country) {
-  //         setCityCovidData(cData[prop]);
-  //       }
-  //     }
-  //   }
-  // };
 
   const { data } = useQuery(QUERY_ME);
   const user = data?.me || [];
@@ -102,8 +81,6 @@ const CityResult = () => {
       } catch (e) {
         console.error(e);
       }
-
-      // update me object's cache
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
@@ -245,25 +222,6 @@ const CityResult = () => {
                         </Card>
                       </div>
                     )}
-                    {/* {cityCovidData !== undefined && (
-                      <Card data-aos="zoom-out-down" color="teal" centered>
-                        <Card.Content>
-                          <Card.Header>Covid Cases</Card.Header>
-                          <Card.Meta>{singleCity.country}</Card.Meta>
-                          <Card.Description textAlign="left">
-                            <b>
-                              <Icon name="heartbeat" />
-                              Deaths today:
-                              {cityCovidData.change.deaths} <br />
-                              <br />
-                              <Icon name="meh" />
-                              Active cases:
-                              {cityCovidData.change.active_cases}
-                            </b>
-                          </Card.Description>
-                        </Card.Content>
-                      </Card>
-                    )} */}
                   </Grid.Column>
                 </Grid.Row>
               </Grid>

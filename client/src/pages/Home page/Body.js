@@ -117,10 +117,7 @@ const Body = ({ user }) => {
     //...................................................
   };
 
-  // 1, 2, 5 || 0 1 6
-
   // Question1..............................................................
-  // RESULT
   const destinationOptions = [
     { key: 1, text: "North America", value: "North America" },
     { key: 2, text: "South America", value: "South America" },
@@ -136,7 +133,6 @@ const Body = ({ user }) => {
   };
 
   // Question2..............................................................
-  // RESULT
   const question2Change = (e, { value }) => {
     setAnswer2(value);
   };

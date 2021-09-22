@@ -1105,7 +1105,7 @@ const cityList = [
     continent: "Europe",
     climate: "Mediterranean",
     pop: "Less popular places – less crowded",
-    image: "https://deih43ym53wif.cloudfront.net/riberia-porto_7a56c88171.jpeg",
+    image: "https://img.peapix.com/a064286bb36a46e5a6135607817ff00b.jpg",
     youtube: "9nZmicn31QM",
     position: { lat: 41.157944, lng: -8.629105 },
   },

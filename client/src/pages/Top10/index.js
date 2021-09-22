@@ -5,6 +5,19 @@ import Footer from "../../components/Footer";
 import cityList from "../../utils/cities";
 import { Card } from "semantic-ui-react";
 
+let top10Cities = [
+  "Tokyo",
+  "Antalya",
+  "Rome",
+  "Barcelona",
+  "Milan",
+  "Cancun",
+  "St. Petersburg",
+  "Amsterdam",
+  "Budapest",
+  "Izmir",
+];
+
 const Top10 = () => {
   return (
     <div>
@@ -15,18 +28,7 @@ const Top10 = () => {
       <div className="search-city-display">
         <Card.Group centered>
           {cityList.map((data) => {
-            if (
-              data.city === "Tokyo" ||
-              data.city === "Antalya" ||
-              data.city === "Rome" ||
-              data.city === "Barcelona" ||
-              data.city === "Milan" ||
-              data.city === "Cancun" ||
-              data.city === "St. Petersburg" ||
-              data.city === "Amsterdam" ||
-              data.city === "Budapest" ||
-              data.city === "Izmir"
-            ) {
+            if (top10Cities.includes(data.city)) {
               return (
                 <Card
                   image={data.image}

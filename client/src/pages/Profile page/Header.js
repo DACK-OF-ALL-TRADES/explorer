@@ -5,8 +5,8 @@ import EditProfileModal from "./EditProfileModal";
 
 const Header = ({ user }) => {
   const cityData = localStorage.getItem("cities");
-
   const cities = JSON.parse(cityData);
+
   return (
     <div>
       <div style={{ marginTop: "5rem" }}>
