@@ -58,7 +58,6 @@ const CityResult = () => {
             setcityWeatherData(result);
           },
           (error) => {
-            console.error(error);
             if (error.code === "LOCATION_NOT_FOUND") {
               ToastsStore.warning(`Location Not Found`);
               return null;
@@ -112,7 +111,6 @@ const CityResult = () => {
 
   const randomCity = () => {
     var randomnumber = Math.floor(Math.random() * (95 - 1 + 1)) + 1;
-    console.log(randomnumber);
     window.location.assign(`/search/${randomnumber}`);
   };
 

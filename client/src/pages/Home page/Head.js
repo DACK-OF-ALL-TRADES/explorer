@@ -52,7 +52,6 @@ const Head = ({ user }) => {
 
   const randomCity = () => {
     var randomnumber = Math.floor(Math.random() * (95 - 1 + 1)) + 1;
-    console.log(randomnumber);
     window.location.assign(`/search/${randomnumber}`);
   };
 

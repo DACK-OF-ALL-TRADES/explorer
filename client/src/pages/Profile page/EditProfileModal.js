@@ -58,7 +58,6 @@ function EditProfileModal({ user }) {
       }
     } catch (err) {
       ToastsStore.error(`${err}`);
-      console.log(err);
     }
   };
 
@@ -101,7 +100,6 @@ function EditProfileModal({ user }) {
       }
     } catch (err) {
       ToastsStore.error(`${err}`);
-      console.log(err);
     }
   };
 
@@ -146,7 +144,6 @@ function EditProfileModal({ user }) {
       }
     } catch (err) {
       ToastsStore.error(`${err}`);
-      console.log(err);
     }
   };
 
@@ -188,7 +185,6 @@ function EditProfileModal({ user }) {
       }
     } catch (err) {
       ToastsStore.error(`${err}`);
-      console.log(err);
     }
   };
 
@@ -210,7 +206,6 @@ function EditProfileModal({ user }) {
         window.location.assign("/");
       } catch (err) {
         ToastsStore.error(`${err}`);
-        console.log(err);
       }
     }
   };

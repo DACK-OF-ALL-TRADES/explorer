@@ -5,14 +5,13 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    // get_me.....................................................
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id });
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-    // get_reviews.....................................................
+
     reviews: async (parent, args, context) => {
       if (context.user) {
         return Reviews.find();
@@ -22,7 +21,6 @@ const resolvers = {
   },
 
   Mutation: {
-    // save_city.....................................................
     saveCity: async (parent, { cityID }, context) => {
       if (context.user) {
         return await User.findByIdAndUpdate(
@@ -39,10 +37,8 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-    // delete_city.....................................................
-    removeCity: async (parent, { cityValue }, context) => {
-      console.log(cityValue);
 
+    removeCity: async (parent, { cityValue }, context) => {
       if (context.user) {
         return await User.findByIdAndUpdate(
           {
@@ -58,7 +54,7 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-    // create user.....................................................
+
     addUser: async (
       parent,
       { username, email, password, firstname, lastname }
@@ -74,11 +70,9 @@ const resolvers = {
       return { token, user };
     },
 
-    // update_firstname.....................................................
     updateFirstName: async (parent, { firstname }, context) => {
       if (context.user) {
         context.user.firstname = firstname;
-        // console.log(context.user);
         return User.findOneAndUpdate(
           { _id: context.user._id },
           { firstname: firstname }
@@ -86,11 +80,10 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-    // update_lastname.....................................................
+
     updateLastName: async (parent, { lastname }, context) => {
       if (context.user) {
         context.user.lastname = lastname;
-        // console.log(context.user);
         return User.findOneAndUpdate(
           { _id: context.user._id },
           { lastname: lastname }
@@ -98,11 +91,10 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-    // update_email.....................................................
+
     updateEmail: async (parent, { email }, context) => {
       if (context.user) {
         context.user.email = email;
-        // console.log(context.user);
         return User.findOneAndUpdate(
           { _id: context.user._id },
           { email: email }
@@ -110,10 +102,9 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-    // update_username.....................................................
+
     updateUsername: async (parent, { username }, context) => {
       if (context.user) {
-        // console.log(context.user);
         return User.findOneAndUpdate(
           { _id: context.user._id },
           { username: username }
@@ -121,15 +112,14 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
-    // delete_me.....................................................
+
     deleteUser: async (parent, { userID }, context) => {
-      // console.log(userID);
       if (context.user) {
         return await User.findOneAndDelete({ _id: context.user._id });
       }
       throw new AuthenticationError("Please Login...");
     },
-    // login.....................................................
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
       if (!user) {
@@ -142,7 +132,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    // add_review.....................................................
+
     addReview: async (parent, { city, country, review, rating, username }) => {
       const user = await Reviews.create({
         city,

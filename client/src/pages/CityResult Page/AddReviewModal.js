@@ -35,7 +35,6 @@ function AddReviewModal({ city, country, username }) {
   };
   const handleRatingChange = (event, data) => {
     const rating = data.rating;
-    console.log(rating);
 
     setFormState({
       ...formState,

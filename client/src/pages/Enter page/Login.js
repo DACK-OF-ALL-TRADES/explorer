@@ -31,7 +31,6 @@ const Login = (props) => {
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    // console.log(formState);
     try {
       const { data } = await login({
         variables: { ...formState },
@@ -42,9 +41,7 @@ const Login = (props) => {
       console.error(e);
       ToastsStore.error(`User deosn't exists...`);
     }
-    if (data) {
-      // console.log(data);
-    } else {
+    if (!data) {
       console.log(error);
     }
 
